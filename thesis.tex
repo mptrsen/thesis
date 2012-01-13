@@ -1,3 +1,4 @@
+% vim: set ft=tex
 \documentclass[a4paper]{scrreprt}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -19,7 +20,7 @@
 %--------------------------------------------------
 \usepackage{color}						% enable color
 % \usepackage{colortbl}					% colored tables
-% \usepackage{graphicx}					% fancy graphics
+\usepackage{graphicx}					% fancy graphics
 % \usepackage{wrapfig}					% wrap figures
 % \usepackage{tabularx}					% better tables
 % \usepackage{enumerate}				% customize numbered lists
@@ -29,6 +30,7 @@
 % \usepackage[parfill]{parskip} % vspace instead of indentation
 % \usepackage{geometry}					% customize page size, margins etc
 \usepackage{listings}         % code listings
+\usepackage{paralist}						% inline lists
 
 % Extra stuff, glossary, index etc
 %--------------------------------------------------
@@ -52,18 +54,18 @@
 	basicstyle=,          % the size of the fonts that are used for the code
 	numbers=left,                      % where to put the line-numbers
 	numberstyle=\tiny,         % the size of the fonts that are used for the line-numbers
-	stepnumber=2,                      % the step between two line-numbers. If it is 1 each line will be numbered
-	numbersep=5pt,                     % how far the line-numbers are from the code
+	%stepnumber=2,                      % the step between two line-numbers. If it is 1 each line will be numbered
+	numbersep=5pt,                     % how far the line numbers are from the code
 	backgroundcolor=\color{lightgrey}, % choose the background color. You must add \usepackage{color}
 	showspaces=false,                  % show spaces adding particular underscores
 	showstringspaces=false,            % underline spaces within strings
-	showtabs=false,                    % show tabs within strings adding particular underscores
-	frame=none,                        % frame. can be: none, leftline, topline, bottomline, lines, single, shadowbox 
+	showtabs=false,                    % show tabs 
+	frame=none,                        % can be: none, leftline, topline, bottomline, lines, single, shadowbox 
 	%frameround=tttt,                   % rounded corners; t=round, f=corner
 	tabsize=2,                         % sets default tabsize to 2 spaces
-	captionpos=b,                      % sets the caption-position to bottom
-	breaklines=true,                   % sets automatic line breaking
-	breakatwhitespace=false,           % sets if automatic breaks should only happen at whitespace
+	captionpos=t,                      % caption position (t|b)
+	breaklines=true,                   % automatic line breaking
+	breakatwhitespace=false,           % automatic breaks should not happen at whitespace
 	%escapeinside={\%}{)}              % if you want to add a comment within your code
 }
 \definecolor{lightgrey}{rgb}{0.9,0.9,0.9}
@@ -81,15 +83,21 @@
 \begin{document}
 \maketitle
 \tableofcontents
+
+\chapter{Journal}
+\include{inc/journal}
+
 \chapter{HaMStR}
 \include{inc/intro}
 \include{inc/methods}
 \clearpage
+
 \addcontentsline{toc}{chapter}{Bibliography}
 \bibliographystyle{plainnat}
-\bibliography{../bib/diploma}
+\bibliography{/home/malty/thesis/bib/diploma}
+
 \appendix
+
 \chapter{Listings}
 \include{inc/listings}
 \end{document}
-%vim:set ft=tex

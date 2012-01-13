@@ -2,11 +2,11 @@
 \subsection{Installation}
 The \hamstr package v1.8 by \cite{Ebersberger2009} was downloaded from \url{http://www.deep-phylogeny.org/hamstr} and unpacked. Since it is a collection of Perl scripts, no compilation was necessary.
 
-The wise2 package v2.2.0 by \cite{Birney2004} was downloaded from \url{http://www.ebi.ac.uk/Tools/Wise2/}, compiled and installed. To fix a conflicting definition of \lstinline{getline()} in \file{src/HMMer2/sqio.c} (line 232) of the wise2 package, the function was renamed to \lstinline{genewise\_getline()}. 
+The wise2 package v2.2.0 by \cite{Birney2004} was downloaded from \url{http://www.ebi.ac.uk/Tools/Wise2/}, compiled and installed. To fix a conflicting definition of \lstinline{getline()} in \file{src/HMMer2/sqio.c} (line 232) of the wise2 package, the function was renamed to \lstinline{genewise_getline()}. 
 
 hmmer v3.0 by \cite{Eddy2009} was downloaded from \url{http://hmmer.janelia.org/}, compiled and installed.
 
-Additionally, the \file{\species{insecta}\_hmmer3-2} core ortholog set was downloaded and installed.
+Additionally, the \file{insecta\_hmmer3-2} core ortholog set was downloaded and installed.
 
 \subsection{Testing}
 The included test set was run according to the instructions in the \file{README} file that came with the \hamstr package. The command was as follows:
@@ -42,10 +42,10 @@ Real-Life files were tested: An EST file containing sequences of varying length 
 \subsection{Benchmarks}
 The \hamstr pipeline uses standard UNIX tools for certain tasks, e.g. filtering content from a file using \code{grep} or line editing with \code{sed}. A benchmark was conducted to compare the time efficiency of \code{sed} to the native regular expression parser in Perl: A file containing one line was read into memory, the line was changed back and forth, and the file was written back to disk. This was repeated $10^4$ times. The process was timed using the \code{time} tool.
 
-Additionally, the \code{grep} tool was benchmarked. A Perl script was used that searches a file for an expression (listing \ref{lst:grep_perl}), and the GNU Regular Expression Parser \code{grep} (listing \ref{lst:grep_grep}). The test was done $10^4$ times and timed using the \code{time} tool.
+Additionally, the \code{grep} tool was benchmarked. A Perl script was used that searches a file for an expression (listing \ref{lst:grep-perl}), and the GNU Regular Expression Parser \code{grep} (listing \ref{lst:grep-grep}). The test was done $10^4$ times and timed using the \code{time} tool.
 
 \subsubsection{Using UNIX tools}
-\lstinputlisting[language=bash, caption=Substitution using UNIX tools, label=lst:subst_sed]{scripts/subst.sh}
+\lstinputlisting[language=bash, caption=Substitution using UNIX tools, label=lst:subst-sed]{scripts/subst.sh}
 
 The \code{sed} variant yielded the following result:
 
@@ -57,7 +57,7 @@ $ bash subst.sh  16% cpu 18.502 total
 Average:                 18.538 total
 \end{verbatim}
 
-\lstinputlisting[caption=Searching a file using UNIX tools, label=lst:grep_grep]{scripts/grep.sh}
+\lstinputlisting[caption=Searching a file using UNIX tools, label=lst:grep-grep]{scripts/grep.sh}
 
 \begin{verbatim}
 ./grep.sh Perl ../latex/inc/methods.tex  17% cpu 15.829 total
@@ -68,7 +68,7 @@ Average:                                         15.556 total
 \end{verbatim}
 
 \subsubsection{Using native Perl functions}
-\lstinputlisting[caption=Substitution using native Perl functions, label=lst:subst_perl]{scripts/subst.pl}
+\lstinputlisting[caption=Substitution using native Perl functions, label=lst:subst-perl]{scripts/subst.pl}
 
 The variant using native Perl functions yielded the following result:
 
@@ -80,7 +80,7 @@ The variant using native Perl functions yielded the following result:
 Average:            0.485 total
 \end{verbatim}
 
-\lstinputlisting[caption=Searching a file using native Perl functions, label=lst:grep_perl]{scripts/grep.pl}
+\lstinputlisting[caption=Searching a file using native Perl functions, label=lst:grep-perl]{scripts/grep.pl}
 
 \begin{verbatim}
 ./grep.pl Perl ../latex/inc/methods.tex  99% cpu 4.397 total
@@ -90,13 +90,13 @@ Average:            0.485 total
 Average:                                         4.494 total
 \end{verbatim}
 
-The native Perl solutions (listings \ref{lst:subst_perl}, \ref{lst:grep_perl}) use much more processor time, but are also much faster than the solutions using UNIX tools (listings \ref{lst:subst_sed}, \ref{lst:grep_grep}). It can be assumed that a Perl script using UNIX tools will run slower than a Perl script that employs its built-in functions for the same task. For this reason Forage will use built-in Perl functions wherever possible.
+The native Perl solutions (listings \ref{lst:subst-perl}, \ref{lst:grep-perl}) use much more processor time, but are also much faster than the solutions using UNIX tools (listings \ref{lst:subst-sed}, \ref{lst:grep-grep}). It can be assumed that a Perl script using UNIX tools will run slower than a Perl script that employs its built-in functions for the same task. For this reason Forage will use built-in Perl functions wherever possible.
 
 \subsection{\code{genewise} benchmarks}
-genewise (\cite{Birney2004}) was tested for reliability with randomly altered sequences. A script (listing \ref{lst:randomframeshifts} on page \pageref{lst:randomframeshifts}) was used to insert frameshift errors simulated by random nucleotides, at a random interval and with fixed probability, into the sequence. 
+\code{Genewise} (\cite{Birney2004}) was tested for reliability with randomly altered sequences. A script (listing \ref{lst:randomframeshifts} on page \pageref{lst:randomframeshifts}) was used to insert frameshift errors simulated by random nucleotides, at a random interval and with fixed probability, into the sequence. 
 
 \subsubsection{\code{genewise} vs. \code{exonerate}}
-The \code{genewise} can be replaced using \code{exonerate} (\cite{Slater2005}), which is about ten times faster. A test using a protein and a nucleotide sequence yielded the following result:
+\code{Genewise} can be replaced using \code{exonerate} (\cite{Slater2005}), which is about ten times faster and allows the output of the corrected DNA sequence (cDNA) that corresponds to the aminoacid alignment. A test using a protein and a nucleotide sequence yielded the following result:
 \begin{verbatim}
 exonerate --exhaustive --model protein2genome:bestfit --verbose 0 
 --showalignment no apime_411985.fa anva_L12193T1.fa --ryo 
@@ -107,3 +107,7 @@ exonerate --exhaustive --model protein2genome:bestfit --verbose 0
 \end{verbatim}
 
 However, some features had to be emulated: 
+\begin{itemize}
+\item this
+\item blah
+\end{itemize}
