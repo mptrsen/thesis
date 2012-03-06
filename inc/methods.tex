@@ -111,3 +111,46 @@ However, some features had to be emulated:
 \item this
 \item blah
 \end{itemize}
+
+In addition, Exonerate comes with a set of fasta file manipulation tools.
+Fastatranslate translates a nucleotide fasta file in all six possible reading
+frames, changing the header from, e.g.:
+
+\begin{verbatim}
+>Original_header
+\end{verbatim}
+
+to:
+
+\begin{verbatim}
+>Original_header [revcomp]:[translate(3)]
+\end{verbatim}
+
+HMMer3's hmmsearch treats everything after the first whitespace in a header as a
+sequence description field, not as part of a unique header. This can lead to
+non-unique header identifiers in the hmmsearch results. To avoid that problem,
+the source code for the fasta manipulation tools in the Exonerate package was
+changed to use underscores instead of whitespace.
+
+\begin{lstlisting}[language=c,caption=src/sequence/sequence.c]
+void Sequence_print_fasta(Sequence *s, FILE *fp, gboolean show_info){
+    fprintf(fp, ">%s", s->id?s->id:"[unknown]");
+    if(s->def)
+        fprintf(fp, "_%s", s->def);	//mp s/_/ /
+    if(show_info){
+        if(s->strand != Sequence_Strand_UNKNOWN)
+            fprintf(fp, "_[%s]", (s->strand == Sequence_Strand_FORWARD)	//mp s/_/ /
+                               ?"forward":"revcomp");
+        if(s->alphabet->type != Alphabet_Type_UNKNOWN)
+            fprintf(fp, "_[%s]",	//mp s/_/ /
+                    Alphabet_Type_get_name(s->alphabet->type));
+        if(s->len)
+            fprintf(fp, "_[length %d]", s->len);	//mp s/_/ /
+        }
+    fprintf(fp, "\n");
+    Sequence_print_fasta_block(s, fp);
+    return;
+    }
+\end{lstlisting}
+
+
