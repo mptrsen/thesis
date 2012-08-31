@@ -582,3 +582,55 @@ I don't have those papers with me right now, so I'll summarize them next time.
 Oliver helped in getting those OGS that we need to create our ortholog sets.
 Maybe next week we can start compiling everything together and then use Tanja's
 script with corresponding nucleotide output for the first time.
+
+\section{March 2012}
+\subsection*{Mon Mar 19 11:45:32 CET 2012}
+
+During the 2$^nd$ half of Feb, I tutored the LSI course one last time. When I
+returned, I spent a lot of time on the HMM test and its report. 
+
+\section{April 2012}
+\subsection*{Fri Apr 13 16:38:22 CEST 2012}
+
+The proteome files for Forage (or more specifically, coreload) must have a very
+restrictive header format: Only the protein ID is accepted, otherwise coreload
+gets confused. Coreload is going to check for this.
+
+\section{August 2012}
+\subsection*{Fri Aug 31 17:58:27 CEST 2012}
+
+My thesis should be structured like this:
+
+\begin{enumerate}
+	\item Orthology prediction:
+	\begin{itemize}
+		\item why is it important?
+		\item what are the different approaches?
+		\item why is the graph-based approach better than the tree-based one?
+	\end{itemize}
+
+\item \hamstr:
+	\begin{itemize}
+		\item hidden Markov models:
+			\begin{itemize}
+				\item what are HMMs?
+				\item why do they represent homology better than a similarity alignment?
+			\end{itemize}
+		\item what did \hamstr right?
+		\item what did \hamstr wrong/what could be improved in this approach?
+	\end{itemize}
+
+\item \pname:
+	\begin{itemize}
+		\item why did I rewrite instead of extending \hamstr?
+		\item why did I use a database?
+		\item why did I try parallelization?
+	\end{itemize}
+
+\item Results:
+	\begin{itemize}
+		\item same/better hit rate as \hamstr?
+		\item test different ortholog sets?
+		\item test simulated data?
+	\end{itemize}
+\end{enumerate}

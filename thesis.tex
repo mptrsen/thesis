@@ -1,4 +1,3 @@
-% vim: set ft=tex
 \documentclass[a4paper]{scrreprt}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -71,25 +70,32 @@
 \definecolor{lightgrey}{rgb}{0.9,0.9,0.9}
 \newcommand{\file}[1]{{\textbf{#1}}}
 \newcommand{\code}[1]{{\textbf{#1}}}
-\newcommand{\hamstr}{HaMStR }
+\newcommand{\hamstr}{HaMStR}
+\newcommand{\pname}{ORTHOGRAPH}
 \newcommand{\species}[1]{\textit{#1}}
 
 \linespread{1.3}
 
-\title{FORAGE}
-\subtitle{Find Orthologs using Reciprocity Among Genes and ESTs}
+\title{Fast and efficient mapping of transcript sequences to ortholog groups}
+\subtitle{\pname: ORTHOlogy prediction using a Graph-based, Reciprocal Approach with Profile Hidden Markov models}
 \author{Malte Petersen}
 
 \begin{document}
+%\frontmatter
 \maketitle
 \tableofcontents
 
+%\mainmatter
 \chapter{Journal}
 \include{inc/journal}
 
 \chapter{HaMStR}
-\include{inc/intro}
-\include{inc/methods}
+\include{inc/hamstr/intro}
+\include{inc/hamstr/methods}
+\clearpage
+
+\chapter{\pname}
+\include{inc/forage/methods}
 \clearpage
 
 \addcontentsline{toc}{chapter}{Bibliography}
