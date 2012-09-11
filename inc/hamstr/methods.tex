@@ -1,0 +1,186 @@
+\section{Methods}
+\subsection{Installation}
+The \hamstr package v1.8 by \cite{Ebersberger2009} was downloaded from \url{http://www.deep-phylogeny.org/hamstr} and unpacked. Since it is a collection of Perl scripts, no compilation was necessary.
+
+The wise2 package v2.2.0 by \cite{Birney2004} was downloaded from \url{http://www.ebi.ac.uk/Tools/Wise2/}, compiled and installed. To fix a conflicting definition of \lstinline{getline()} in \file{src/HMMer2/sqio.c} (line 232) of the wise2 package, the function was renamed to \lstinline{genewise_getline()}. 
+
+hmmer v3.0 by \cite{Eddy2009} was downloaded from \url{http://hmmer.janelia.org/}, compiled and installed.
+
+Additionally, the \file{insecta\_hmmer3-2} core ortholog set was downloaded and installed.
+
+\subsection{Testing}
+The included test set was run according to the instructions in the \file{README} file that came with the \hamstr package. The command was as follows:
+
+\begin{verbatim}
+$ ../bin/hamstrsearch_local-hmmer3.v8.pl -est -sequence_file=testset.fa \
+	-taxon=test -hmmset=modelorganisms_hmmer3 -refspec=DROME -representative \
+	-hmm=317.hmm
+\end{verbatim}
+
+The options and flags have the following meanings:
+\begin{description}
+	\item[-est] Conduct an EST, not a protein analysis.
+	\item[-sequence\_file=] The file containing the EST data.
+	\item[-taxon=] String containing a user-selected taxon name. This is used in the FASTA file headers.
+	\item[-hmmset=] The HMM set to use. \hamstr looks for HMM sets in the directory \file{core\_orthologs}.
+	\item[-refspec=] Reference species among the core orthologs to use. There has to exist a directory under \file{core\_orthologs/} with that name.
+	\item[-representative] If \hamstr detects more than one hit, the program will choose the best of the three hits as representative. If two or more hits match to non-overlapping parts of the reference protein, these hits will be kept and subsequently concatenated. The FASTA header of the concatenated hit sequence will then contain information which sequences have been concatenated, and how long they are.
+	\item[-hmm=] Use one specified HMM instead of a set of HMMs. There has to exist a file with that name under \file{core\_orthologs/} and it has to end in \file{.hmm}.
+\end{description}
+For a complete listing of available options see the \hamstr \file{README} file in the appendix. The test run completed without errors.
+
+\subsection{Real-Life Tests}
+Real-Life files were tested: An EST file containing sequences of varying length (103-21135 bp) was parsed using the following command.
+
+\begin{verbatim}
+../bin/hamstrsearch_local-hmmer3.v8_mpmod.pl \
+-sequence_file=cleaned/Mengenilla_12_5_mio_PE_velvet_contigs.fa -est \
+-taxon=Mengenilla_trica -hmmset=insecta_hmmer3-2 -refspec=trica_1449 \
+-representative -strict -eval=1e-05 -hmmset=insecta_hmmer3-2 
+\end{verbatim}
+
+The test run completed without problems.
+
+\subsection{Benchmarks}
+The \hamstr pipeline uses standard UNIX tools for certain tasks, e.g. filtering
+content from a file using \code{grep} or line editing with \code{sed}. A
+benchmark was conducted to compare the time efficiency of \code{sed} to the
+native regular expression parser in Perl: A file containing one line was read
+into memory, the line was changed back and forth, and the file was written back
+to disk. This was repeated $10^4$ times. The process was timed using the
+\code{time} tool.
+
+Additionally, the \code{grep} tool was benchmarked. A Perl script was used that
+searches a file for an expression (listing \ref{lst:grep-perl}), and the GNU
+Regular Expression Parser \code{grep} (listing \ref{lst:grep-grep}). The test
+was done $10^4$ times and timed using the \code{time} tool.
+
+\subsubsection{Using UNIX tools}
+\lstinputlisting[language=bash, caption=Substitution using UNIX tools, label=lst:subst-sed]{scripts/subst.sh}
+
+The \code{sed} variant yielded the following result:
+
+\begin{verbatim}
+$ bash subst.sh  16% cpu 18.596 total
+$ bash subst.sh  16% cpu 18.515 total
+$ bash subst.sh  16% cpu 18.502 total
+-------------------------------------
+Average:                 18.538 total
+\end{verbatim}
+
+\lstinputlisting[caption=Searching a file using UNIX tools, label=lst:grep-grep]{scripts/grep.sh}
+
+\begin{verbatim}
+./grep.sh Perl ../latex/inc/methods.tex  17% cpu 15.829 total
+./grep.sh Perl ../latex/inc/methods.tex  17% cpu 15.288 total
+./grep.sh Perl ../latex/inc/methods.tex  17% cpu 15.552 total
+-------------------------------------------------------------
+Average:                                         15.556 total
+\end{verbatim}
+
+\subsubsection{Using native Perl functions}
+\lstinputlisting[caption=Substitution using native Perl functions, label=lst:subst-perl]{scripts/subst.pl}
+
+The variant using native Perl functions yielded the following result:
+
+\begin{verbatim}
+./subst.pl  97% cpu 0.524 total
+./subst.pl  98% cpu 0.447 total
+./subst.pl  97% cpu 0.483 total
+-------------------------------
+Average:            0.485 total
+\end{verbatim}
+
+\lstinputlisting[caption=Searching a file using native Perl functions, label=lst:grep-perl]{scripts/grep.pl}
+
+\begin{verbatim}
+./grep.pl Perl ../latex/inc/methods.tex  99% cpu 4.397 total
+./grep.pl Perl ../latex/inc/methods.tex  99% cpu 4.478 total
+./grep.pl Perl ../latex/inc/methods.tex  99% cpu 4.607 total
+------------------------------------------------------------
+Average:                                         4.494 total
+\end{verbatim}
+
+The native Perl solutions (listings \ref{lst:subst-perl}, \ref{lst:grep-perl})
+use much more processor time, but are also much faster than the solutions using
+UNIX tools (listings \ref{lst:subst-sed}, \ref{lst:grep-grep}). It can be
+assumed that a Perl script using UNIX tools will run slower than a Perl script
+that employs its built-in functions for the same task. For this reason
+\pname~will use built-in Perl functions wherever possible.
+
+\subsection{\code{genewise} benchmarks}
+\code{Genewise} (\cite{Birney2004}) was tested for reliability with randomly
+altered sequences. A script (listing \ref{lst:randomframeshifts} on page
+\pageref{lst:randomframeshifts}) was used to insert frameshift errors simulated
+by random nucleotides, at a random interval and with fixed probability, into
+the sequence. 
+
+\subsubsection{\code{genewise} vs. \code{exonerate}}
+Genewise can be replaced using Exonerate (\cite{Slater2005}),
+which runs about ten times faster and allows the output of the corrected DNA
+sequence (cDNA) that corresponds to the aminoacid alignment. A test using a
+protein and a nucleotide sequence yielded the following result:
+
+\begin{verbatim}
+exonerate --exhaustive --model protein2genome:bestfit --verbose 0 
+--showalignment no apime_411985.fa anva_L12193T1.fa --ryo 
+"Score: %s\n
+>%qi_%ti_%tcb-%tce_cdna\n%tcs//\n
+>%qi[%qab:%qae]_query\n%qas//\n
+>%ti[%tab:%tae]_target\n%tas" 
+\end{verbatim}
+
+However, some features had to be emulated: 
+
+\begin{itemize}
+\item this
+\item blah
+\end{itemize}
+
+In addition, Exonerate comes with a set of fasta file manipulation tools.
+Fastatranslate translates a nucleotide fasta file in all six possible reading
+frames. Because it is written in C++, this implementation is much faster than the
+one used in \hamstr, which is written in Perl. Fastatranslate changes the
+header from, e.g.:
+
+\begin{verbatim}
+>Original_header
+\end{verbatim}
+
+to:
+
+\begin{verbatim}
+>Original_header [revcomp]:[translate(3)]
+\end{verbatim}
+
+HMMer3's hmmsearch treats everything after the first whitespace in a header as a
+sequence description field, not as part of a unique header. This can lead to
+non-unique header identifiers in the hmmsearch results. To avoid that problem,
+the source code for the fasta manipulation tools in the Exonerate package was
+changed to use underscores instead of whitespace.
+
+\begin{lstlisting}[language=c,caption=src/sequence/sequence.c]
+void Sequence_print_fasta(Sequence *s, FILE *fp, gboolean show_info){
+    fprintf(fp, ">%s", s->id?s->id:"[unknown]");
+    if(s->def)
+        fprintf(fp, "_%s", s->def);	//mp s/_/ /
+    if(show_info){
+        if(s->strand != Sequence_Strand_UNKNOWN)
+            fprintf(fp, "_[%s]", (s->strand == Sequence_Strand_FORWARD)	//mp s/_/ /
+                               ?"forward":"revcomp");
+        if(s->alphabet->type != Alphabet_Type_UNKNOWN)
+            fprintf(fp, "_[%s]",	//mp s/_/ /
+                    Alphabet_Type_get_name(s->alphabet->type));
+        if(s->len)
+            fprintf(fp, "_[length %d]", s->len);	//mp s/_/ /
+        }
+    fprintf(fp, "\n");
+    Sequence_print_fasta_block(s, fp);
+    return;
+    }
+\end{lstlisting}
+
+\label{uniq}
+This problem becomes irrelevant if all sequences are assigned a unique ID
+without whitespace before using them in the analysis. For later reference, the
+original ID may be written back afterwards.
