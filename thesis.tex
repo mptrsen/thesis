@@ -45,9 +45,11 @@
 % Stuff that doesn't fit in any category
 % \usepackage{lastpage}					% provides total number of pages, use with:
 %																% \pageref{LastPage}
+\usepackage{xspace}
 \usepackage{blindtext}
 %-------------------------------------------------- 
 
+% setup the listings package
 \lstset{%
 	language=perl,
 	basicstyle=,          % the size of the fonts that are used for the code
@@ -67,11 +69,23 @@
 	breakatwhitespace=false,           % automatic breaks should not happen at whitespace
 	%escapeinside={\%}{)}              % if you want to add a comment within your code
 }
+
+% setup hyperlinks
+\hypersetup{%
+	bookmarks=true,
+	pdftitle={ORTHOGRAPH},
+	pdfauthor={Malte Petersen},
+	pdfcreator={pdflatex},
+	pdfsubject={orthology prediction},
+	pdfkeywords={orthology} {prediction} {est} {transcriptome} {phylogeny}
+}
+
+% new colors and commands
 \definecolor{lightgrey}{rgb}{0.9,0.9,0.9}
-\newcommand{\file}[1]{{\textbf{#1}}}
-\newcommand{\code}[1]{{\textbf{#1}}}
-\newcommand{\hamstr}{HaMStR}
-\newcommand{\pname}{ORTHOGRAPH}
+\newcommand{\file}[1]{{\lstinline{#1}}}
+\newcommand{\code}[1]{{\texttt{#1}}}
+\newcommand{\hamstr}{HaMStR\xspace}
+\newcommand{\pname}{ORTHOGRAPH\xspace}
 \newcommand{\species}[1]{\textit{#1}}
 
 \linespread{1.3}
@@ -89,7 +103,8 @@
 \chapter{Journal}
 \include{inc/journal}
 
-\chapter{\hamstr}
+\chapter{Orthology prediction}
+\include{inc/orthology/intro}
 \include{inc/hamstr/intro}
 \include{inc/hamstr/methods}
 \clearpage
@@ -106,4 +121,7 @@
 
 \chapter{Listings}
 \include{inc/listings}
+
+\addcontentsline{toc}{chapter}{Eigenst\"andigkeitserkl\"arung}
+\include{inc/erklaerung}
 \end{document}
