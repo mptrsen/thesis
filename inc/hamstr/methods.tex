@@ -1,5 +1,7 @@
 \section{Methods}
+
 \subsection{Installation}
+
 The \hamstr package v1.8 by \cite{Ebersberger2009} was downloaded from \url{http://www.deep-phylogeny.org/hamstr} and unpacked. Since it is a collection of Perl scripts, no compilation was necessary.
 
 The wise2 package v2.2.0 by \cite{Birney2004} was downloaded from \url{http://www.ebi.ac.uk/Tools/Wise2/}, compiled and installed. To fix a conflicting definition of \lstinline{getline()} in \file{src/HMMer2/sqio.c} (line 232) of the wise2 package, the function was renamed to \lstinline{genewise_getline()}. 
@@ -9,6 +11,7 @@ hmmer v3.0 by \cite{Eddy2009} was downloaded from \url{http://hmmer.janelia.org/
 Additionally, the \file{insecta\_hmmer3-2} core ortholog set was downloaded and installed.
 
 \subsection{Testing}
+
 The included test set was run according to the instructions in the \file{README} file that came with the \hamstr package. The command was as follows:
 
 \begin{verbatim}
@@ -30,6 +33,7 @@ The options and flags have the following meanings:
 For a complete listing of available options see the \hamstr \file{README} file in the appendix. The test run completed without errors.
 
 \subsection{Real-Life Tests}
+
 Real-Life files were tested: An EST file containing sequences of varying length (103-21135 bp) was parsed using the following command.
 
 \begin{verbatim}
@@ -42,6 +46,7 @@ Real-Life files were tested: An EST file containing sequences of varying length 
 The test run completed without problems.
 
 \subsection{Benchmarks}
+
 The \hamstr pipeline uses standard UNIX tools for certain tasks, e.g. filtering
 content from a file using \code{grep} or line editing with \code{sed}. A
 benchmark was conducted to compare the time efficiency of \code{sed} to the
@@ -56,6 +61,7 @@ Regular Expression Parser \code{grep} (listing \ref{lst:grep-grep}). The test
 was done $10^4$ times and timed using the \code{time} tool.
 
 \subsubsection{Using UNIX tools}
+
 \lstinputlisting[language=bash, caption=Substitution using UNIX tools, label=lst:subst-sed]{scripts/subst.sh}
 
 The \code{sed} variant yielded the following result:
@@ -79,6 +85,7 @@ Average:                                         15.556 total
 \end{verbatim}
 
 \subsubsection{Using native Perl functions}
+
 \lstinputlisting[caption=Substitution using native Perl functions, label=lst:subst-perl]{scripts/subst.pl}
 
 The variant using native Perl functions yielded the following result:
@@ -106,9 +113,10 @@ use much more processor time, but are also much faster than the solutions using
 UNIX tools (listings \ref{lst:subst-sed}, \ref{lst:grep-grep}). It can be
 assumed that a Perl script using UNIX tools will run slower than a Perl script
 that employs its built-in functions for the same task. For this reason
-\pname~will use built-in Perl functions wherever possible.
+\pname will use built-in Perl functions wherever possible.
 
 \subsection{\code{genewise} benchmarks}
+
 \code{Genewise} (\cite{Birney2004}) was tested for reliability with randomly
 altered sequences. A script (listing \ref{lst:randomframeshifts} on page
 \pageref{lst:randomframeshifts}) was used to insert frameshift errors simulated
@@ -116,10 +124,11 @@ by random nucleotides, at a random interval and with fixed probability, into
 the sequence. 
 
 \subsubsection{\code{genewise} vs. \code{exonerate}}
-Genewise can be replaced using Exonerate (\cite{Slater2005}),
-which runs about ten times faster and allows the output of the corrected DNA
-sequence (cDNA) that corresponds to the aminoacid alignment. A test using a
-protein and a nucleotide sequence yielded the following result:
+
+Genewise can be replaced using Exonerate (\cite{Slater2005}), which runs about
+ten times faster and allows the output of the frameshift-corrected,
+corresponding nucleotide sequences (cDNA) along with the peptide sequences.
+A test using a peptide and a nucleotide sequence yielded the following result:
 
 \begin{verbatim}
 exonerate --exhaustive --model protein2genome:bestfit --verbose 0 
@@ -130,24 +139,17 @@ exonerate --exhaustive --model protein2genome:bestfit --verbose 0
 >%ti[%tab:%tae]_target\n%tas" 
 \end{verbatim}
 
-However, some features had to be emulated: 
-
-\begin{itemize}
-\item this
-\item blah
-\end{itemize}
-
 In addition, Exonerate comes with a set of fasta file manipulation tools.
 Fastatranslate translates a nucleotide fasta file in all six possible reading
 frames. Because it is written in C++, this implementation is much faster than the
 one used in \hamstr, which is written in Perl. Fastatranslate changes the
-header from, e.g.:
+header from:
 
 \begin{verbatim}
 >Original_header
 \end{verbatim}
 
-to:
+to (e.g., for the third reading frame on the reverse complement strand):
 
 \begin{verbatim}
 >Original_header [revcomp]:[translate(3)]
@@ -155,32 +157,9 @@ to:
 
 HMMer3's hmmsearch treats everything after the first whitespace in a header as a
 sequence description field, not as part of a unique header. This can lead to
-non-unique header identifiers in the hmmsearch results. To avoid that problem,
-the source code for the fasta manipulation tools in the Exonerate package was
-changed to use underscores instead of whitespace.
-
-\begin{lstlisting}[language=c,caption=src/sequence/sequence.c]
-void Sequence_print_fasta(Sequence *s, FILE *fp, gboolean show_info){
-    fprintf(fp, ">%s", s->id?s->id:"[unknown]");
-    if(s->def)
-        fprintf(fp, "_%s", s->def);	//mp s/_/ /
-    if(show_info){
-        if(s->strand != Sequence_Strand_UNKNOWN)
-            fprintf(fp, "_[%s]", (s->strand == Sequence_Strand_FORWARD)	//mp s/_/ /
-                               ?"forward":"revcomp");
-        if(s->alphabet->type != Alphabet_Type_UNKNOWN)
-            fprintf(fp, "_[%s]",	//mp s/_/ /
-                    Alphabet_Type_get_name(s->alphabet->type));
-        if(s->len)
-            fprintf(fp, "_[length %d]", s->len);	//mp s/_/ /
-        }
-    fprintf(fp, "\n");
-    Sequence_print_fasta_block(s, fp);
-    return;
-    }
-\end{lstlisting}
+non-unique sequence identifiers in the hmmsearch results. 
 
 \label{uniq}
 This problem becomes irrelevant if all sequences are assigned a unique ID
 without whitespace before using them in the analysis. For later reference, the
-original ID may be written back afterwards.
+original ID can be written back after the analysis. 
