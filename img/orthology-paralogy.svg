@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="744.09448819"
+   height="1052.3622047"
+   id="svg5281"
+   version="1.1"
+   inkscape:version="0.48.3.1 r9886"
+   sodipodi:docname="orthology-paralogy.svg">
+  <defs
+     id="defs5283" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.9899495"
+     inkscape:cx="440.70069"
+     inkscape:cy="829.11509"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1680"
+     inkscape:window-height="1023"
+     inkscape:window-x="1280"
+     inkscape:window-y="2"
+     inkscape:window-maximized="1"
+     showguides="false"
+     inkscape:guide-bbox="true"
+     inkscape:snap-global="true"
+     inkscape:snap-page="true">
+    <sodipodi:guide
+       orientation="0,1"
+       position="157.07872,654.57885"
+       id="guide3175" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5286">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       inkscape:connector-curvature="0"
+       d="m 256.52208,55.312525 0,43.137175 179.30534,100.53263 0,51.01467 143.29617,90.78028 0,71.52318 -179.3076,0 0,-69.27247 -26.25681,-29.25927 -81.02569,36.01142 0,62.52032 -106.53303,0 0,-79.77654 142.54444,-72.77232 0,-61.52102 -99.0314,-54.01712 -150.797794,62.2705 0,153.04852 53.267624,0 0,52.76798 -88.529561,0 0,-221.5715 177.806371,-73.52406 0,-61.892375 35.26194,0"
+       style="fill:#c9f1fc;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="path4577" />
+    <path
+       inkscape:connector-curvature="0"
+       d="m 240.2269,55.308024 0.1644,68.275396 -180.210129,73.9742 0,214.74734 M 240.3913,123.58342 375.22029,195.52748 m 145.0855,143.76882 -102.85535,-68.30689 0,-75.5497 -71.31387,0 0,75.5497 -139.80083,72.01832 0,69.29723 m 139.80083,-141.31555 18.35908,18.35682 m -88.25949,122.95873 0,-68.59275 141.21428,-72.7228 m -34.59798,36.00916 34.59798,33.89125 0,71.41514 m 74.134,0 0,-72.8286 69.90265,0 0,72.8286 m -434.93688,-26.22757 -9.88515,0 0,26.22757 m 74.13851,-26.93429 14.82769,0"
+       style="fill:none;stroke:#000000;stroke-width:5.44672728;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path4585" />
+    <path
+       inkscape:connector-curvature="0"
+       d="m 141.30706,385.52611 41.79861,0"
+       style="fill:none;stroke:#ed1c24;stroke-width:3.639;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="path4587"
+       sodipodi:nodetypes="cc" />
+    <path
+       inkscape:connector-curvature="0"
+       d="m 154.31502,385.52616 4.65391,10.64147 -0.2635,0.24202 -25.53072,-10.88371 25.53072,-10.88373 0.2635,0.17718 -4.65391,10.70645"
+       style="fill:#ed1c24;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.639;stroke-miterlimit:4;stroke-dasharray:none"
+       id="path4589"
+       sodipodi:nodetypes="ccccccc" />
+    <text
+       xml:space="preserve"
+       style="font-size:25.20799255px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.0250001;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+       x="274.54111"
+       y="104.04899"
+       id="text6088"><tspan
+         sodipodi:role="line"
+         id="tspan6090"
+         x="274.54111"
+         y="104.04899"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L">Speciation 1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:25.20799255px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.0250001;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+       x="439.40103"
+       y="189.82353"
+       id="text6092"><tspan
+         sodipodi:role="line"
+         id="tspan6094"
+         x="439.40103"
+         y="189.82353">Duplication 1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:25.20799255px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.0250001;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+       x="469.72736"
+       y="258.47501"
+       id="text6096"><tspan
+         sodipodi:role="line"
+         id="tspan6098"
+         x="469.72736"
+         y="258.47501">Speciation 2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:25.20799255px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;color:#000000;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:3.0250001;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+       x="584.99921"
+       y="334.73294"
+       id="text6100"><tspan
+         sodipodi:role="line"
+         id="tspan6102"
+         x="584.99921"
+         y="334.73294">Duplication 2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:25.20799255px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;color:#000000;fill:#910d0d;fill-opacity:1;fill-rule:nonzero;stroke:#910d0d;stroke-width:1.80057096;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+       x="47.312786"
+       y="439.58353"
+       id="text3177"><tspan
+         sodipodi:role="line"
+         id="tspan3179"
+         x="47.312786"
+         y="439.58353"
+         style="fill:#000000;stroke:none">A1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:25.20799255px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;color:#000000;fill:#910d0d;fill-opacity:1;fill-rule:nonzero;stroke:#910d0d;stroke-width:1.80057096;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+       x="94.127655"
+       y="439.58353"
+       id="text3177-9"><tspan
+         sodipodi:role="line"
+         id="tspan3179-8"
+         x="94.127655"
+         y="439.58353"
+         style="fill:#000000;stroke:none">AB1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:25.20799255px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;color:#000000;fill:#910d0d;fill-opacity:1;fill-rule:nonzero;stroke:#910d0d;stroke-width:1.80057096;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+       x="190.76363"
+       y="439.58353"
+       id="text3177-4"><tspan
+         sodipodi:role="line"
+         id="tspan3179-6"
+         x="190.76363"
+         y="439.58353"
+         style="fill:#000000;stroke:none">B1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:25.20799255px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;color:#000000;fill:#910d0d;fill-opacity:1;fill-rule:nonzero;stroke:#910d0d;stroke-width:1.80057096;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+       x="259.91656"
+       y="439.58353"
+       id="text3177-2"><tspan
+         sodipodi:role="line"
+         id="tspan3179-0"
+         x="259.91656"
+         y="439.58353"
+         style="fill:#000000;stroke:none">B2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:25.20799255px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;color:#000000;fill:#910d0d;fill-opacity:1;fill-rule:nonzero;stroke:#910d0d;stroke-width:1.80057096;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+       x="402.69638"
+       y="439.58353"
+       id="text3177-27"><tspan
+         sodipodi:role="line"
+         id="tspan3179-3"
+         x="402.69638"
+         y="439.58353"
+         style="fill:#000000;stroke:none">C1</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:25.20799255px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;color:#000000;fill:#910d0d;fill-opacity:1;fill-rule:nonzero;stroke:#910d0d;stroke-width:1.80057096;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+       x="476.32327"
+       y="439.58353"
+       id="text3177-1"><tspan
+         sodipodi:role="line"
+         id="tspan3179-68"
+         x="476.32327"
+         y="439.58353"
+         style="fill:#000000;stroke:none">C2</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:25.20799255px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;writing-mode:lr-tb;text-anchor:start;color:#000000;fill:#910d0d;fill-opacity:1;fill-rule:nonzero;stroke:#910d0d;stroke-width:1.80057096;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+       x="544.56677"
+       y="439.58353"
+       id="text3177-5"><tspan
+         sodipodi:role="line"
+         id="tspan3179-87"
+         x="544.56677"
+         y="439.58353"
+         style="fill:#000000;stroke:none">C3</tspan></text>
+  </g>
+</svg>

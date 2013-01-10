@@ -52,9 +52,9 @@
 % setup the listings package
 \lstset{%
 	language=perl,
-	basicstyle=,          % the size of the fonts that are used for the code
+	basicstyle=,                       % the size of the fonts that are used for the code
 	numbers=left,                      % where to put the line-numbers
-	numberstyle=\tiny,         % the size of the fonts that are used for the line-numbers
+	numberstyle=\tiny,                 % the size of the fonts that are used for the line-numbers
 	%stepnumber=2,                      % the step between two line-numbers. If it is 1 each line will be numbered
 	numbersep=5pt,                     % how far the line numbers are from the code
 	backgroundcolor=\color{lightgrey}, % choose the background color. You must add \usepackage{color}
@@ -67,17 +67,17 @@
 	captionpos=t,                      % caption position (t|b)
 	breaklines=true,                   % automatic line breaking
 	breakatwhitespace=false,           % automatic breaks should not happen at whitespace
-	%escapeinside={\%}{)}              % if you want to add a comment within your code
+	%escapeinside={\%}{)}               % if you want to add a comment within your code
 }
 
 % setup hyperlinks
 \hypersetup{%
 	bookmarks=true,
-	pdftitle={ORTHOGRAPH},
+	pdftitle={Fast and efficient mapping of transcript sequences to ortholog groups},
 	pdfauthor={Malte Petersen},
 	pdfcreator={pdflatex},
 	pdfsubject={orthology prediction},
-	pdfkeywords={orthology} {prediction} {est} {transcriptome} {phylogeny}
+	pdfkeywords={orthology} {prediction} {est} {transcriptome} {phylogeny} {thesis}
 }
 
 % new colors and commands
@@ -92,7 +92,7 @@
 \linespread{1.3}
 
 \title{Fast and efficient mapping of transcript sequences to ortholog groups}
-\subtitle{\pname: ORTHOlogy prediction using a Graph-based, Reciprocal Approach with Profile Hidden Markov models}
+%\subtitle{\pname: ORTHOlogy prediction using a Graph-based, Reciprocal Approach with Profile Hidden Markov models}
 \author{Malte Petersen}
 
 \begin{document}
@@ -102,21 +102,29 @@
 
 %\mainmatter
 \chapter{Journal}
-\include{inc/journal}
 
+\include{inc/journal}
 \include{inc/quotes}
 
-\chapter{Orthology prediction}
-\include{inc/orthology/intro}
+\chapter{Thesis}
+
+\section{Introduction}
+\include{inc/intro/intro}
 \include{inc/hmms}
-\include{inc/hamstr/methods}
+%\include{inc/hamstr/methods}
 \clearpage
 
-\chapter{\pname}
+\section{Methodology}
 \include{inc/orthograph/methods}
 \clearpage
 
-\addcontentsline{toc}{chapter}{Bibliography}
+\section{Comparisons with \hamstr}
+\clearpage
+
+\section{Conclusion and outlook}
+\clearpage
+
+\addcontentsline{toc}{section}{Bibliography}
 \bibliographystyle{plainnat}
 \bibliography{/home/malty/thesis/bib/zotero_export}
 

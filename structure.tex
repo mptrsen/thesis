@@ -1,0 +1,205 @@
+\documentclass[a4paper]{scrartcl}
+\usepackage[T1]{fontenc}			% International font encoding
+\usepackage[utf8]{inputenc}		% input encoding: utf-8
+
+%--------------------------------------------------
+% \usepackage[german]{babel}		% German language 
+\usepackage{lmodern}					% font looks better on screen
+\usepackage{microtype}				% even better
+\usepackage[cm]{fullpage}			% more space on the page
+% \usepackage{natbib}
+% \bibpunct{[}{]}{,}{n}{}{;}		% citing format:
+% 1. opening bracket symbol, default = (
+% 2. closing bracket symbol, default = )
+% 3. punctuation between multiple citations, default = ;
+% 4. 'n' for numerical style, 's' for numerical superscript style, default = author-year;
+% 5. punctuation between the author names and the year
+% 6. punctuation between years or numbers when common author lists are suppressed (default = ,);
+
+% Math symbols and stuff
+%--------------------------------------------------
+% \usepackage{amsmath}					% all the fancy math stuff
+% \usepackage{amssymb}					% more math symbols
+% \usepackage{wasysym}					% even MORE math symbols
+% \usepackage{upgreek}					% upright Greek letters
+
+% Enhanced formatting
+%--------------------------------------------------
+% \usepackage{color}						% enable color
+% \usepackage{colortbl}					% colored tables
+% \usepackage{graphicx}					% fancy graphics
+% \usepackage{wrapfig}					% wrap figures
+% \usepackage{tabularx}					% better tables
+% \usepackage{enumerate}				% customize numbered lists
+% \usepackage{tocloft}					% fancy table of content
+% \usepackage{caption}					% extended captioning, e.g. without numbers
+% \usepackage{fancyhdr}					% fancy header customisation
+% \usepackage[parfill]{parskip} % vspace instead of indentation
+% \usepackage{geometry}					% customize page size, margins etc
+
+% Extra stuff, glossary, index etc
+%--------------------------------------------------
+% \usepackage{glossaries}				% glossaries
+% \usepackage{makeidx}					% index
+% \usepackage{showidx}					% print index items for debugging
+% \usepackage{url}
+% \usepackage{hyperref}					% should be loaded last
+% \usepackage{syntonly}					% check for syntax only; much faster
+% \syntaxonly										% comment if output is desired
+% \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}	% dots in TOC
+
+% Stuff that doesn't fit in any category
+% \usepackage{lastpage}					% provides total number of pages, use with:
+%																% \pageref{LastPage}
+%-------------------------------------------------- 
+
+\begin{document}
+
+\section{Introduction}
+
+\subsection{Orthology}
+
+\begin{itemize}
+	\item Where does the term come from?
+	\item Similarity vs. homology
+	\item Orthology
+	\item Paralogy:
+	\begin{itemize}
+		\item Inparalogy
+		\item Outparalogy
+	\end{itemize}
+	\item Xenology
+	\item Why is orthology important?
+	\begin{itemize}
+		\item Phylogenetics
+		\item Other uses (protein families, functional annotation, \ldots)
+	\end{itemize}
+\end{itemize}
+
+\subsection{How can orthology be assessed?}
+
+\begin{itemize}
+	\item Tree-based strategies
+	\begin{itemize}
+		\item Pros
+		\item Cons
+		\item Implementation examples
+	\end{itemize}
+	\item Graph-based strategies
+	\begin{itemize}
+		\item Pros
+		\item Cons
+		\item Implementation examples
+	\end{itemize}
+	\item Reciprocal best hits, triangulation, reference proteomes
+\end{itemize}
+
+\subsection{Example: The HaMStR approach}
+
+\begin{itemize}
+	\item How HaMStR does it
+	\item Shortcomings
+\end{itemize}
+
+\subsection{Hidden Markov Models}
+
+\begin{itemize}
+	\item Theory
+	\item Sequence weighting
+\end{itemize}
+
+\subsection{Room for improvement on the HaMStR approach}
+
+\begin{itemize}
+	\item Frameshift-corrected, corresponding nucleotide output
+	\item Performance issues
+	\item Bugs
+	\item Modularity (enabling reciprocal HMM search)
+\end{itemize}
+
+\clearpage
+
+\section{Methodology}
+
+\subsection{Graph-based approach}
+
+\begin{itemize}
+	\item Explain the graph
+	\item Reciprocal best hit, reference proteomes (triangulation)
+\end{itemize}
+
+\subsection{Algorithm}
+
+\begin{itemize}
+	\item Analysis
+	\item Reporting
+	\item Extensibility
+	\item Future development
+\end{itemize}
+
+\subsection{Programs}
+
+Description of and why these are used:
+
+\begin{itemize}
+	\item MySQL
+	\item HMMer3
+	\item BLAST+
+	\item Exonerate
+\end{itemize}
+
+\subsection{Config-file driven}
+
+Advantages of using a config file vs. command-line options
+
+\subsection{Database design}
+
+\begin{itemize}
+	\item Indexes
+	\item Unique indexes
+	\item InnoDB vs. MyISAM
+	\item Example queries
+\end{itemize}
+
+\subsection{Performance tweaks}
+
+\begin{itemize}
+	\item Using native Perl functions instead of shelling out
+	\item One BLAST database comprising all ``core'' taxa proteomes
+	\item RDBMS vs. flat files
+	\item LOAD DATA 
+	\item Disabling MyISAM indexes during upload
+\end{itemize}
+
+\subsection{SHA-256 checksums as sequence identifiers}
+
+\begin{itemize}
+	\item Reasoning
+	\item Collision probability
+\end{itemize}
+
+\clearpage
+
+\section{Results}
+
+\subsection{Benchmarks}
+
+Run a couple of transcriptomes from 1KITE, compare with HaMStR:
+
+\begin{itemize}
+	\item Hit ratio
+	\item Outliers
+\end{itemize}
+
+\subsection{HMM sensitivity}
+
+Report of the conducted tests in spring 2012: Phylogenetic diversity in a HMM only marginally affects its specificity.
+
+\section{Conclusions and outlook}
+
+\begin{itemize}
+	\item Summary
+	\item Future developments
+\end{itemize}
+
+\end{document}
