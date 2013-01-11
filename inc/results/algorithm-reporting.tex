@@ -1,0 +1,42 @@
+The reporting algorithm is as follows:
+
+\begin{enumerate}
+	\item Get configuration, initialize global variables.
+	\item Get a list of ortholog group IDs and their associated ortholog sequences
+		from the database.
+	\item Get all results in the form:
+	\begin{lstlisting}
+	hmmsearch_evalue => {
+		ortholog_group_id => [
+			reciprocal_hit,
+			reciprocal_hit,
+		],
+		ortholog_gene_id => [
+			reciprocal_hit,
+			reciprocal_hit,
+		],
+	}
+	\end{lstlisting}
+	\item Sort the e-values in ascending order.
+	\item Starting with the lowest hmmsearch e-value, do the following:
+	\begin{enumerate}
+		\item For each ortholog group that has a hit with this e-value, do the following:
+		\begin{enumerate}
+			\item Check whether this ortholog group is present in the list that was
+				generated in step 2. If not, skip to the next group (this ortholog group
+				has already been assigned a transcript).
+			\item Sort the reciprocal hits by BLAST e-value in ascending order.
+			\item For each reciprocal hit, do the following:
+			\begin{enumerate}
+				\item If the reciprocal search hit a sequence that is in this ortholog
+					group, and this transcript has not been assigned previously, then this
+					is a valid match. Otherwise, skip to the next reciprocal hit unless
+					the ``soft threshold'' has been reached (in that case, skip to the
+					next ortholog group).
+				\item Assign this transcript to this ortholog group. Neither can be
+					assigned again.
+			\end{enumerate}
+		\end{enumerate}
+	\end{enumerate}
+\end{enumerate}
+

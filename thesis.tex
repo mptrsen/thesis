@@ -101,21 +101,56 @@
 \tableofcontents
 
 %\mainmatter
-\chapter{Journal}
+%--------------------------------------------------
+% \chapter{Journal}
+% 
+% \include{inc/journal}
+% \include{inc/quotes}
+%-------------------------------------------------- 
 
-\include{inc/journal}
-\include{inc/quotes}
-
-\chapter{Thesis}
-
-\section{Introduction}
-\include{inc/intro/intro}
-\include{inc/hmms}
-%\include{inc/hamstr/methods}
+\chapter{Introduction}
+	\section{Summary}
+	\section{Orthology}
+		\include{inc/intro/intro}
+	\section{How can orthology be assessed?}
+	\section{The \hamstr approach}
+		\subsection{Hidden Markov models}
+			\include{inc/intro/hmms}
+		\subsection{Room for improvements on the \hamstr approach}
+\chapter{Methods}
+	\section{Programs}
+		\subsection{HMMer3}
+		\subsection{BLAST+}
+		\subsection{Exonerate}
+		\subsection{MySQL}
+			\include{inc/results/database-advantages}
+	\section{What have I done} % TODO ???
+		\subsection{Perl programming}
+\chapter{Results}
+	\include{inc/methods/methods}
+	\section{Graph}
+	\section{Algorithm}
+		\subsection{Analysis}
+			\include{inc/results/algorithm-analysis}
+		\subsection{Reporting}
+			\include{inc/results/algorithm-reporting}
+	\section{Implementation decisions}
+	\section{Database design}
+		\include{inc/results/database-structure}
+	\section{Performance tweaks}
+		\subsection{One BLAST database comprising all ``core'' taxa proteomes}
+		\subsection{RBDMS vs. flat files}
+		\subsection{MySQL performance}
+	\section{SHA-256 checksums as sequence identifiers}
+		\include{inc/results/checksums}
+	\section{Benchmarks}
+	\section{HMM sensitivity}
+\chapter{Discussion and outlook}
+	\section{Summary}
+	\section{Outlook}
 \clearpage
 
 \section{Methodology}
-\include{inc/orthograph/methods}
 \clearpage
 
 \section{Comparisons with \hamstr}
@@ -126,12 +161,12 @@
 
 \addcontentsline{toc}{section}{Bibliography}
 \bibliographystyle{plainnat}
-\bibliography{/home/malty/thesis/bib/zotero_export}
+\bibliography{bib/diploma}
 
 \appendix
 
 \chapter{Listings}
-\include{inc/listings}
+%\include{inc/listings}
 
 \addcontentsline{toc}{chapter}{Eigenst\"andigkeitserkl\"arung}
 \include{inc/erklaerung}
