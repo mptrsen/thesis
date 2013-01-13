@@ -73,6 +73,7 @@
 % setup hyperlinks
 \hypersetup{%
 	bookmarks=true,
+	linktocpage=true,
 	pdftitle={Fast and efficient mapping of transcript sequences to ortholog groups},
 	pdfauthor={Malte Petersen},
 	pdfcreator={pdflatex},
@@ -85,7 +86,7 @@
 \newcommand{\file}[1]{{\lstinline{#1}}}
 \newcommand{\code}[1]{{\texttt{#1}}}
 \newcommand{\hamstr}{HaMStR\xspace}
-\newcommand{\pname}{ORTHOGRAPH\xspace}
+\newcommand{\pname}{Orthograph\xspace}
 \newcommand{\species}[1]{\textit{#1}}
 
 
@@ -101,50 +102,59 @@
 \tableofcontents
 
 %\mainmatter
-%--------------------------------------------------
-% \chapter{Journal}
-% 
-% \include{inc/journal}
-% \include{inc/quotes}
-%-------------------------------------------------- 
+%\chapter{Journal}
+	%\include{inc/journal}
+\include{inc/quotes}
 
 \chapter{Introduction}
 	\section{Summary}
+		\input{inc/intro/intro}
 	\section{Orthology}
-		\include{inc/intro/intro}
+		\input{inc/intro/orthology}
 	\section{How can orthology be assessed?}
-	\section{The \hamstr approach}
+	\section{Implementation in \hamstr}
 		\subsection{Hidden Markov models}
-			\include{inc/intro/hmms}
+			\input{inc/intro/hmms}
 		\subsection{Room for improvements on the \hamstr approach}
-\chapter{Methods}
+
+\chapter{Material and methods}
 	\section{Programs}
-		\subsection{HMMer3}
+		\input{inc/methods/programs}
+		\subsection{HMMER3}
+			\input{inc/methods/hmmer}
 		\subsection{BLAST+}
+			\input{inc/methods/blast}
 		\subsection{Exonerate}
-		\subsection{MySQL}
-			\include{inc/results/database-advantages}
-	\section{What have I done} % TODO ???
+			\input{inc/methods/exonerate}
+	\section{Glue}
 		\subsection{Perl programming}
+			\input{inc/methods/perl}
+		\subsection{MySQL}
+			\input{inc/methods/mysql}
+	\section{Hardware}
+		
+
 \chapter{Results}
-	\include{inc/methods/methods}
 	\section{Graph}
 	\section{Algorithm}
 		\subsection{Analysis}
-			\include{inc/results/algorithm-analysis}
+			\input{inc/results/algorithm-analysis}
 		\subsection{Reporting}
-			\include{inc/results/algorithm-reporting}
+			\input{inc/results/algorithm-reporting}
 	\section{Implementation decisions}
+		\input{inc/results/implementation}
 	\section{Database design}
-		\include{inc/results/database-structure}
+		\input{inc/results/database-structure}
 	\section{Performance tweaks}
-		\subsection{One BLAST database comprising all ``core'' taxa proteomes}
+		\subsection{One BLAST database comprising all core taxa proteomes}
+			\input{inc/results/one-blast}
 		\subsection{RBDMS vs. flat files}
 		\subsection{MySQL performance}
 	\section{SHA-256 checksums as sequence identifiers}
-		\include{inc/results/checksums}
+		\input{inc/results/checksums}
 	\section{Benchmarks}
 	\section{HMM sensitivity}
+
 \chapter{Discussion and outlook}
 	\section{Summary}
 	\section{Outlook}
@@ -159,15 +169,35 @@
 \section{Conclusion and outlook}
 \clearpage
 
-\addcontentsline{toc}{section}{Bibliography}
+\phantomsection
+\addcontentsline{toc}{chapter}{Bibliography}
 \bibliographystyle{plainnat}
 \bibliography{bib/diploma}
+\clearpage
 
+\phantomsection
+\addcontentsline{toc}{chapter}{List of figures}
+\listoffigures
+\clearpage
+
+\phantomsection
+\addcontentsline{toc}{chapter}{List of tables}
+\listoftables
+\clearpage
+
+\phantomsection
 \appendix
+\chapter{Appendix}
+	\section{Listings}
+		\input{inc/listings}
 
-\chapter{Listings}
-%\include{inc/listings}
+\phantomsection
+\chapter*{Acknowledgements}
+	\input{inc/acknowledgements}
+	\clearpage
 
-\addcontentsline{toc}{chapter}{Eigenst\"andigkeitserkl\"arung}
-\include{inc/erklaerung}
+\phantomsection
+\addcontentsline{toc}{chapter}{Declaration of authorship}
+\chapter*{Declaration of authorship}
+	\input{inc/erklaerung}
 \end{document}
