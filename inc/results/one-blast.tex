@@ -1,0 +1,9 @@
+In \hamstr, one BLAST database had to be maintained for each reference taxon.
+This led to the problem of BLAST scores and e-values not being normalized: since
+the \hamstr BLAST databases are of differing sizes, the e-values, which depend
+on the database size, cannot be compared across reference taxa. To generate a
+``normalized'' e-value, \hamstr took an additional pairwise alignment step using
+ClustalW.
+
+\pname uses one BLAST database comprising all reference taxa proteomes. E-values
+are comparable across taxa since the database is of constant size. 
