@@ -1,3 +1,26 @@
+HaMStR (\cite{ebersberger2009}) implements a graph-based approach using hidden
+Markov models (HMMs, see section \ref{sec:hmms}). It is aimed specifically at
+searching for orthologs in expressed sequence tag (EST) data, which is sequenced
+using complementary DNA (cDNA) libraries. This cDNA is generated from mRNA and
+therefore contains no introns. EST data can be redundant and fragmented, which
+is why methods for orthology prediction in genomic data cannot be applied.
+
+The HaMStR algorithm goes as follows:
+
+\begin{enumerate}
+	\item For each HMM, do the following:
+		\begin{enumerate}
+			\item Search the EST library. If matches were found, do the following for
+				each:
+			\begin{enumerate}
+				\item Search the hit sequence against a BLAST database of all reference
+					proteomes (the ``reciprocal BLAST''). 
+				\item If matches were found: 
+
+			\end{enumerate}
+		\end{enumerate}
+\end{enumerate}
+
 \begin{figure}[h]
 		\begin{center}
 			\def\svgwidth{0.8\textwidth}

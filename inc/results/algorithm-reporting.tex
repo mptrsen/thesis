@@ -33,9 +33,13 @@ The reporting algorithm is as follows:
 					is a valid match. Otherwise, skip to the next reciprocal hit unless
 					the ``soft threshold'' has been reached (in that case, skip to the
 					next ortholog group).
-				\item Assign this transcript to this ortholog group. Neither can be
+				\item Assign this transcript to this ortholog group if it does not
+					overlap with an existing assignment. This transcript cannot be
 					assigned again.
 			\end{enumerate}
+			\item If there is a gap between the transcripts (the end of one transcript
+				lies more than 1 bp before the start of the next), fill the gap with
+				'X' and concatenate the fragments.
 		\end{enumerate}
 	\end{enumerate}
 \end{enumerate}
