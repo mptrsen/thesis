@@ -1,3 +1,24 @@
-In contrast to a sequence similarity-based search tool like BLAST,
-Needleman-Wunsch (\cite{needleman1970}) or Smith-Waterman (\cite{smith1981}),
-HMM-based alignment algorithms search for homology. 
+Hidden Markov models (HMMs) are probabilistic models that are generally
+applicable to ``linear'' problems and have been widely used in speech
+recognition algorithms for thirty years. 
+
+HMMs were introduced into computational biology by \cite{churchill1989} and used
+as profile models since the 1990s (\cite{krogh1994}).
+
+to time series or linear sequences.  This property makes them very useful for
+application on biological sequences.
+
+Proteins, RNAs and other biological molecular sequences can usually be
+classified into families of related sequences and structures
+(\cite{henikoff1997}).  In contrast to a sequence similarity-based search tool
+like BLAST, Needleman-Wunsch (\cite{needleman1970}) or Smith-Waterman
+(\cite{smith1981}), HMM-based alignment algorithms search for homology. 
+
+\begin{figure}[h]
+	\begin{center}
+		\def\svgwidth{0.8\textwidth}
+		\input{img/hmm-eddy.pdf_tex}
+	\end{center}
+	\caption[A simple hidden Markov model]{A simple hidden Markov model}
+	\label{fig:hmm}
+\end{figure}
