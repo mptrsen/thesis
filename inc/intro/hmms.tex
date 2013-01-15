@@ -19,7 +19,7 @@ HMM-based alignment algorithms search for homology.
 
 \begin{figure}[h]
 	\begin{center}
-		\def\svgwidth{0.8\textwidth}
+		\def\svgwidth{\textwidth}
 		\input{img/hmm-eddy.pdf_tex}
 	\end{center}
 	\caption[A simple hidden Markov model]{A simple, two-state hidden Markov model
@@ -27,13 +27,13 @@ HMM-based alignment algorithms search for homology.
 		\begin{inparaenum}[a)]
 			\item State 1 generates AT-rich sequences. State 2 generates CG-rich
 				sequences (so-called CpG islands). State transitions and their respective
-				probabilities are indicated by arrows. Symbol mission probabilities for
+				probabilities are indicated by arrows. Symbol emission probabilities for
 				each state are listed below the states.
 			\item At each position, the model not only emits a symbol with a
 				probability that is dependent on its state, it also transits to the
 				other state with a certain probability, or remains in the present state.
 			\item The symbol sequence is the result of of the state transitions and
-				the emission probabilities.
+				the emission probabilities in that state.
 		\end{inparaenum}
 	}
 	\label{fig:hmm}

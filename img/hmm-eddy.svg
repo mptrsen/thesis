@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="hmm-eddy.pdf">
+   sodipodi:docname="hmm-eddy.svg">
   <defs
      id="defs4">
     <linearGradient
@@ -104,7 +104,7 @@
        x2="-672.5"
        y2="-23.40625"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="translate(10,308.2677)" />
+       gradientTransform="translate(78,308.2677)" />
     <linearGradient
        inkscape:collect="always"
        xlink:href="#linearGradient4058-5"
@@ -163,7 +163,7 @@
        x2="-672.5"
        y1="-269.3009"
        x1="-672.5"
-       gradientTransform="translate(231.125,308.46235)"
+       gradientTransform="translate(299.125,308.46235)"
        gradientUnits="userSpaceOnUse"
        id="linearGradient4123"
        xlink:href="#linearGradient4150"
@@ -177,8 +177,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.70710678"
-     inkscape:cx="-797.6216"
-     inkscape:cy="638.60552"
+     inkscape:cx="-326.89144"
+     inkscape:cy="526.77569"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -262,7 +262,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -273,13 +273,13 @@
      transform="translate(0,-308.2677)">
     <path
        style="color:#000000;fill:url(#linearGradient4123);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="m -459.09375,38.966782 -19.53125,58.27682 0,187.812498 37.25,0 0,-187.812498 z"
+       d="m -391.09375,38.966782 -19.53125,58.27682 0,187.812498 37.25,0 0,-187.812498 z"
        id="rect4045-8"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccccc" />
     <path
        style="color:#000000;fill:url(#linearGradient4064);fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:1;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
-       d="M -680.21875,38.772133 -699.75,97.04895 l 0,187.8125 37.25,0 0,-187.8125 z"
+       d="M -612.21875,38.772133 -631.75,97.04895 l 0,187.8125 37.25,0 0,-187.8125 z"
        id="rect4045"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="cccccc" />
@@ -291,10 +291,10 @@
        sodipodi:cy="-322.57611"
        sodipodi:rx="53.386562"
        sodipodi:ry="53.386562"
-       d="m -626.49662,-322.57611 c 0,29.48458 -23.90197,53.38656 -53.38656,53.38656 -29.48458,0 -53.38656,-23.90198 -53.38656,-53.38656 0,-29.48459 23.90198,-53.38656 53.38656,-53.38656 29.48459,0 53.38656,23.90197 53.38656,53.38656 z"
-       transform="translate(-0.58578642,308.2677)" />
+       d="m -626.49662,-322.57611 a 53.386562,53.386562 0 1 1 -106.77312,0 53.386562,53.386562 0 1 1 106.77312,0 z"
+       transform="translate(67.414214,308.2677)" />
     <path
-       transform="translate(218.14245,307.91416)"
+       transform="translate(286.14245,307.91416)"
        sodipodi:type="arc"
        style="color:#000000;fill:#ffead0;fill-opacity:1;fill-rule:nonzero;stroke:#4d4d4d;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
        id="path4427-8"
@@ -302,54 +302,51 @@
        sodipodi:cy="-322.57611"
        sodipodi:rx="53.386562"
        sodipodi:ry="53.386562"
-       d="m -626.49662,-322.57611 c 0,29.48458 -23.90197,53.38656 -53.38656,53.38656 -29.48458,0 -53.38656,-23.90198 -53.38656,-53.38656 0,-29.48459 23.90198,-53.38656 53.38656,-53.38656 29.48459,0 53.38656,23.90197 53.38656,53.38656 z" />
+       d="m -626.49662,-322.57611 a 53.386562,53.386562 0 1 1 -106.77312,0 53.386562,53.386562 0 1 1 106.77312,0 z" />
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-684.47937"
+       x="-616.47937"
        y="-4.0553346"
        id="text4447"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4449"
-         x="-684.47937"
+         x="-616.47937"
          y="-4.0553346"
          style="font-size:32px;font-weight:normal;-inkscape-font-specification:Nimbus Sans L">\textbf{1}</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-461.74072"
+       x="-393.74072"
        y="-6.1766725"
        id="text4451"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan4453"
-         x="-461.74072"
+         x="-393.74072"
          y="-6.1766725"
          style="font-size:32px;font-weight:normal;-inkscape-font-specification:Nimbus Sans L">\textbf{2}</tspan></text>
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
-       d="m -736.09816,-334.24336 c -161.22035,-89.09545 -171.11984,104.6518 -7.77817,26.16295"
+       d="M -668.09816,-25.97566 C -829.31851,-115.07111 -839.218,78.67614 -675.87633,0.18729"
        id="path4455"
-       inkscape:connector-curvature="0"
-       transform="translate(0,308.2677)" />
+       inkscape:connector-curvature="0" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend)"
-       d="M -407.91313,-6.8096208 C -246.69278,82.28583 -236.79329,-111.46142 -400.13496,-32.972571"
+       d="M -339.91313,-6.8096208 C -178.69278,82.28583 -168.79329,-111.46142 -332.13496,-32.972571"
        id="path4455-3"
        inkscape:connector-curvature="0" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend-7)"
-       d="m -509.82399,-288.28142 c -46.66905,51.6188 -118.08683,-4.24264 -118.08683,-4.24264"
+       d="m -441.82399,19.98628 c -46.66905,51.6188 -118.08683,-4.24264 -118.08683,-4.24264"
        id="path4669"
-       inkscape:connector-curvature="0"
-       transform="translate(0,308.2677)" />
+       inkscape:connector-curvature="0" />
     <path
        style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;marker-end:url(#Arrow1Lend-7)"
-       d="m -631.44636,-355.45656 c 34.64824,-50.20459 101.18271,-24.74821 122.32948,-8.13173"
+       d="m -563.44636,-47.18886 c 34.64824,-50.20459 101.18271,-24.74821 122.32948,-8.13173"
        id="path4859"
        inkscape:connector-curvature="0"
-       transform="translate(0,308.2677)"
        sodipodi:nodetypes="cc" />
     <flowRoot
        xml:space="preserve"
@@ -367,7 +364,7 @@
        xml:space="preserve"
        id="flowRoot5061"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       transform="translate(27,303.2677)"><flowRegion
+       transform="translate(95,303.2677)"><flowRegion
          id="flowRegion5063"><rect
            id="rect5065"
            width="59"
@@ -386,7 +383,7 @@
        xml:space="preserve"
        id="flowRoot5061-6"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       transform="translate(249.851,301.52976)"><flowRegion
+       transform="translate(317.851,301.52976)"><flowRegion
          id="flowRegion5063-9"><rect
            id="rect5065-7"
            width="96"
@@ -404,402 +401,64 @@
          style="font-size:32px;font-weight:normal;line-height:122.00000286%;-inkscape-font-specification:Nimbus Sans L">0.05</flowPara></flowRoot>    <text
        xml:space="preserve"
        style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-833"
+       x="-765"
        y="-61.637817"
        id="text5138"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5140"
-         x="-833"
+         x="-765"
          y="-61.637817">0.99</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-592.08197"
+       x="-524.08197"
        y="-92.661819"
        id="text5138-8"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5140-0"
-         x="-592.08197"
+         x="-524.08197"
          y="-92.661819">0.01</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-356.082"
+       x="-288.082"
        y="-68.661819"
        id="text5138-3"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5140-5"
-         x="-356.082"
+         x="-288.082"
          y="-68.661819">0.9</tspan></text>
-    <path
-       sodipodi:type="arc"
-       style="color:#000000;fill:#ddf5ff;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;fill-opacity:1"
-       id="path5174"
-       sodipodi:cx="-818.12256"
-       sodipodi:cy="111.23392"
-       sodipodi:rx="23.334524"
-       sodipodi:ry="23.334524"
-       d="m -794.78803,111.23392 c 0,12.8873 -10.44723,23.33452 -23.33453,23.33452 -12.8873,0 -23.33452,-10.44722 -23.33452,-23.33452 0,-12.887305 10.44722,-23.334527 23.33452,-23.334527 12.8873,0 23.33453,10.447222 23.33453,23.334527 z"
-       transform="translate(8.25,310.0177)" />
-    <flowRoot
-       xml:space="preserve"
-       id="flowRoot5176"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       transform="translate(-85.171573,315.67151)"><flowRegion
-         id="flowRegion5178"><rect
-           id="rect5180"
-           width="191.53265"
-           height="37.553299"
-           x="-822"
-           y="98.094482"
-           style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L" /></flowRegion><flowPara
-         id="flowPara5182">\textbf{1}</flowPara></flowRoot>    <path
-       sodipodi:type="arc"
-       style="color:#000000;fill:#ddf5ff;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;fill-opacity:1"
-       id="path5174-6"
-       sodipodi:cx="-818.12256"
-       sodipodi:cy="111.23392"
-       sodipodi:rx="23.334524"
-       sodipodi:ry="23.334524"
-       d="m -794.78803,111.23392 c 0,12.8873 -10.44723,23.33452 -23.33453,23.33452 -12.8873,0 -23.33452,-10.44722 -23.33452,-23.33452 0,-12.887305 10.44722,-23.334527 23.33452,-23.334527 12.8873,0 23.33453,10.447222 23.33453,23.334527 z"
-       transform="translate(79.195972,310.0177)" />
-    <flowRoot
-       xml:space="preserve"
-       id="flowRoot5176-2"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       transform="translate(69.188612,315.67151)"><flowRegion
-         id="flowRegion5178-5"><rect
-           id="rect5180-3"
-           width="28.035534"
-           height="37.553303"
-           x="-822"
-           y="98.094482"
-           style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L" /></flowRegion><flowPara
-         id="flowPara5182-0">\textbf{1}</flowPara></flowRoot>    <path
-       sodipodi:type="arc"
-       style="color:#000000;fill:#ddf5ff;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;fill-opacity:1"
-       id="path5174-3"
-       sodipodi:cx="-818.12256"
-       sodipodi:cy="111.23392"
-       sodipodi:rx="23.334524"
-       sodipodi:ry="23.334524"
-       d="m -794.78803,111.23392 c 0,12.8873 -10.44723,23.33452 -23.33453,23.33452 -12.8873,0 -23.33452,-10.44722 -23.33452,-23.33452 0,-12.887305 10.44722,-23.334527 23.33452,-23.334527 12.8873,0 23.33453,10.447222 23.33453,23.334527 z"
-       transform="translate(144.95691,310.0177)" />
-    <flowRoot
-       xml:space="preserve"
-       id="flowRoot5176-4"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       transform="translate(134.94955,315.67151)"><flowRegion
-         id="flowRegion5178-2"><rect
-           id="rect5180-5"
-           width="28.035534"
-           height="37.553303"
-           x="-822"
-           y="98.094482"
-           style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L" /></flowRegion><flowPara
-         id="flowPara5182-1">\textbf{1}</flowPara></flowRoot>    <path
-       sodipodi:type="arc"
-       style="color:#000000;fill:#ddf5ff;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;fill-opacity:1"
-       id="path5174-4"
-       sodipodi:cx="-818.12256"
-       sodipodi:cy="111.23392"
-       sodipodi:rx="23.334524"
-       sodipodi:ry="23.334524"
-       d="m -794.78803,111.23392 c 0,12.8873 -10.44723,23.33452 -23.33453,23.33452 -12.8873,0 -23.33452,-10.44722 -23.33452,-23.33452 0,-12.887305 10.44722,-23.334527 23.33452,-23.334527 12.8873,0 23.33453,10.447222 23.33453,23.334527 z"
-       transform="translate(208.24296,310.0177)" />
-    <flowRoot
-       xml:space="preserve"
-       id="flowRoot5176-7"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       transform="translate(198.2356,315.67151)"><flowRegion
-         id="flowRegion5178-29"><rect
-           id="rect5180-6"
-           width="28.035534"
-           height="37.553303"
-           x="-822"
-           y="98.094482"
-           style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L" /></flowRegion><flowPara
-         id="flowPara5182-9">\textbf{1}</flowPara></flowRoot>    <path
-       sodipodi:type="arc"
-       style="color:#000000;fill:#ddf5ff;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;fill-opacity:1"
-       id="path5174-8"
-       sodipodi:cx="-818.12256"
-       sodipodi:cy="111.23392"
-       sodipodi:rx="23.334524"
-       sodipodi:ry="23.334524"
-       d="m -794.78803,111.23392 c 0,12.8873 -10.44723,23.33452 -23.33453,23.33452 -12.8873,0 -23.33452,-10.44722 -23.33452,-23.33452 0,-12.887305 10.44722,-23.334527 23.33452,-23.334527 12.8873,0 23.33453,10.447222 23.33453,23.334527 z"
-       transform="translate(274.11479,310.0177)" />
-    <flowRoot
-       xml:space="preserve"
-       id="flowRoot5176-3"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       transform="translate(264.10743,315.67151)"><flowRegion
-         id="flowRegion5178-24"><rect
-           id="rect5180-2"
-           width="28.035534"
-           height="37.553303"
-           x="-822"
-           y="98.094482"
-           style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L" /></flowRegion><flowPara
-         id="flowPara5182-11">\textbf{1}</flowPara></flowRoot>    <path
-       sodipodi:type="arc"
-       style="color:#000000;fill:#ffead0;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;fill-opacity:1"
-       id="path5174-2"
-       sodipodi:cx="-818.12256"
-       sodipodi:cy="111.23392"
-       sodipodi:rx="23.334524"
-       sodipodi:ry="23.334524"
-       d="m -794.78803,111.23392 c 0,12.8873 -10.44723,23.33452 -23.33453,23.33452 -12.8873,0 -23.33452,-10.44722 -23.33452,-23.33452 0,-12.887305 10.44722,-23.334527 23.33452,-23.334527 12.8873,0 23.33453,10.447222 23.33453,23.334527 z"
-       transform="translate(340.11838,310.0177)" />
-    <flowRoot
-       xml:space="preserve"
-       id="flowRoot5176-25"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       transform="translate(330.11102,315.67151)"><flowRegion
-         id="flowRegion5178-7"><rect
-           id="rect5180-0"
-           width="28.035534"
-           height="37.553303"
-           x="-822"
-           y="98.094482"
-           style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L" /></flowRegion><flowPara
-         id="flowPara5182-5">\textbf{2}</flowPara></flowRoot>    <path
-       sodipodi:type="arc"
-       style="color:#000000;fill:#ffead0;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;fill-opacity:1"
-       id="path5174-0"
-       sodipodi:cx="-818.12256"
-       sodipodi:cy="111.23392"
-       sodipodi:rx="23.334524"
-       sodipodi:ry="23.334524"
-       d="m -794.78803,111.23392 c 0,12.8873 -10.44723,23.33452 -23.33453,23.33452 -12.8873,0 -23.33452,-10.44722 -23.33452,-23.33452 0,-12.887305 10.44722,-23.334527 23.33452,-23.334527 12.8873,0 23.33453,10.447222 23.33453,23.334527 z"
-       transform="translate(402.34377,310.0177)" />
-    <flowRoot
-       xml:space="preserve"
-       id="flowRoot5176-8"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       transform="translate(392.33641,315.67151)"><flowRegion
-         id="flowRegion5178-1"><rect
-           id="rect5180-33"
-           width="28.035534"
-           height="37.553303"
-           x="-822"
-           y="98.094482"
-           style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L" /></flowRegion><flowPara
-         id="flowPara5182-6">\textbf{2}</flowPara></flowRoot>    <path
-       sodipodi:type="arc"
-       style="color:#000000;fill:#ffead0;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;fill-opacity:1"
-       id="path5174-5"
-       sodipodi:cx="-818.12256"
-       sodipodi:cy="111.23392"
-       sodipodi:rx="23.334524"
-       sodipodi:ry="23.334524"
-       d="m -794.78803,111.23392 c 0,12.8873 -10.44723,23.33452 -23.33453,23.33452 -12.8873,0 -23.33452,-10.44722 -23.33452,-23.33452 0,-12.887305 10.44722,-23.334527 23.33452,-23.334527 12.8873,0 23.33453,10.447222 23.33453,23.334527 z"
-       transform="translate(465.27628,310.0177)" />
-    <flowRoot
-       xml:space="preserve"
-       id="flowRoot5176-73"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       transform="translate(455.26892,315.67151)"><flowRegion
-         id="flowRegion5178-72"><rect
-           id="rect5180-64"
-           width="28.035534"
-           height="37.553303"
-           x="-822"
-           y="98.094482"
-           style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L" /></flowRegion><flowPara
-         id="flowPara5182-18">\textbf{2}</flowPara></flowRoot>    <path
-       sodipodi:type="arc"
-       style="color:#000000;fill:#ffead0;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;fill-opacity:1"
-       id="path5174-37"
-       sodipodi:cx="-818.12256"
-       sodipodi:cy="111.23392"
-       sodipodi:rx="23.334524"
-       sodipodi:ry="23.334524"
-       d="m -794.78803,111.23392 c 0,12.8873 -10.44723,23.33452 -23.33453,23.33452 -12.8873,0 -23.33452,-10.44722 -23.33452,-23.33452 0,-12.887305 10.44722,-23.334527 23.33452,-23.334527 12.8873,0 23.33453,10.447222 23.33453,23.334527 z"
-       transform="translate(530.45142,310.0177)" />
-    <flowRoot
-       xml:space="preserve"
-       id="flowRoot5176-0"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       transform="translate(520.44406,315.67151)"><flowRegion
-         id="flowRegion5178-3"><rect
-           id="rect5180-02"
-           width="28.035534"
-           height="37.553303"
-           x="-822"
-           y="98.094482"
-           style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L" /></flowRegion><flowPara
-         id="flowPara5182-7">\textbf{2}</flowPara></flowRoot>    <path
-       sodipodi:type="arc"
-       style="color:#000000;fill:#ddf5ff;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;fill-opacity:1"
-       id="path5174-44"
-       sodipodi:cx="-818.12256"
-       sodipodi:cy="111.23392"
-       sodipodi:rx="23.334524"
-       sodipodi:ry="23.334524"
-       d="m -794.78803,111.23392 c 0,12.8873 -10.44723,23.33452 -23.33453,23.33452 -12.8873,0 -23.33452,-10.44722 -23.33452,-23.33452 0,-12.887305 10.44722,-23.334527 23.33452,-23.334527 12.8873,0 23.33453,10.447222 23.33453,23.334527 z"
-       transform="translate(593.14128,310.0177)" />
-    <flowRoot
-       xml:space="preserve"
-       id="flowRoot5176-9"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       transform="translate(583.13392,315.67151)"><flowRegion
-         id="flowRegion5178-9"><rect
-           id="rect5180-646"
-           width="28.035534"
-           height="37.553303"
-           x="-822"
-           y="98.094482"
-           style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L" /></flowRegion><flowPara
-         id="flowPara5182-91">\textbf{1}</flowPara></flowRoot>    <path
-       sodipodi:type="arc"
-       style="color:#000000;fill:#ddf5ff;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;fill-opacity:1"
-       id="path5174-7"
-       sodipodi:cx="-818.12256"
-       sodipodi:cy="111.23392"
-       sodipodi:rx="23.334524"
-       sodipodi:ry="23.334524"
-       d="m -794.78803,111.23392 c 0,12.8873 -10.44723,23.33452 -23.33453,23.33452 -12.8873,0 -23.33452,-10.44722 -23.33452,-23.33452 0,-12.887305 10.44722,-23.334527 23.33452,-23.334527 12.8873,0 23.33453,10.447222 23.33453,23.334527 z"
-       transform="translate(657.60932,310.0177)" />
-    <flowRoot
-       xml:space="preserve"
-       id="flowRoot5176-75"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       transform="translate(647.60196,315.67151)"><flowRegion
-         id="flowRegion5178-22"><rect
-           id="rect5180-1"
-           width="28.035534"
-           height="37.553303"
-           x="-822"
-           y="98.094482"
-           style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L" /></flowRegion><flowPara
-         id="flowPara5182-79">\textbf{1}</flowPara></flowRoot>    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-820.95099"
-       y="606.88489"
-       id="text5353"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5355"
-         x="-820.95099"
-         y="606.88489">\textbf{A}</tspan></text>
+    <g
+       id="g3323">
+      <path
+         transform="translate(8.25,310.0177)"
+         d="m -794.78803,111.23392 c 0,12.8873 -10.44723,23.33452 -23.33453,23.33452 -12.8873,0 -23.33452,-10.44722 -23.33452,-23.33452 0,-12.887305 10.44722,-23.334527 23.33452,-23.334527 12.8873,0 23.33453,10.447222 23.33453,23.334527 z"
+         sodipodi:ry="23.334524"
+         sodipodi:rx="23.334524"
+         sodipodi:cy="111.23392"
+         sodipodi:cx="-818.12256"
+         id="path5174"
+         style="color:#000000;fill:#ddf5ff;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;fill-opacity:1"
+         sodipodi:type="arc" />
+      <flowRoot
+         transform="translate(4.948164,315.67151)"
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         id="flowRoot5176"
+         xml:space="preserve"><flowRegion
+           id="flowRegion5178"><rect
+             style="font-weight:normal;text-align:start;text-anchor:start;-inkscape-font-specification:Nimbus Sans L"
+             y="98.094482"
+             x="-822"
+             height="37.553299"
+             width="191.53265"
+             id="rect5180" /></flowRegion><flowPara
+           id="flowPara5182">\textbf{1}</flowPara></flowRoot>    </g>
     <text
        xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-750.96033"
-       y="606.88489"
-       id="text5353-6"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5355-7"
-         x="-750.96033"
-         y="606.88489">\textbf{T}</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-684.59271"
-       y="606.88489"
-       id="text5353-3"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5355-2"
-         x="-684.59271"
-         y="606.88489">\textbf{C}</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-620.95312"
-       y="606.88489"
-       id="text5353-1"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5355-71"
-         x="-620.95312"
-         y="606.88489">\textbf{A}</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-555.1922"
-       y="606.88489"
-       id="text5353-66"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5355-3"
-         x="-555.1922"
-         y="606.88489">\textbf{A}</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-492.25974"
-       y="606.88489"
-       id="text5353-9"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5355-9"
-         x="-492.25974"
-         y="606.88489">\textbf{G}</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-428.53387"
-       y="606.14893"
-       id="text5353-9-5"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5355-9-6"
-         x="-428.53387"
-         y="606.14893">\textbf{G}</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-363.73917"
-       y="606.14893"
-       id="text5353-3-3"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5355-2-1"
-         x="-363.73917"
-         y="606.14893">\textbf{C}</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-301.96179"
-       y="606.14893"
-       id="text5353-9-5-7"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5355-9-6-4"
-         x="-301.96179"
-         y="606.14893">\textbf{G}</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-238.40839"
-       y="606.88489"
-       id="text5353-66-0"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5355-3-3"
-         x="-238.40839"
-         y="606.88489">\textbf{A}</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-171.04434"
-       y="606.88489"
-       id="text5353-6-1"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5355-7-9"
-         x="-171.04434"
-         y="606.88489">\textbf{T}</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
        x="-118.62973"
        y="606.88489"
        id="text5519"
@@ -810,7 +469,7 @@
          y="606.88489">.</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
        x="-100.948"
        y="606.88489"
        id="text5519-5"
@@ -821,7 +480,7 @@
          y="606.88489">.</tspan></text>
     <text
        xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+       style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
        x="-82.072998"
        y="606.88489"
        id="text5519-8"
@@ -833,35 +492,35 @@
     <text
        xml:space="preserve"
        style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-118.83407"
+       x="61.165932"
        y="428.02957"
        id="text5519-0"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5521-3"
-         x="-118.83407"
+         x="61.165932"
          y="428.02957">.</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-101.15234"
+       x="78.847656"
        y="428.02957"
        id="text5519-5-1"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5521-0-2"
-         x="-101.15234"
+         x="78.847656"
          y="428.02957">.</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-82.277336"
+       x="97.722664"
        y="428.02957"
        id="text5519-8-2"
        sodipodi:linespacing="125%"><tspan
          sodipodi:role="line"
          id="tspan5521-02-8"
-         x="-82.277336"
+         x="97.722664"
          y="428.02957">.</tspan></text>
     <text
        xml:space="preserve"
@@ -940,126 +599,415 @@
          id="tspan5622"
          x="-988.53125"
          y="484.58432">transitions</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-738.58801"
-       y="484.58432"
-       id="text5634"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5636"
+    <g
+       id="g3330">
+      <g
+         id="g3316">
+        <path
+           sodipodi:type="arc"
+           style="color:#000000;fill:#ddf5ff;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate;fill-opacity:1"
+           id="path5174-6"
+           sodipodi:cx="-818.12256"
+           sodipodi:cy="111.23392"
+           sodipodi:rx="23.334524"
+           sodipodi:ry="23.334524"
+           d="m -794.78803,111.23392 c 0,12.8873 -10.44723,23.33452 -23.33453,23.33452 -12.8873,0 -23.33452,-10.44722 -23.33452,-23.33452 0,-12.887305 10.44722,-23.334527 23.33452,-23.334527 12.8873,0 23.33453,10.447222 23.33453,23.334527 z"
+           transform="translate(79.195972,310.0177)" />
+        <flowRoot
+           xml:space="preserve"
+           id="flowRoot5176-2"
+           style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+           transform="translate(69.188612,315.67151)"><flowRegion
+             id="flowRegion5178-5"><rect
+               id="rect5180-3"
+               width="136.82434"
+               height="37.553299"
+               x="-822"
+               y="98.094482"
+               style="font-weight:normal;text-align:start;text-anchor:start;-inkscape-font-specification:Nimbus Sans L" /></flowRegion><flowPara
+             id="flowPara5182-0">\textbf{1}</flowPara></flowRoot>      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5634"
+         y="484.58432"
          x="-738.58801"
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         xml:space="preserve"><tspan
+           style="text-align:center;text-anchor:middle;font-weight:normal;-inkscape-font-specification:Nimbus Sans L"
+           y="484.58432"
+           x="-738.58801"
+           id="tspan5636"
+           sodipodi:role="line">0.99</tspan></text>
+    </g>
+    <g
+       id="g3340"
+       transform="translate(20,0)">
+      <g
+         id="g3309">
+        <path
+           sodipodi:type="arc"
+           style="color:#000000;fill:#ddf5ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           id="path5174-3"
+           sodipodi:cx="-818.12256"
+           sodipodi:cy="111.23392"
+           sodipodi:rx="23.334524"
+           sodipodi:ry="23.334524"
+           d="m -794.78803,111.23392 c 0,12.8873 -10.44723,23.33452 -23.33453,23.33452 -12.8873,0 -23.33452,-10.44722 -23.33452,-23.33452 0,-12.887305 10.44722,-23.334527 23.33452,-23.334527 12.8873,0 23.33453,10.447222 23.33453,23.334527 z"
+           transform="translate(144.95691,310.0177)" />
+        <flowRoot
+           xml:space="preserve"
+           id="flowRoot5176-4"
+           style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+           transform="translate(134.94955,315.67151)"><flowRegion
+             id="flowRegion5178-2"><rect
+               id="rect5180-5"
+               width="138.7787"
+               height="37.553299"
+               x="-822"
+               y="98.094482"
+               style="font-weight:normal;text-align:start;text-anchor:start;-inkscape-font-specification:Nimbus Sans L" /></flowRegion><flowPara
+             id="flowPara5182-1">\textbf{1}</flowPara></flowRoot>      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5634-9"
          y="484.58432"
-         style="text-align:center;text-anchor:middle;font-weight:normal;-inkscape-font-specification:Nimbus Sans L">0.99</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-672.71973"
-       y="484.58432"
-       id="text5634-9"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5636-2"
          x="-672.71973"
-         y="484.58432"
-         style="text-align:center;text-anchor:middle;font-weight:normal;-inkscape-font-specification:Nimbus Sans L">0.99</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-612.15387"
-       y="483.84833"
-       id="text5634-2"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5636-9"
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         xml:space="preserve"><tspan
+           style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L"
+           y="484.58432"
+           x="-672.71973"
+           id="tspan5636-2"
+           sodipodi:role="line">0.99</tspan></text>
+    </g>
+    <g
+       id="g3350"
+       transform="translate(40,0)">
+      <g
+         id="g3302">
+        <path
+           sodipodi:type="arc"
+           style="color:#000000;fill:#ddf5ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           id="path5174-4"
+           sodipodi:cx="-818.12256"
+           sodipodi:cy="111.23392"
+           sodipodi:rx="23.334524"
+           sodipodi:ry="23.334524"
+           d="m -794.78803,111.23392 c 0,12.8873 -10.44723,23.33452 -23.33453,23.33452 -12.8873,0 -23.33452,-10.44722 -23.33452,-23.33452 0,-12.887305 10.44722,-23.334527 23.33452,-23.334527 12.8873,0 23.33453,10.447222 23.33453,23.334527 z"
+           transform="translate(208.24296,310.0177)" />
+        <flowRoot
+           xml:space="preserve"
+           id="flowRoot5176-7"
+           style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+           transform="translate(198.2356,315.67151)"><flowRegion
+             id="flowRegion5178-29"><rect
+               id="rect5180-6"
+               width="134.01619"
+               height="37.553299"
+               x="-822"
+               y="98.094482"
+               style="font-weight:normal;text-align:start;text-anchor:start;-inkscape-font-specification:Nimbus Sans L" /></flowRegion><flowPara
+             id="flowPara5182-9">\textbf{1}</flowPara></flowRoot>      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5634-2"
+         y="483.84833"
          x="-612.15387"
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         xml:space="preserve"><tspan
+           style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L"
+           y="483.84833"
+           x="-612.15387"
+           id="tspan5636-9"
+           sodipodi:role="line">0.99</tspan></text>
+    </g>
+    <g
+       id="g3360"
+       transform="translate(60,0)">
+      <g
+         id="g3295">
+        <path
+           sodipodi:type="arc"
+           style="color:#000000;fill:#ddf5ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           id="path5174-8"
+           sodipodi:cx="-818.12256"
+           sodipodi:cy="111.23392"
+           sodipodi:rx="23.334524"
+           sodipodi:ry="23.334524"
+           d="m -794.78803,111.23392 c 0,12.8873 -10.44723,23.33452 -23.33453,23.33452 -12.8873,0 -23.33452,-10.44722 -23.33452,-23.33452 0,-12.887305 10.44722,-23.334527 23.33452,-23.334527 12.8873,0 23.33453,10.447222 23.33453,23.334527 z"
+           transform="translate(274.11479,310.0177)" />
+        <flowRoot
+           xml:space="preserve"
+           id="flowRoot5176-3"
+           style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+           transform="translate(264.10743,315.67151)"><flowRegion
+             id="flowRegion5178-24"><rect
+               id="rect5180-2"
+               width="138.13467"
+               height="37.553299"
+               x="-822"
+               y="98.094482"
+               style="font-weight:normal;text-align:start;text-anchor:start;-inkscape-font-specification:Nimbus Sans L" /></flowRegion><flowPara
+             id="flowPara5182-11">\textbf{1}</flowPara></flowRoot>      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5634-9-6"
          y="483.84833"
-         style="text-align:center;text-anchor:middle;font-weight:normal;-inkscape-font-specification:Nimbus Sans L">0.99</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-546.78558"
-       y="483.84833"
-       id="text5634-9-6"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5636-2-5"
          x="-546.78558"
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         xml:space="preserve"><tspan
+           style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L"
+           y="483.84833"
+           x="-546.78558"
+           id="tspan5636-2-5"
+           sodipodi:role="line">0.99</tspan></text>
+    </g>
+    <g
+       id="g3370"
+       transform="translate(80,0)">
+      <g
+         id="g3288">
+        <path
+           sodipodi:type="arc"
+           style="color:#000000;fill:#ffead0;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           id="path5174-2"
+           sodipodi:cx="-818.12256"
+           sodipodi:cy="111.23392"
+           sodipodi:rx="23.334524"
+           sodipodi:ry="23.334524"
+           d="m -794.78803,111.23392 c 0,12.8873 -10.44723,23.33452 -23.33453,23.33452 -12.8873,0 -23.33452,-10.44722 -23.33452,-23.33452 0,-12.887305 10.44722,-23.334527 23.33452,-23.334527 12.8873,0 23.33453,10.447222 23.33453,23.334527 z"
+           transform="translate(340.11838,310.0177)" />
+        <flowRoot
+           xml:space="preserve"
+           id="flowRoot5176-25"
+           style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+           transform="translate(330.11102,315.67151)"><flowRegion
+             id="flowRegion5178-7"><rect
+               id="rect5180-0"
+               width="148.77036"
+               height="37.553299"
+               x="-822"
+               y="98.094482"
+               style="font-weight:normal;text-align:start;text-anchor:start;-inkscape-font-specification:Nimbus Sans L" /></flowRegion><flowPara
+             id="flowPara5182-5">\textbf{2}</flowPara></flowRoot>      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5634-8"
          y="483.84833"
-         style="text-align:center;text-anchor:middle;font-weight:normal;-inkscape-font-specification:Nimbus Sans L">0.99</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-479.74588"
-       y="483.84833"
-       id="text5634-8"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5636-3"
          x="-479.74588"
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         xml:space="preserve"><tspan
+           style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L"
+           y="483.84833"
+           x="-479.74588"
+           id="tspan5636-3"
+           sodipodi:role="line">0.01</tspan></text>
+    </g>
+    <g
+       id="g3380"
+       transform="translate(100,0)">
+      <g
+         id="g3281">
+        <path
+           sodipodi:type="arc"
+           style="color:#000000;fill:#ffead0;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           id="path5174-0"
+           sodipodi:cx="-818.12256"
+           sodipodi:cy="111.23392"
+           sodipodi:rx="23.334524"
+           sodipodi:ry="23.334524"
+           d="m -794.78803,111.23392 c 0,12.8873 -10.44723,23.33452 -23.33453,23.33452 -12.8873,0 -23.33452,-10.44722 -23.33452,-23.33452 0,-12.887305 10.44722,-23.334527 23.33452,-23.334527 12.8873,0 23.33453,10.447222 23.33453,23.334527 z"
+           transform="translate(402.34377,310.0177)" />
+        <flowRoot
+           xml:space="preserve"
+           id="flowRoot5176-8"
+           style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+           transform="translate(392.33641,315.67151)"><flowRegion
+             id="flowRegion5178-1"><rect
+               id="rect5180-33"
+               width="145.05321"
+               height="37.553299"
+               x="-822"
+               y="98.094482"
+               style="font-weight:normal;text-align:start;text-anchor:start;-inkscape-font-specification:Nimbus Sans L" /></flowRegion><flowPara
+             id="flowPara5182-6">\textbf{2}</flowPara></flowRoot>      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5634-9-5"
          y="483.84833"
-         style="text-align:center;text-anchor:middle;font-weight:normal;-inkscape-font-specification:Nimbus Sans L">0.01</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-418.28561"
-       y="483.84833"
-       id="text5634-9-5"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5636-2-6"
          x="-418.28561"
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         xml:space="preserve"><tspan
+           style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L"
+           y="483.84833"
+           x="-418.28561"
+           id="tspan5636-2-6"
+           sodipodi:role="line">0.99</tspan></text>
+    </g>
+    <g
+       id="g3390"
+       transform="translate(120,0)">
+      <g
+         id="g3274">
+        <path
+           sodipodi:type="arc"
+           style="color:#000000;fill:#ffead0;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           id="path5174-5"
+           sodipodi:cx="-818.12256"
+           sodipodi:cy="111.23392"
+           sodipodi:rx="23.334524"
+           sodipodi:ry="23.334524"
+           d="m -794.78803,111.23392 c 0,12.8873 -10.44723,23.33452 -23.33453,23.33452 -12.8873,0 -23.33452,-10.44722 -23.33452,-23.33452 0,-12.887305 10.44722,-23.334527 23.33452,-23.334527 12.8873,0 23.33453,10.447222 23.33453,23.334527 z"
+           transform="translate(465.27628,310.0177)" />
+        <flowRoot
+           xml:space="preserve"
+           id="flowRoot5176-73"
+           style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+           transform="translate(455.26892,315.67151)"><flowRegion
+             id="flowRegion5178-72"><rect
+               id="rect5180-64"
+               width="124.52013"
+               height="37.553299"
+               x="-822"
+               y="98.094482"
+               style="font-weight:normal;text-align:start;text-anchor:start;-inkscape-font-specification:Nimbus Sans L" /></flowRegion><flowPara
+             id="flowPara5182-18">\textbf{2}</flowPara></flowRoot>      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5634-3"
          y="483.84833"
-         style="text-align:center;text-anchor:middle;font-weight:normal;-inkscape-font-specification:Nimbus Sans L">0.99</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-354.6539"
-       y="483.84833"
-       id="text5634-3"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5636-7"
          x="-354.6539"
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         xml:space="preserve"><tspan
+           style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L"
+           y="483.84833"
+           x="-354.6539"
+           id="tspan5636-7"
+           sodipodi:role="line">0.99</tspan></text>
+    </g>
+    <g
+       id="g3400"
+       transform="translate(140,0)">
+      <g
+         id="g3267">
+        <path
+           sodipodi:type="arc"
+           style="color:#000000;fill:#ffead0;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           id="path5174-37"
+           sodipodi:cx="-818.12256"
+           sodipodi:cy="111.23392"
+           sodipodi:rx="23.334524"
+           sodipodi:ry="23.334524"
+           d="m -794.78803,111.23392 c 0,12.8873 -10.44723,23.33452 -23.33453,23.33452 -12.8873,0 -23.33452,-10.44722 -23.33452,-23.33452 0,-12.887305 10.44722,-23.334527 23.33452,-23.334527 12.8873,0 23.33453,10.447222 23.33453,23.334527 z"
+           transform="translate(530.45142,310.0177)" />
+        <flowRoot
+           xml:space="preserve"
+           id="flowRoot5176-0"
+           style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+           transform="translate(520.44406,315.67151)"><flowRegion
+             id="flowRegion5178-3"><rect
+               id="rect5180-02"
+               width="132.68733"
+               height="37.553299"
+               x="-822"
+               y="98.094482"
+               style="font-weight:normal;text-align:start;text-anchor:start;-inkscape-font-specification:Nimbus Sans L" /></flowRegion><flowPara
+             id="flowPara5182-7">\textbf{2}</flowPara></flowRoot>      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5634-9-9"
          y="483.84833"
-         style="text-align:center;text-anchor:middle;font-weight:normal;-inkscape-font-specification:Nimbus Sans L">0.99</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-287.78561"
-       y="483.84833"
-       id="text5634-9-9"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5636-2-8"
          x="-287.78561"
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         xml:space="preserve"><tspan
+           style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L"
+           y="483.84833"
+           x="-287.78561"
+           id="tspan5636-2-8"
+           sodipodi:role="line">0.99</tspan></text>
+    </g>
+    <g
+       id="g3410"
+       transform="translate(160,0)">
+      <g
+         id="g3260">
+        <path
+           sodipodi:type="arc"
+           style="color:#000000;fill:#ddf5ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           id="path5174-44"
+           sodipodi:cx="-818.12256"
+           sodipodi:cy="111.23392"
+           sodipodi:rx="23.334524"
+           sodipodi:ry="23.334524"
+           d="m -794.78803,111.23392 c 0,12.8873 -10.44723,23.33452 -23.33453,23.33452 -12.8873,0 -23.33452,-10.44722 -23.33452,-23.33452 0,-12.887305 10.44722,-23.334527 23.33452,-23.334527 12.8873,0 23.33453,10.447222 23.33453,23.334527 z"
+           transform="translate(593.14128,310.0177)" />
+        <flowRoot
+           xml:space="preserve"
+           id="flowRoot5176-9"
+           style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+           transform="translate(583.13392,315.67151)"><flowRegion
+             id="flowRegion5178-9"><rect
+               id="rect5180-646"
+               width="151.0721"
+               height="37.553299"
+               x="-822"
+               y="98.094482"
+               style="font-weight:normal;text-align:start;text-anchor:start;-inkscape-font-specification:Nimbus Sans L" /></flowRegion><flowPara
+             id="flowPara5182-91">\textbf{1}</flowPara></flowRoot>      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5634-81"
          y="483.84833"
-         style="text-align:center;text-anchor:middle;font-weight:normal;-inkscape-font-specification:Nimbus Sans L">0.99</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-223.15215"
-       y="483.84833"
-       id="text5634-81"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5636-0"
          x="-223.15215"
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         xml:space="preserve"><tspan
+           style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L"
+           y="483.84833"
+           x="-223.15215"
+           id="tspan5636-0"
+           sodipodi:role="line">0.1</tspan></text>
+    </g>
+    <g
+       id="g3420"
+       transform="translate(180,0)">
+      <g
+         id="g3253">
+        <path
+           sodipodi:type="arc"
+           style="color:#000000;fill:#ddf5ff;fill-opacity:1;stroke:#000000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
+           id="path5174-7"
+           sodipodi:cx="-818.12256"
+           sodipodi:cy="111.23392"
+           sodipodi:rx="23.334524"
+           sodipodi:ry="23.334524"
+           d="m -794.78803,111.23392 c 0,12.8873 -10.44723,23.33452 -23.33453,23.33452 -12.8873,0 -23.33452,-10.44722 -23.33452,-23.33452 0,-12.887305 10.44722,-23.334527 23.33452,-23.334527 12.8873,0 23.33453,10.447222 23.33453,23.334527 z"
+           transform="translate(657.60932,310.0177)" />
+        <flowRoot
+           xml:space="preserve"
+           id="flowRoot5176-75"
+           style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+           transform="translate(647.60196,315.67151)"><flowRegion
+             id="flowRegion5178-22"><rect
+               id="rect5180-1"
+               width="128.88808"
+               height="37.553299"
+               x="-822"
+               y="98.094482"
+               style="font-weight:normal;text-align:start;text-anchor:start;-inkscape-font-specification:Nimbus Sans L" /></flowRegion><flowPara
+             id="flowPara5182-79">\textbf{1}</flowPara></flowRoot>      </g>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5634-9-7"
          y="483.84833"
-         style="text-align:center;text-anchor:middle;font-weight:normal;-inkscape-font-specification:Nimbus Sans L">0.1</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-162.78561"
-       y="483.84833"
-       id="text5634-9-7"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5636-2-0"
          x="-162.78561"
-         y="483.84833"
-         style="text-align:center;text-anchor:middle;font-weight:normal;-inkscape-font-specification:Nimbus Sans L">0.99</tspan></text>
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         xml:space="preserve"><tspan
+           style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L"
+           y="483.84833"
+           x="-162.78561"
+           id="tspan5636-2-0"
+           sodipodi:role="line">0.99</tspan></text>
+    </g>
     <text
        xml:space="preserve"
        style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
@@ -1071,138 +1019,302 @@
          id="tspan5741"
          x="-988.53125"
          y="655.36218">emissions:</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-810.78967"
-       y="655.36218"
-       id="text5743"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5745"
+    <g
+       id="g3490">
+      <text
+         sodipodi:linespacing="125%"
+         id="text5353"
+         y="606.88489"
+         x="-820.95099"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         xml:space="preserve"><tspan
+           y="606.88489"
+           x="-820.95099"
+           id="tspan5355"
+           sodipodi:role="line">\textbf{A}</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5743"
+         y="655.36218"
          x="-810.78967"
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         xml:space="preserve"><tspan
+           style="text-align:center;text-anchor:middle;font-weight:normal;-inkscape-font-specification:Nimbus Sans L"
+           y="655.36218"
+           x="-810.78967"
+           id="tspan5745"
+           sodipodi:role="line">0.4</tspan></text>
+    </g>
+    <g
+       id="g3484"
+       transform="translate(20,0)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text5353-6"
+         y="606.88489"
+         x="-750.96033"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         xml:space="preserve"><tspan
+           y="606.88489"
+           x="-750.96033"
+           id="tspan5355-7"
+           sodipodi:role="line">\textbf{T}</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5743-7"
          y="655.36218"
-         style="text-align:center;text-anchor:middle;font-weight:normal;-inkscape-font-specification:Nimbus Sans L">0.4</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-741.7406"
-       y="655.36218"
-       id="text5743-7"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5745-2"
          x="-741.7406"
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         xml:space="preserve"><tspan
+           style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L"
+           y="655.36218"
+           x="-741.7406"
+           id="tspan5745-2"
+           sodipodi:role="line">0.4</tspan></text>
+    </g>
+    <g
+       id="g3478"
+       transform="translate(40,0)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text5353-3"
+         y="606.88489"
+         x="-684.59271"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         xml:space="preserve"><tspan
+           y="606.88489"
+           x="-684.59271"
+           id="tspan5355-2"
+           sodipodi:role="line">\textbf{C}</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5743-4"
          y="655.36218"
-         style="text-align:center;text-anchor:middle;font-weight:normal;-inkscape-font-specification:Nimbus Sans L">0.4</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-673.79797"
-       y="655.36218"
-       id="text5743-4"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5745-5"
          x="-673.79797"
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         xml:space="preserve"><tspan
+           style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L"
+           y="655.36218"
+           x="-673.79797"
+           id="tspan5745-5"
+           sodipodi:role="line">0.1</tspan></text>
+    </g>
+    <g
+       id="g3472"
+       transform="translate(60,0)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text5353-1"
+         y="606.88489"
+         x="-620.95312"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         xml:space="preserve"><tspan
+           y="606.88489"
+           x="-620.95312"
+           id="tspan5355-71"
+           sodipodi:role="line">\textbf{A}</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5743-71"
          y="655.36218"
-         style="text-align:center;text-anchor:middle;font-weight:normal;-inkscape-font-specification:Nimbus Sans L">0.1</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-613.04724"
-       y="655.36218"
-       id="text5743-71"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5745-4"
          x="-613.04724"
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         xml:space="preserve"><tspan
+           style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L"
+           y="655.36218"
+           x="-613.04724"
+           id="tspan5745-4"
+           sodipodi:role="line">0.4</tspan></text>
+    </g>
+    <g
+       id="g3466"
+       transform="translate(80,0)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text5353-66"
+         y="606.88489"
+         x="-555.1922"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         xml:space="preserve"><tspan
+           y="606.88489"
+           x="-555.1922"
+           id="tspan5355-3"
+           sodipodi:role="line">\textbf{A}</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5743-0"
          y="655.36218"
-         style="text-align:center;text-anchor:middle;font-weight:normal;-inkscape-font-specification:Nimbus Sans L">0.4</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-544.45789"
-       y="655.36218"
-       id="text5743-0"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5745-54"
          x="-544.45789"
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         xml:space="preserve"><tspan
+           style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L"
+           y="655.36218"
+           x="-544.45789"
+           id="tspan5745-54"
+           sodipodi:role="line">0.4</tspan></text>
+    </g>
+    <g
+       id="g3460"
+       transform="translate(100,0)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text5353-9"
+         y="606.88489"
+         x="-492.25974"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         xml:space="preserve"><tspan
+           y="606.88489"
+           x="-492.25974"
+           id="tspan5355-9"
+           sodipodi:role="line">\textbf{G}</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5743-6"
          y="655.36218"
-         style="text-align:center;text-anchor:middle;font-weight:normal;-inkscape-font-specification:Nimbus Sans L">0.4</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-478.45538"
-       y="655.36218"
-       id="text5743-6"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5745-0"
          x="-478.45538"
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         xml:space="preserve"><tspan
+           style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L"
+           y="655.36218"
+           x="-478.45538"
+           id="tspan5745-0"
+           sodipodi:role="line">0.5</tspan></text>
+    </g>
+    <g
+       id="g3454"
+       transform="translate(120,0)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text5353-9-5"
+         y="606.14893"
+         x="-428.53387"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         xml:space="preserve"><tspan
+           y="606.14893"
+           x="-428.53387"
+           id="tspan5355-9-6"
+           sodipodi:role="line">\textbf{G}</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5743-6-4"
          y="655.36218"
-         style="text-align:center;text-anchor:middle;font-weight:normal;-inkscape-font-specification:Nimbus Sans L">0.5</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-415.76443"
-       y="655.36218"
-       id="text5743-6-4"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5745-0-1"
          x="-415.76443"
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         xml:space="preserve"><tspan
+           style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L"
+           y="655.36218"
+           x="-415.76443"
+           id="tspan5745-0-1"
+           sodipodi:role="line">0.5</tspan></text>
+    </g>
+    <g
+       id="g3448"
+       transform="translate(140,0)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text5353-3-3"
+         y="606.14893"
+         x="-363.73917"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         xml:space="preserve"><tspan
+           y="606.14893"
+           x="-363.73917"
+           id="tspan5355-2-1"
+           sodipodi:role="line">\textbf{C}</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5743-6-5"
          y="655.36218"
-         style="text-align:center;text-anchor:middle;font-weight:normal;-inkscape-font-specification:Nimbus Sans L">0.5</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-353.07349"
-       y="655.36218"
-       id="text5743-6-5"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5745-0-3"
          x="-353.07349"
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         xml:space="preserve"><tspan
+           style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L"
+           y="655.36218"
+           x="-353.07349"
+           id="tspan5745-0-3"
+           sodipodi:role="line">0.4</tspan></text>
+    </g>
+    <g
+       id="g3436"
+       transform="translate(180,0)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text5353-66-0"
+         y="606.88489"
+         x="-238.40839"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         xml:space="preserve"><tspan
+           y="606.88489"
+           x="-238.40839"
+           id="tspan5355-3-3"
+           sodipodi:role="line">\textbf{A}</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5743-6-5-6"
          y="655.36218"
-         style="text-align:center;text-anchor:middle;font-weight:normal;-inkscape-font-specification:Nimbus Sans L">0.4</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-224.49202"
-       y="655.36218"
-       id="text5743-6-5-6"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5745-0-3-2"
          x="-224.49202"
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         xml:space="preserve"><tspan
+           style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L"
+           y="655.36218"
+           x="-224.49202"
+           id="tspan5745-0-3-2"
+           sodipodi:role="line">0.4</tspan></text>
+    </g>
+    <g
+       id="g3430"
+       transform="translate(200,0)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text5353-6-1"
+         y="606.88489"
+         x="-171.04434"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         xml:space="preserve"><tspan
+           y="606.88489"
+           x="-171.04434"
+           id="tspan5355-7-9"
+           sodipodi:role="line">\textbf{T}</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5743-6-5-2"
          y="655.36218"
-         style="text-align:center;text-anchor:middle;font-weight:normal;-inkscape-font-specification:Nimbus Sans L">0.4</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-161.20598"
-       y="655.36218"
-       id="text5743-6-5-2"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5745-0-3-4"
          x="-161.20598"
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         xml:space="preserve"><tspan
+           style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L"
+           y="655.36218"
+           x="-161.20598"
+           id="tspan5745-0-3-4"
+           sodipodi:role="line">0.4</tspan></text>
+    </g>
+    <g
+       id="g3442"
+       transform="translate(160,0)">
+      <text
+         sodipodi:linespacing="125%"
+         id="text5353-9-5-7"
+         y="606.14893"
+         x="-301.96179"
+         style="font-size:10px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         xml:space="preserve"><tspan
+           y="606.14893"
+           x="-301.96179"
+           id="tspan5355-9-6-4"
+           sodipodi:role="line">\textbf{G}</tspan></text>
+      <text
+         sodipodi:linespacing="125%"
+         id="text5743-6-4-3"
          y="655.36218"
-         style="text-align:center;text-anchor:middle;font-weight:normal;-inkscape-font-specification:Nimbus Sans L">0.4</tspan></text>
-    <text
-       xml:space="preserve"
-       style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       x="-289.19232"
-       y="655.36218"
-       id="text5743-6-4-3"
-       sodipodi:linespacing="125%"><tspan
-         sodipodi:role="line"
-         id="tspan5745-0-1-5"
          x="-289.19232"
-         y="655.36218"
-         style="text-align:center;text-anchor:middle;font-weight:normal;-inkscape-font-specification:Nimbus Sans L">0.5</tspan></text>
+         style="font-size:32px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
+         xml:space="preserve"><tspan
+           style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L"
+           y="655.36218"
+           x="-289.19232"
+           id="tspan5745-0-1-5"
+           sodipodi:role="line">0.5</tspan></text>
+    </g>
     <flowRoot
        xml:space="preserve"
        id="flowRoot5898"
@@ -1289,7 +1401,7 @@
        xml:space="preserve"
        id="flowRoot5061-2"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       transform="translate(-21,303.2677)"><flowRegion
+       transform="translate(47,303.2677)"><flowRegion
          id="flowRegion5063-7"><rect
            id="rect5065-1"
            width="180.01115"
@@ -1308,7 +1420,7 @@
        xml:space="preserve"
        id="flowRoot5061-2-1"
        style="font-size:22px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none;font-family:Nimbus Sans L;-inkscape-font-specification:Nimbus Sans L"
-       transform="translate(201,303.2677)"><flowRegion
+       transform="translate(269,303.2677)"><flowRegion
          id="flowRegion5063-7-9"><rect
            id="rect5065-1-9"
            width="180.01115"

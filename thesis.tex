@@ -1,53 +1,26 @@
 \documentclass[a4paper,13pt]{scrreprt}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-%--------------------------------------------------
 \usepackage[english]{babel}		% English language 
+%--------------------------------------------------
+% font and formatting
 \usepackage{lmodern}					% font looks better on screen
 \usepackage{microtype}				% even better
 \usepackage{fullpage}					% more space on the page
 \usepackage{natbib}
-
-% Math symbols and stuff
 %--------------------------------------------------
+% more features
 \usepackage{amsmath}					% all the fancy math stuff
-% \usepackage{amssymb}					% more math symbols
-% \usepackage{wasysym}					% even MORE math symbols
-% \usepackage{upgreek}					% upright Greek letters
-
-% Enhanced formatting
-%--------------------------------------------------
-\usepackage{color}						% enable color
-% \usepackage{colortbl}					% colored tables
-\usepackage{graphicx}					% fancy graphics
-% \usepackage{wrapfig}					% wrap figures
-% \usepackage{tabularx}					% better tables
-\usepackage{enumerate}				% customize numbered lists
-% \usepackage{tocloft}					% fancy table of content
-% \usepackage{caption}					% extended captioning, e.g. without numbers
-% \usepackage{fancyhdr}					% fancy header customisation
-% \usepackage[parfill]{parskip} % vspace instead of indentation
-% \usepackage{geometry}					% customize page size, margins etc
 \usepackage{listings}         % code listings
-\usepackage{paralist}						% inline lists
-
-% Extra stuff, glossary, index etc
-%--------------------------------------------------
-% \usepackage{glossaries}				% glossaries
-% \usepackage{makeidx}					% index
-% \usepackage{showidx}					% print index items for debugging
+\usepackage{enumerate}				% customize numbered lists
+\usepackage{paralist}					% inline lists
+\usepackage{graphicx}					% fancy graphics
+\usepackage{color}						% enable color
+\usepackage{xspace}						% to space or not to space...
 \usepackage{url}							% URL handling
 \usepackage{hyperref} 				% should be loaded last
-% \usepackage{syntonly}					% check for syntax only; much faster
-% \syntaxonly										% comment if output is desired
-% \renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}	% dots in TOC
+%--------------------------------------------------
 
-% Stuff that doesn't fit in any category
-% \usepackage{lastpage}					% provides total number of pages, use with:
-%																% \pageref{LastPage}
-\usepackage{xspace}
-\usepackage{blindtext}
-%-------------------------------------------------- 
 
 % setup the listings package
 \lstset{%
@@ -70,7 +43,7 @@
 	%escapeinside={\%}{)}               % if you want to add a comment within your code
 }
 
-% setup hyperlinks
+% setup hyperlinks, bookmarks and pdf metadata
 \hypersetup{%
 	bookmarks=true,
 	linktocpage=true,
@@ -97,10 +70,11 @@
 \author{Malte Petersen}
 
 \begin{document}
-\include{notes}
-%\frontmatter
 \maketitle
 \tableofcontents
+
+\chapter*{Paper notes}
+	\input{notes}
 
 %\mainmatter
 %\chapter{Journal}
