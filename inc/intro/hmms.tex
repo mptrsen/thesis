@@ -1,3 +1,4 @@
+\label{sec:hmms}
 Hidden Markov models (HMMs) are probabilistic models that are generally
 applicable to ``linear'' problems and have been widely used in speech
 recognition algorithms for thirty years. 
@@ -21,6 +22,19 @@ HMM-based alignment algorithms search for homology.
 		\def\svgwidth{0.8\textwidth}
 		\input{img/hmm-eddy.pdf_tex}
 	\end{center}
-	\caption[A simple hidden Markov model]{A simple hidden Markov model}
+	\caption[A simple hidden Markov model]{A simple, two-state hidden Markov model
+		describing a DNA sequence with a heterogenous base composition. 
+		\begin{inparaenum}[a)]
+			\item State 1 generates AT-rich sequences. State 2 generates CG-rich
+				sequences (so-called CpG islands). State transitions and their respective
+				probabilities are indicated by arrows. Symbol mission probabilities for
+				each state are listed below the states.
+			\item At each position, the model not only emits a symbol with a
+				probability that is dependent on its state, it also transits to the
+				other state with a certain probability, or remains in the present state.
+			\item The symbol sequence is the result of of the state transitions and
+				the emission probabilities.
+		\end{inparaenum}
+	}
 	\label{fig:hmm}
 \end{figure}

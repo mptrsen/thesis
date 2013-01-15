@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{771.79216156bp}%
+    \setlength{\unitlength}{796.66548637bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,79 +48,79 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.80014081)%
+  \begin{picture}(1,0.77467697)%
     \put(0,0){\includegraphics[width=\unitlength]{img/hmm-eddy.pdf}}%
-    \put(0.3684783,0.68428113){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{1}}}%
-    \put(0.59935771,0.68648){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{2}}}%
-    \put(0.40214474,0.56982802){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.06115636\unitlength}\raggedright 0.4\\ 0.1\\ 0.1\\ 0.4\end{minipage}}}%
-    \put(0.63106751,0.57162948){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09950866\unitlength}\raggedright 0.05\\ 0.4\\ 0.5\\ 0.05\end{minipage}}}%
-    \put(0.21452947,0.74396817){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{0.99}}}%
-    \put(0.46425269,0.77612605){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{0.01}}}%
-    \put(0.7088781,0.75124889){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{0.9}}}%
-    \put(0.14118603,0.25118907){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.19853288\unitlength}\centering 1\end{minipage}}}%
-    \put(0.29764885,0.25118907){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.02906018\unitlength}\centering 1\end{minipage}}}%
-    \put(0.36581325,0.25118907){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.02906018\unitlength}\centering 1\end{minipage}}}%
-    \put(0.43141231,0.25118907){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.02906018\unitlength}\centering 1\end{minipage}}}%
-    \put(0.49969166,0.25118907){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.02906018\unitlength}\centering 1\end{minipage}}}%
-    \put(0.56810758,0.25118907){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.02906018\unitlength}\centering 2\end{minipage}}}%
-    \put(0.63260721,0.25118907){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.02906018\unitlength}\centering 2\end{minipage}}}%
-    \put(0.69783981,0.25118907){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.02906018\unitlength}\centering 2\end{minipage}}}%
-    \put(0.765397,0.25118907){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.02906018\unitlength}\centering 2\end{minipage}}}%
-    \put(0.83037808,0.25118907){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.02906018\unitlength}\centering 1\end{minipage}}}%
-    \put(0.89720233,0.25118907){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.02906018\unitlength}\centering 1\end{minipage}}}%
-    \put(0.22701885,0.05101197){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{A}}}%
-    \put(0.29956756,0.05101197){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{T}}}%
-    \put(0.36836082,0.05101197){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{C}}}%
-    \put(0.43432633,0.05101197){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{A}}}%
-    \put(0.50249072,0.05101197){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{A}}}%
-    \put(0.56772327,0.05101197){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{G}}}%
-    \put(0.63377822,0.05177483){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{G}}}%
-    \put(0.70094107,0.05177483){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{C}}}%
-    \put(0.76497632,0.05177483){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{G}}}%
-    \put(0.83085251,0.05101197){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{A}}}%
-    \put(0.9006786,0.05101197){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{T}}}%
-    \put(0.95500889,0.05101197){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{.}}}%
-    \put(0.97333686,0.05101197){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{.}}}%
-    \put(0.99290172,0.05101197){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{.}}}%
-    \put(0.95479708,0.23640417){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{.}}}%
-    \put(0.97312505,0.23640417){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{.}}}%
-    \put(0.99268991,0.23640417){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{.}}}%
-    \put(0.14614175,0.05101197){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{.}}}%
-    \put(0.16446975,0.05101197){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{.}}}%
-    \put(0.18403461,0.05101197){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{.}}}%
-    \put(0.14588261,0.23381631){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{.}}}%
-    \put(0.16421062,0.23381631){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{.}}}%
-    \put(0.18377547,0.23381631){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{.}}}%
-    \put(0.05331378,0.17778244){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{transitions}}}%
-    \put(0.31239207,0.17778244){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.99}}}%
-    \put(0.38066774,0.17778244){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.99}}}%
-    \put(0.44344719,0.17854533){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.99}}}%
-    \put(0.51120459,0.17854533){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.99}}}%
-    \put(0.58069449,0.17854533){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.01}}}%
-    \put(0.64440104,0.17854533){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.99}}}%
-    \put(0.71035839,0.17854533){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.99}}}%
-    \put(0.77967061,0.17854533){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.99}}}%
-    \put(0.84666634,0.17854533){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.1}}}%
-    \put(0.90923918,0.17854533){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.99}}}%
-    \put(0.05331378,0.0007629){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{emissions:}}}%
-    \put(0.23755155,0.0007629){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.4}}}%
-    \put(0.30912426,0.0007629){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.4}}}%
-    \put(0.37955009,0.0007629){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.1}}}%
-    \put(0.44252117,0.0007629){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.4}}}%
-    \put(0.51361736,0.0007629){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.4}}}%
-    \put(0.58203215,0.0007629){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.5}}}%
-    \put(0.64701436,0.0007629){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.5}}}%
-    \put(0.71199657,0.0007629){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.4}}}%
-    \put(0.84527749,0.0007629){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.4}}}%
-    \put(0.91087654,0.0007629){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.4}}}%
-    \put(0.77821249,0.0007629){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.5}}}%
-    \put(-0.00092394,0.80086215){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.05423836\unitlength}\raggedright a)\end{minipage}}}%
-    \put(-0.00092394,0.33480413){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.05423836\unitlength}\raggedright b)\end{minipage}}}%
-    \put(-0.00092394,0.129578){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.05423836\unitlength}\raggedright c)\end{minipage}}}%
-    \put(0.05330961,0.33797549){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.69923477\unitlength}\raggedright \textbf{state sequence (hidden):}\end{minipage}}}%
-    \put(0.05330961,0.12956764){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.65232595\unitlength}\raggedright \textbf{symbol sequence (observable):}\end{minipage}}}%
-    \put(0.23882193,0.17778244){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{?}}}%
-    \put(0.35239041,0.56982802){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.18659031\unitlength}\raggedright \textbf{A\\ C\\ G\\ T}\end{minipage}}}%
-    \put(0.58043108,0.56982802){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.18659031\unitlength}\raggedright \textbf{A\\ C\\ G\\ T}\end{minipage}}}%
+    \put(0.35813057,0.66291665){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\textbf{1}}}}%
+    \put(0.58180151,0.66504686){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\textbf{2}}}}%
+    \put(0.396771,0.55203697){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.05924695\unitlength}\raggedright 0.4\\ 0.1\\ 0.1\\ 0.4\end{minipage}}}%
+    \put(0.62055476,0.55378218){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.09640182\unitlength}\raggedright 0.05\\ 0.4\\ 0.5\\ 0.05\end{minipage}}}%
+    \put(0.20898829,0.72074015){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{0.99}}}%
+    \put(0.45091471,0.751894){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{0.01}}}%
+    \put(0.68790247,0.72779355){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{0.9}}}%
+    \put(0.13450627,0.24334649){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.19233433\unitlength}\centering \textbf{1}\end{minipage}}}%
+    \put(0.28951254,0.24334649){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.02815287\unitlength}\centering \textbf{1}\end{minipage}}}%
+    \put(0.35554873,0.24334649){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.02815287\unitlength}\centering \textbf{1}\end{minipage}}}%
+    \put(0.41909967,0.24334649){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.02815287\unitlength}\centering \textbf{1}\end{minipage}}}%
+    \put(0.48524721,0.24334649){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.02815287\unitlength}\centering \textbf{1}\end{minipage}}}%
+    \put(0.55152706,0.24334649){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.02815287\unitlength}\centering \textbf{2}\end{minipage}}}%
+    \put(0.6140129,0.24334649){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.02815287\unitlength}\centering \textbf{2}\end{minipage}}}%
+    \put(0.67720882,0.24334649){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.02815287\unitlength}\centering \textbf{2}\end{minipage}}}%
+    \put(0.74265676,0.24334649){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.02815287\unitlength}\centering \textbf{2}\end{minipage}}}%
+    \put(0.80560901,0.24334649){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.02815287\unitlength}\centering \textbf{1}\end{minipage}}}%
+    \put(0.87034689,0.24334649){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.02815287\unitlength}\centering \textbf{1}\end{minipage}}}%
+    \put(0.22108774,0.04941928){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{A}}}}%
+    \put(0.29137135,0.04941928){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{T}}}}%
+    \put(0.35801675,0.04941928){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{C}}}}%
+    \put(0.42192271,0.04941928){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{A}}}}%
+    \put(0.48795888,0.04941928){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{A}}}}%
+    \put(0.55115476,0.04941928){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{G}}}}%
+    \put(0.61514735,0.05015832){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{G}}}}%
+    \put(0.68021326,0.05015832){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{C}}}}%
+    \put(0.74224921,0.05015832){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{G}}}}%
+    \put(0.80606862,0.04941928){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{A}}}}%
+    \put(0.87371462,0.04941928){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{T}}}}%
+    \put(0.92634862,0.04941928){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{.}}}%
+    \put(0.94410436,0.04941928){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{.}}}%
+    \put(0.96305837,0.04941928){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{.}}}%
+    \put(0.92614343,0.22902321){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{.}}}%
+    \put(0.94389916,0.22902321){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{.}}}%
+    \put(0.96285317,0.22902321){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{.}}}%
+    \put(0.14273576,0.04941928){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{.}}}%
+    \put(0.16049153,0.04941928){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{.}}}%
+    \put(0.17944554,0.04941928){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{.}}}%
+    \put(0.14248472,0.22651615){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{.}}}%
+    \put(0.16024049,0.22651615){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{.}}}%
+    \put(0.17919449,0.22651615){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{.}}}%
+    \put(0.05280605,0.17223175){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{transitions}}}%
+    \put(0.30379545,0.17223175){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.99}}}%
+    \put(0.36993943,0.17223175){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.99}}}%
+    \put(0.43075879,0.17297082){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.99}}}%
+    \put(0.49640069,0.17297082){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.99}}}%
+    \put(0.56372099,0.17297082){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.01}}}%
+    \put(0.6254385,0.17297082){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.99}}}%
+    \put(0.68933655,0.17297082){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.99}}}%
+    \put(0.75648472,0.17297082){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.99}}}%
+    \put(0.82138872,0.17297082){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.1}}}%
+    \put(0.88200792,0.17297082){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.99}}}%
+    \put(0.05280605,0.00073908){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{emissions:}}}%
+    \put(0.23129158,0.00073908){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.4}}}%
+    \put(0.30062967,0.00073908){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.4}}}%
+    \put(0.36885667,0.00073908){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.1}}}%
+    \put(0.42986168,0.00073908){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.4}}}%
+    \put(0.49873813,0.00073908){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.4}}}%
+    \put(0.56501689,0.00073908){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.5}}}%
+    \put(0.62797023,0.00073908){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.5}}}%
+    \put(0.69092358,0.00073908){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.4}}}%
+    \put(0.82004324,0.00073908){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.4}}}%
+    \put(0.88359417,0.00073908){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.4}}}%
+    \put(0.75507213,0.00073908){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.5}}}%
+    \put(0.00026173,0.72364014){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.18011427\unitlength}\raggedright \textbf{a)}\end{minipage}}}%
+    \put(0.00026173,0.32435095){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.1810807\unitlength}\raggedright \textbf{b)}\end{minipage}}}%
+    \put(0.00026173,0.12553234){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.17103884\unitlength}\raggedright \textbf{c)}\end{minipage}}}%
+    \put(0.05280201,0.32742329){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.67740341\unitlength}\raggedright \textbf{state sequence (hidden):}\end{minipage}}}%
+    \put(0.05280201,0.12552231){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.63195917\unitlength}\raggedright \textbf{symbol sequence (observable):}\end{minipage}}}%
+    \put(0.2325223,0.17223175){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{?}}}%
+    \put(0.34857009,0.55203697){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.18076462\unitlength}\raggedright \textbf{A}\\ \textbf{C}\\ \textbf{G}\\ \textbf{T}\end{minipage}}}%
+    \put(0.57149929,0.55203697){\color[rgb]{0,0,0}\makebox(0,0)[lt]{\begin{minipage}{0.18076462\unitlength}\raggedright \textbf{A}\\ \textbf{C}\\ \textbf{G}\\ \textbf{T}\end{minipage}}}%
   \end{picture}%
 \endgroup%
