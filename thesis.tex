@@ -1,4 +1,4 @@
-\documentclass[a4paper,13pt]{scrreprt}
+\documentclass[a4paper,12.5pt]{scrreprt}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}		% English language 
@@ -96,6 +96,8 @@
 \chapter{Material and methods}
 	\section{Programs}
 		\input{inc/methods/programs}
+		\input{inc/methods/hardware}
+		\input{inc/methods/compiler}
 		\subsection{HMMER3}
 			\input{inc/methods/hmmer}
 		\subsection{BLAST+}
@@ -107,8 +109,6 @@
 			\input{inc/methods/perl}
 		\subsection{MySQL}
 			\input{inc/methods/mysql}
-	\section{Hardware}
-		\input{inc/methods/hardware}
 
 \chapter{Results}
 	\section{Graph}
@@ -133,6 +133,7 @@
 	\section{HMM sensitivity}
 
 \chapter{Discussion and outlook}
+	\input{inc/discussion/intro}
 	\section{Summary}
 	\section{Outlook}
 \clearpage
