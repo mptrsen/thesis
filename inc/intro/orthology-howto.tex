@@ -1,13 +1,22 @@
 With next-generation, high-throughput technologies providing vast amounts of
-sequence data, it becomes more important to classify conserved genes according
-to their homologous relationships. It is worth mentioning here that homology is
-a concept of quality, not quantity (\cite{reeck1987}) and thus indivisible. Two
-sequences can be \emph{similar} by a percentage (e.g., amino acid positional
-identity), but they are either homologous or they are not. The same follows for
-orthologs, paralogs, and xenologs. This distinction is important because
-homology implies a genealogical relationship, whereas similarity does not.
+sequence data, 
 
-A simple alignment or scoring (i.e., similarity) search cannot separate
-homologous from merely similar sequences. 
+To make use of the information contained in the ortholog property, it is
+important to classify conserved genes according to their homologous
+relationships. It is worth mentioning here that homology is a concept of
+quality, not quantity (\cite{reeck1987}) and thus indivisible. Two sequences can
+be \emph{similar} by a percentage (e.g., amino acid positional identity), but
+they are either homologous or they are not. The same follows for orthologs,
+paralogs, and xenologs. This distinction is important because homology implies a
+genealogical relationship, whereas similarity does not. Similarity can also be
+the result of other evolutionary processes, such as convergence, which results
+in \emph{analogy}. All variants of similarity can be grouped under the term
+\emph{homoplasy}, which encompasses similarity (\emph{homos} (``equal''),
+\emph{plasis} (``shaping'')) excluding homology and its subforms. In the present
+thesis, the definition of homoplasy is used as it appears in \cite{page1998}.
+
+A simple alignment or scoring (i.e., similarity) alone cannot separate
+homologous from merely similar sequences (\cite{eisen1998}). To distinguish
+homology from homoplasy, further logic is necessary: 
 
 See figure \ref{fig:hamstr}.
