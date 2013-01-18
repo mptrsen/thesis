@@ -13,7 +13,8 @@ genealogical relationship, whereas similarity does not. Similarity can also be
 the result of other evolutionary processes, such as convergence, which results
 in \emph{analogy}. All variants of similarity can be grouped under the term
 \emph{homoplasy}, which encompasses similarity (\emph{homos} (``equal''),
-\emph{plasis} (``shaping'')) excluding homology and its subforms \citep{page1998}.
+\emph{plasis} (``shaping'')), but excludes homology and its subforms
+\citep{page1998}.
 
 A simple alignment or scoring (i.e., similarity) alone cannot separate
 homologous from merely similar sequences \citep{eisen1998}. Since orthology and
@@ -35,6 +36,8 @@ altered, e.g., to include only those clusters that occur in 80\% of the initial
 trees, but in most cases, clustering cannot be avoided altogether
 \citep{mirkin1995}.
 
+\input{inc/intro/fig-consens-approx}
+
 In the approximation approach to tree reconciliation, a similarity measure is
 used across the initial trees. The algorithm tries to find a tree topology that
 maximizes the total similarity (minimizes the total dissimilarity) to the
@@ -45,7 +48,7 @@ given set of starting trees, leading to ambiguous interpretations.
 Tree reconciliation strategies are subject to a number of restrictions when
 applied on a genomic scale. The widespread presence of horizontal gene
 transfer, which is very common in prokaryotes, invalidates the very notion of a
-species tree \citet{doolittle2000}, because the manyfold xenologous
+species tree \citet{doolittle2000}, because the manifold xenologous
 relationships between prokaryote genes would show up in a reconciled tree as
 ``just a bunch of clusters'' \todo{rephrase}. In addition, reconstructing a
 phylogenetic tree is computationally expensive, and doing so for all genes in
@@ -64,8 +67,13 @@ to its ortholog but to a paralog from another genome) would require a
 statistically significant different evolutionary rate in paralogs to create a
 large enough similarity offset compared to orthologs.
 
-something in \citet{page1997}
+In a graph-based approach, an algorithm would create a two-dimensional graph
+with genes (or proteins) as nodes and evolutionary relationships as edges. The
+relationships are inferred using a symmetrical search, and clusters of
+orthologous genes are created (figure \ref{fig:graph-based-strat}). 
 
-\input{inc/intro/fig-consens-approx}
+\input{inc/intro/fig-graph-based-strat}
+
+something in \citet{page1997}
 
 See figure \ref{fig:hamstr}.
