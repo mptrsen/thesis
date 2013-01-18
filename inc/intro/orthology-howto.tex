@@ -34,7 +34,13 @@ clusters, and the concept of a ``common cluster'' can be altered, e.g., to
 include only those clusters that occur in 80\% of the initial trees, but in most
 cases, clustering cannot be avoided altogether (\cite{mirkin1995}).
 
-In the approximation approach, 
+In the approximation approach to tree reconciliation, a similarity measure is
+used across the initial trees. The algorithm tries to find a tree topology that
+maximizes the total similarity (minimizes the total dissimilarity) to the
+original trees. However, these measures have no explicit biological meaning
+(\cite{mirkin1995}), and multiple approximation tree topologies can result for a
+given set of starting trees, leading to ambiguity.
+
 something in \cite{page1997}
 
 \input{inc/intro/fig-consens-approx}
