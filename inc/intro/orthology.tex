@@ -1,53 +1,58 @@
-When reconstructing species lineages, so called homologous characters are used
-to reconstruct ancestral trees. The term homolog was introduced in 1848
-(\cite{owen1848}) and was used to describe ``the same organ in different animals
-under different every variety of form and function''. Similarly, analogs were
-defined as ``part or organ in one animal which has the same function as another
-part or organ in a different animal''. At that time, Owen had no notion of the
-concept of evolution, and in the famous \emph{Origin of Species}
-(\cite{darwin1859}), the term homology is never used, but in a review
-(\cite{owen1860}), he refers to homology as evidence of evolution.
+When reconstructing the evolution of species lineages, so called homologous
+characters are used to reconstruct phylogenetic trees. The term homolog was
+introduced by \citet{owen1848} and was used to describe ``the same organ in
+different animals under different every variety of form and function''.
+Similarly, analogs were defined as ``part or organ in one animal which has the
+same function as another part or organ in a different animal''. At that time,
+Owen had no notion of the concept of evolution, and in the famous \emph{Origin
+of Species} \citep{darwin1859}, the term homology is never used. However, in a
+review, \citet{owen1860} refers to homology as evidence of evolution.
 
-A morphological character is the phenotypic reflection of a molecular character.
-Since molecular genetics entered the field of phylogenetics during the 1960s,
-these are used in numerous studies on species lineages.  Molecular characters,
-such as genes, are homologous if they share a common origin. However, this is
-not sufficient to infer reliable phylogenies based on molecular data. Genes can
-be subject to a number of events in the course of their evolutionary history,
-such as speciation, gene duplication, gene loss, horizontal gene transfer as
-well as fusion, fission and other rearrangements of genes (\cite{koonin2005}).
-These different types of relatedness between molecular sequences have made new
-definitions necessary (see figure \ref{fig:orthology}).
+A morphological character is the phenotypic reflection of genetic information.
+Since the analysis of molecular data entered the field of phylogenetics during
+the 1960s, these are used in numerous studies on species relationships.
+Molecular characters, such as the DNA sequences of genes, are homologous if they
+share a common origin. However, this is not sufficient to infer reliable
+phylogenies based on molecular sequence data. Genes do not only dplicate during
+a speciation event, but can be subject to a number of events in the course of
+their evolutionary history, such as speciation, gene duplication, gene loss,
+horizontal gene transfer as well as fusion, fission and other rearrangements of
+genes \citep{koonin2005}.  These different types of relatedness between
+sequences of molecular characters have made new definitions necessary (see
+figure \ref{fig:orthology}).
 
 \input{inc/intro/fig-orthology}
 
-Homologous genes that are related by a speciation event are called
-\emph{orthologs} (\cite{fitch1970}). They reflect species phylogeny directly and
-are most commonly used to infer species lineages. \emph{Paralogous} genes are
-also homologous, but they are related by a gene duplication event and are not
-involved in horizontal radiation. Further distinction must be made among
-paralogous genes (\cite{sonnhammer2002}): paralogous genes that are related by a
+Homologous genes in two or more species that are related by a speciation event
+are called \emph{orthologs} \citep{fitch1970}. They reflect species phylogeny
+directly and are most commonly used to infer phylogenetic relationships between
+species. \emph{Paralogs} are also homologous genes, but they are related by a
+gene duplication event within a species and are not involved in horizontal
+radiation \citep{ohno1970}. Further distinction must be made among paralogous
+genes \citep{sonnhammer2002}: paralogous genes that are related by a
 lineage-specific duplication are called \emph{outparalogs} if the duplication
-occurred prior to a given speciation event, while genes that result from a
-lineage-specific duplication subsequent to a given speciation event are called
-\emph{inparalogs}.  These distinctions are important when looking at internal
-branches of a phylogenetic tree.
+occurred prior to a given speciation event. On the contrary, genes that result
+from a lineage-specific duplication subsequent to a given speciation event are
+called \emph{inparalogs}. Additionally, two genes in a single species that are
+paralogous to each other can be \emph{co-orthologs} to a gene in another
+species. These distinctions are important when looking at internal branches of a
+phylogenetic tree. 
 
 A fourth subtype of homology is called \emph{xenology}. It is defined as the
 condition in which the history of the genes involves horizontal, or
-interspecies, gene transfer (\cite{gray1983}). This is the only form of homology
+interspecies, gene transfer \citep{gray1983}. This is the only form of homology
 in which the gene lineage cannot be traced back to a parent, but instead from
 one organism to another.
 
-In molecular phylogenetics, orthologous sequences are used to reconstruct
-species lineages, because these sequences are the only homologous sequences
-whose phylogeny reflects the genealogical relationships of the species from
-which the sequences were obtained. Orthologs are also used to study mechanisms
-of gene and genome evolution (\cite{dessimoz2012}). Orthologs tend to be more
-functionally similar than paralogs (\cite{altenhoff2012}); this is the so-called
-\emph{ortholog conjecture} (\cite{tatusov1997}) and the reason why the analysis
-of protein families often requires orthology among the investigated genes. In
-addition, housekeeping genes, i.e., genes that are essential to keeping an
-organism alive, underlie stronger sequence conservation due to selection
-pressure (\cite{she2009}) and are more likely to be orthologous across species
-(\cite{waterhouse2011}). 
+In molecular phylogenetics, orthologous molecular sequences are used to
+reconstruct genealogical relationships, because these sequences are the only
+homologous sequences whose phylogeny reflects the genealogical relationships of
+the species from which the sequences were obtained. Orthologs are also used to
+study mechanisms of gene and genome evolution \citep{dessimoz2012}. Orthologs
+tend to be more functionally similar than paralogs \citep{altenhoff2012}. This
+is the so-called \emph{ortholog conjecture} \citep{tatusov1997}, and the reason
+why the analysis of protein families often relies on orthology among the
+investigated genes. In addition, housekeeping genes, i.e., genes that are
+essential to keeping an organism alive, underlie stronger sequence conservation
+due to selection pressure \citep{she2009} and are more likely to be orthologous
+across species \citep{waterhouse2011}. 

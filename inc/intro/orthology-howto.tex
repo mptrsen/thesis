@@ -5,7 +5,7 @@ amounts of data, comparing genomes is becoming a more and more important task.
 To make use of the speciation information contained in the ortholog property, it
 is important to classify conserved genes according to their homologous
 relationships. It is worth mentioning here that homology is a concept of
-quality, not quantity (\cite{reeck1987}) and thus indivisible. Two sequences can
+quality, not quantity \citep{reeck1987} and thus indivisible. Two sequences can
 be \emph{similar} by a percentage (e.g., amino acid positional identity), but
 they are either homologous or they are not. The same follows for orthologs,
 paralogs, and xenologs. This distinction is important because homology implies a
@@ -13,10 +13,10 @@ genealogical relationship, whereas similarity does not. Similarity can also be
 the result of other evolutionary processes, such as convergence, which results
 in \emph{analogy}. All variants of similarity can be grouped under the term
 \emph{homoplasy}, which encompasses similarity (\emph{homos} (``equal''),
-\emph{plasis} (``shaping'')) excluding homology and its subforms \cite{page1998}.
+\emph{plasis} (``shaping'')) excluding homology and its subforms \citep{page1998}.
 
 A simple alignment or scoring (i.e., similarity) alone cannot separate
-homologous from merely similar sequences (\cite{eisen1998}). Since orthology and
+homologous from merely similar sequences \citep{eisen1998}. Since orthology and
 paralogy are notions that describe evolutionary events, they can be directly
 coupled to a species tree topology. This is how \emph{tree reconciliation
 strategies} work: a gene tree topology is compared to the topology of the chosen
@@ -25,23 +25,46 @@ i.e., the minimal possible number of evolutionary events (speciation, gene
 duplication, gene loss). In order to produce a reconciled tree, two major
 approaches are followed: \emph{consensus} and \emph{approximation} (figure
 \ref{fig:consens-approx}). Like all algorithms in this class, they consider a
-phylogenetic tree a formal mathematical object. The consensus algorithm tries to
-find a tree that combines the features common to both of the original trees.
-This is rarely a well-resolved tree and therefore biologically not very
-relevant, as the consensus criterion leads to clustering (compare figure
-\ref{fig:consens-approx}c). More initial trees reduce the number of common
-clusters, and the concept of a ``common cluster'' can be altered, e.g., to
-include only those clusters that occur in 80\% of the initial trees, but in most
-cases, clustering cannot be avoided altogether (\cite{mirkin1995}).
+phylogenetic tree a formal mathematical object. In the consensus approach, one
+tries to find a tree that combines the features common to both of the original
+trees. This is rarely a fully resolved tree and therefore biologically not very
+relevant, as the consensus criterion leads to clustering (figure
+\ref{fig:consens-approx}c). Increasing the number of initial trees reduces the
+number of common clusters, and the concept of a ``common cluster'' can be
+altered, e.g., to include only those clusters that occur in 80\% of the initial
+trees, but in most cases, clustering cannot be avoided altogether
+\citep{mirkin1995}.
 
 In the approximation approach to tree reconciliation, a similarity measure is
 used across the initial trees. The algorithm tries to find a tree topology that
 maximizes the total similarity (minimizes the total dissimilarity) to the
 original trees. However, these measures have no explicit biological meaning
-(\cite{mirkin1995}), and multiple approximation tree topologies can result for a
-given set of starting trees, leading to ambiguity.
+\citep{mirkin1995}, and multiple approximation tree topologies can result for a
+given set of starting trees, leading to ambiguous interpretations. 
 
-something in \cite{page1997}
+Tree reconciliation strategies are subject to a number of restrictions when
+applied on a genomic scale. The widespread presence of horizontal gene
+transfer, which is very common in prokaryotes, invalidates the very notion of a
+species tree \citet{doolittle2000}, because the manyfold xenologous
+relationships between prokaryote genes would show up in a reconciled tree as
+``just a bunch of clusters'' \todo{rephrase}. In addition, reconstructing a
+phylogenetic tree is computationally expensive, and doing so for all genes in
+sequenced genomes is a gargantuan task for modern software engineering and
+computer systems.
+
+Faced with these fundamental and practical obstacles, most genome-wide
+studies employ simplifications and shortcuts. Assuming that the sequences of
+orthologous genes or proteins are more similar to each other than they are to
+other genes or proteins in the compared genomes, a \emph{graph-based strategy}
+can be applied. All graph-based strategies use some form of symmetrical best hit
+criterion to distinguish orthologs from paralogs or other homolog subtypes. The
+validity of this criterion is made plausible by the previously mentioned
+ortholog conjecture. The opposite (a gene from one genome being more similar not
+to its ortholog but to a paralog from another genome) would require a
+statistically significant different evolutionary rate in paralogs to create a
+large enough similarity offset compared to orthologs.
+
+something in \citet{page1997}
 
 \input{inc/intro/fig-consens-approx}
 

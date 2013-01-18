@@ -21,6 +21,8 @@
 \usepackage{hyperref} 				% should be loaded last
 %--------------------------------------------------
 
+% setup natbib citation format
+\bibpunct{(}{)}{,}{a}{,}{,}
 
 % setup the listings package
 \lstset{%
@@ -61,7 +63,7 @@
 \newcommand{\hamstr}{HaMStR\xspace}
 \newcommand{\pname}{Orthograph\xspace}
 \newcommand{\species}[1]{\textit{#1}}
-\newcommand{\todo}[1]{\textbf{\color{red}#1}}
+\newcommand{\todo}[1]{\textbf{\color{red}[#1]}}
 
 % doublespace
 \linespread{1.3}
