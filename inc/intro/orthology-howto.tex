@@ -20,6 +20,24 @@ A simple alignment or scoring (i.e., similarity) alone cannot separate
 homologous from merely similar sequences (\cite{eisen1998}). Since orthology and
 paralogy are notions that describe evolutionary events, they can be directly
 coupled to a species tree topology. This is how \emph{tree reconciliation
-strategies} work. 
+strategies} work: a gene tree topology is compared to the topology of the chosen
+species tree. The two trees are reconciled using a maximum parsimony criterion,
+i.e., the minimal possible number of evolutionary events (speciation, gene
+duplication, gene loss). In order to produce a reconciled tree, two major
+approaches are followed: \emph{consensus} and \emph{approximation} (figure
+\ref{fig:consens-approx}). Like all algorithms in this class, they consider a
+phylogenetic tree a formal mathematical object. The consensus algorithm tries to
+find a tree that combines the features common to both of the original trees.
+This is rarely a well-resolved tree and therefore biologically not very
+relevant, as the consensus criterion leads to clustering (compare figure
+\ref{fig:consens-approx}c). More initial trees reduce the number of common
+clusters, and the concept of a ``common cluster'' can be altered, e.g., to
+include only those clusters that occur in 80\% of the initial trees, but in most
+cases, clustering cannot be avoided altogether (\cite{mirkin1995}).
+
+In the approximation approach, 
+something in \cite{page1997}
+
+\input{inc/intro/fig-consens-approx}
 
 See figure \ref{fig:hamstr}.
