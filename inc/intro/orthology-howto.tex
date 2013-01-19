@@ -114,15 +114,3 @@ genome,\footnote{National Human Genome Research Institute
 new discoveries in the fields of comparative genomics and phylogenetics are made
 every day. 
 
-Why does an approach that is used on genomes not work on transcriptomes?
-
-With a bidirectional search, it can happen that two genes that are identified as
-mutually closest to each other are in fact not orthologs, but paralogs where the
-corresponding orthologs have been lost in both species. This situation is called
-\emph{differential gene loss} and best solved using a tree-based approach. Given
-the aforementioned difficulties of a tree-based strategy, some algorithms
-implement \emph{triangulation}: To identify a gene as orthologous, it must be
-BBH not only in two, but in three species. The third gene functions as ``witness
-of non-orthology'' \citep{dessimoz2006}. This strategy must also be applied to
-transcriptomes, whose incompleteness may be seen as a similar situation as
-potential gene loss in complete genomes.
