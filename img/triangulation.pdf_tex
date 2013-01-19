@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{408.12897949bp}%
+    \setlength{\unitlength}{390.86303574bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,13 +48,13 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.59458671)%
+  \begin{picture}(1,0.62022117)%
     \put(0,0){\includegraphics[width=\unitlength]{img/triangulation.pdf}}%
-    \put(0.16436712,0.27825222){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{1.}}}%
-    \put(0.58539754,0.2600507){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{2.}}}%
-    \put(0.25902432,0.10758569){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{3.}}}%
-    \put(0.05423659,0.06805506){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{HMM}}}%
-    \put(0.42666787,0.55697605){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{transcripts}}}%
-    \put(0.78789832,0.00897005){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{reference proteome}}}%
+    \put(0.17162785,0.28991295){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\textbf{1.}}}}%
+    \put(0.61125683,0.27090741){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\textbf{2.}}}}%
+    \put(0.27046644,0.11170742){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\textbf{3.}}}}%
+    \put(0.05663243,0.07043057){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{HMM}}}%
+    \put(0.44551545,0.5809491){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{transcripts}}}%
+    \put(0.82270286,0.00873554){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{reference proteome}}}%
   \end{picture}%
 \endgroup%

@@ -5,22 +5,20 @@
 \usepackage[english]{babel}		% English language 
 \usepackage[backend=bibtex,style=authoryear,bibstyle=nature,natbib=true]{biblatex}
 %--------------------------------------------------
-% font and formatting
+% passive packages
 \usepackage{lmodern}					% font looks better on screen
 \usepackage{microtype}				% even better
 \usepackage{fullpage}					% more space on the page
 \usepackage{csquotes}
-\bibliography{bib/diploma}
 %\usepackage{natbib}           % bibliography for scientists
 \usepackage{perpage}          % counters per page, not per doc
+\usepackage{graphicx}					% fancy graphics
+\usepackage{color}						% enable color
 %--------------------------------------------------
 % more features
 \usepackage{amsmath}					% all the fancy math stuff
 \usepackage{listings}         % code listings
 %\usepackage{enumerate}				% customize numbered lists
-\usepackage{paralist}					% inline lists
-\usepackage{graphicx}					% fancy graphics
-\usepackage{color}						% enable color
 \usepackage{tikz}             % draw stuff with tikz
 \usepackage{xspace}						% to space or not to space
 \usepackage{url}							% URL handling
@@ -34,8 +32,10 @@
 %\bibpunct{(}{)}{,}{a}{,}{,}
 
 % setup biblatex
+\bibliography{bib/diploma}
 \ExecuteBibliographyOptions{
 	firstinits=true,
+	backref=true,
 	isbn=false,
 	url=false,
 	maxcitenames=2,
@@ -71,7 +71,7 @@
 	pdfauthor={Malte Petersen},
 	pdfcreator={pdflatex},
 	pdfsubject={orthology prediction},
-	pdfkeywords={orthology} {prediction} {est} {transcriptome} {phylogeny} {thesis}
+	pdfkeywords={orthology} {prediction} {est} {transcriptome} {hmm} {phylogenetics} {thesis} {1kite}
 }
 
 % new colors and commands
@@ -156,10 +156,6 @@
 \chapter{Discussion and outlook}
 	\input{inc/discussion/intro}
 	\section{Summary}
-	\section{Outlook}
-	\clearpage
-	\section{Methodology}
-	\clearpage
 	\section{Comparisons with \hamstr}
 	\clearpage
 	\section{Conclusion and outlook}
@@ -167,8 +163,10 @@
 
 \phantomsection
 \addcontentsline{toc}{chapter}{Bibliography}
+% uncomment these two lines if using bibtex
 %\bibliographystyle{plainnat}
 %\bibliography{bib/diploma}
+% uncomment this line if using biblatex
 \printbibliography
 \clearpage
 

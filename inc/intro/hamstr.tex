@@ -26,15 +26,13 @@ The HaMStR algorithm goes as follows:
 	\def\svgwidth{0.8\textwidth}
 	\input{img/triangulation.pdf_tex}
 	\caption[Triangulation]{Triangulation:
-		\begin{inparaenum}
-			\item The transcript sequence space is searched using a hidden Markov
-				model (HMM), which is a statistical representation of the reference
-				sequences that were used to build it.
-			\item A reference proteome is searched using the match sequence from the
-				HMM search (reciprocal search).
-			\item If the reciprocal search match sequence is one that was used to
-				build the HMM, then orthology is assumed.
-		\end{inparaenum}
+		\textbf{1.} The transcript sequence space is searched using a hidden Markov
+			model (HMM), which is a statistical representation of the reference
+			sequences that were used to build it.
+		\textbf{2.} A reference proteome is searched using the match sequence from the
+			HMM search (reciprocal search).
+		\textbf{3.} If the reciprocal search match sequence is one that was used to
+			build the HMM, then orthology is assumed.
 	}
 	\label{fig:hamstr}
 \end{figure}
