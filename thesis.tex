@@ -1,28 +1,46 @@
+\RequirePackage[l2tabu, orthodox]{nag}
 \documentclass[a4paper,12.5pt]{scrreprt}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}		% English language 
+\usepackage[backend=bibtex,style=authoryear,bibstyle=nature,natbib=true]{biblatex}
 %--------------------------------------------------
 % font and formatting
 \usepackage{lmodern}					% font looks better on screen
 \usepackage{microtype}				% even better
 \usepackage{fullpage}					% more space on the page
-\usepackage{natbib}
+\usepackage{csquotes}
+\bibliography{bib/diploma}
+%\usepackage{natbib}           % bibliography for scientists
+\usepackage{perpage}          % counters per page, not per doc
 %--------------------------------------------------
 % more features
 \usepackage{amsmath}					% all the fancy math stuff
 \usepackage{listings}         % code listings
-\usepackage{enumerate}				% customize numbered lists
+%\usepackage{enumerate}				% customize numbered lists
 \usepackage{paralist}					% inline lists
 \usepackage{graphicx}					% fancy graphics
 \usepackage{color}						% enable color
-\usepackage{xspace}						% to space or not to space...
+\usepackage{tikz}             % draw stuff with tikz
+\usepackage{xspace}						% to space or not to space
 \usepackage{url}							% URL handling
 \usepackage{hyperref} 				% should be loaded last
 %--------------------------------------------------
 
+% setup the footnote counter per page
+\MakePerPage{footnote}
+
 % setup natbib citation format
-\bibpunct{(}{)}{,}{a}{,}{,}
+%\bibpunct{(}{)}{,}{a}{,}{,}
+
+% setup biblatex
+\ExecuteBibliographyOptions{
+	firstinits=true,
+	isbn=false,
+	url=false,
+	maxcitenames=2,
+	maxbibnames=999,
+}
 
 % setup the listings package
 \lstset{%
@@ -133,26 +151,25 @@
 		\input{inc/results/checksums}
 	\section{Benchmarks}
 	\section{HMM sensitivity}
+		\input{inc/results/hmmtest}
 
 \chapter{Discussion and outlook}
 	\input{inc/discussion/intro}
 	\section{Summary}
 	\section{Outlook}
-\clearpage
-
-\section{Methodology}
-\clearpage
-
-\section{Comparisons with \hamstr}
-\clearpage
-
-\section{Conclusion and outlook}
-\clearpage
+	\clearpage
+	\section{Methodology}
+	\clearpage
+	\section{Comparisons with \hamstr}
+	\clearpage
+	\section{Conclusion and outlook}
+	\clearpage
 
 \phantomsection
 \addcontentsline{toc}{chapter}{Bibliography}
-\bibliographystyle{plainnat}
-\bibliography{bib/diploma}
+%\bibliographystyle{plainnat}
+%\bibliography{bib/diploma}
+\printbibliography
 \clearpage
 
 \phantomsection

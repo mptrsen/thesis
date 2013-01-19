@@ -1,6 +1,7 @@
+\label{sec:hmmtest}
 To avoid statistical bias by uneven phylogenetic representation when creating a
 hidden Markov model (HMM), \texttt{hmmbuild} from the HMMer package
-(\cite{eddy2009}) uses a position-based weighting scheme (\cite{henikoff1994})
+\citep{eddy2009} uses a position-based weighting scheme \citep{henikoff1994}
 by default: The sequence distances are not calculated based on the sequences as
 a whole, but use a diversity measure for each position in the alignment. From
 the paper:
@@ -33,13 +34,13 @@ sequences would each receive half the weight that one sequence would.
 \section*{Other weighting schemes}
 
 \texttt{hmmbuild} can also use other weighting schemes, namely a BLOSUM matrix
-and a tree-based weighting scheme used by \cite{gerstein1994}. Neither the
+and a tree-based weighting scheme used by \citet{gerstein1994}. Neither the
 BLOSUM matrix nor the tree-based weighting scheme use position-based sequence
 weights. From the HMMer user guide about the BLOSUM approach:
 
 \begin{quote}
 	Use the same clustering scheme that was used to weight data in calculating
-	BLOSUM subsitution matrices (\cite{henikoff1994}). Sequences are
+	BLOSUM subsitution matrices \citep{henikoff1994}. Sequences are
 	single-linkage clustered at an identity threshold (default 0.62; see
 	\lstinline{--wid}) and within each cluster of $c$ sequences, each sequence
 	gets relative weight $1/c$. 
@@ -49,7 +50,7 @@ The Gerstein tree-based weighting scheme uses a distance tree based on percent
 identity. It upweights sequences that are close to the root of the tree and
 diverse from the rest of the alignment. The tree is constructed by arithmetic
 averaging of pairwise distances, where the distances are measured using percent
-residue identity (see \cite{nei1987} and \cite{sneath1973}). Nodes in the tree
+residue identity (see \citet{nei1987} and \citet{sneath1973}). Nodes in the tree
 are visited subsequently, going from the ones closest to 100 \% identity (leaf
 groups) to 0 \% identity (root). For each node, relative weight is added to both
 left and right subtrees according to the length of the edge connecting them to

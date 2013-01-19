@@ -12,15 +12,15 @@ paralogs, and xenologs. This distinction is important because homology implies a
 genealogical relationship, whereas similarity does not. Similarity can also be
 the result of other evolutionary processes, such as convergence, which results
 in \emph{analogy}. All variants of similarity can be grouped under the term
-\emph{homoplasy}, which encompasses similarity (\emph{homos} (``equal''),
-\emph{plasis} (``shaping'')), but excludes homology and its subforms
-\citep{page1998}.
+\emph{homoplasy}\footnote{\emph{homos} (``equal''), \emph{plasis}
+(``shaping'')}, which encompasses similarity but excludes homology and its
+subforms \citep{page1998}.
 
 A simple alignment or scoring (i.e., similarity) alone cannot separate
 homologous from merely similar sequences \citep{eisen1998}. Since orthology and
 paralogy are notions that describe evolutionary events, they can be directly
-coupled to a species tree topology. This is how \emph{tree reconciliation
-strategies} work: a gene tree topology is compared to the topology of the chosen
+coupled to a species tree topology. This is how \emph{tree reconciliation}
+strategies work: a gene tree topology is compared to the topology of the chosen
 species tree. The two trees are reconciled using a maximum parsimony criterion,
 i.e., the minimal possible number of evolutionary events (speciation, gene
 duplication, gene loss). In order to produce a reconciled tree, two major
@@ -46,34 +46,80 @@ original trees. However, these measures have no explicit biological meaning
 given set of starting trees, leading to ambiguous interpretations. 
 
 Tree reconciliation strategies are subject to a number of restrictions when
-applied on a genomic scale. The widespread presence of horizontal gene
-transfer, which is very common in prokaryotes, invalidates the very notion of a
-species tree \citet{doolittle2000}, because the manifold xenologous
-relationships between prokaryote genes would show up in a reconciled tree as
-``just a bunch of clusters'' \todo{rephrase}. In addition, reconstructing a
-phylogenetic tree is computationally expensive, and doing so for all genes in
-sequenced genomes is a gargantuan task for modern software engineering and
-computer systems.
+applied on a genomic scale. The widespread presence of horizontal gene transfer,
+which is very common in prokaryotes, invalidates the very notion of a species
+tree \citep{doolittle2000}, because the manifold xenologous relationships
+between prokaryote genes would show up in a reconciled tree as ``just a bunch of
+clusters'' \todo{rephrase}. In addition, reconstructing a phylogenetic tree is
+computationally expensive, and doing so for all genes in sequenced genomes is a
+gargantuan task for modern software engineering and computer systems.
+Nevertheless, a number of implementations have persevered; among the most recent
+are Orthostrapper \citep{jothi2006} and LOFT \citep{van_der_heijden2007} as well
+as \mbox{COCO-CL} \citep{storm2002}, which does not use a tree reconciliation
+algorithm, but builds a hierarchy of sets of outparalogs. 
 
-Faced with these fundamental and practical obstacles, most genome-wide
-studies employ simplifications and shortcuts. Assuming that the sequences of
-orthologous genes or proteins are more similar to each other than they are to
-other genes or proteins in the compared genomes, a \emph{graph-based strategy}
-can be applied. All graph-based strategies use some form of symmetrical best hit
-criterion to distinguish orthologs from paralogs or other homolog subtypes. The
-validity of this criterion is made plausible by the previously mentioned
-ortholog conjecture. The opposite (a gene from one genome being more similar not
-to its ortholog but to a paralog from another genome) would require a
-statistically significant different evolutionary rate in paralogs to create a
-large enough similarity offset compared to orthologs.
+Faced with these fundamental problems and practical obstacles of tree-based
+orthology assessment strategies, most genome-wide studies employ different
+methods. Assuming that the sequences of orthologous genes or proteins are more
+similar to each other than they are to other genes or proteins in the compared
+genomes, a \emph{graph-based} approach can be used. All graph-based strategies
+use some form of symmetrical best hit criterion to distinguish orthologs from
+paralogs or other homolog subtypes. The validity of this criterion is made
+plausible by the above-mentioned ortholog conjecture; the opposite (a gene from
+one genome being more similar not to its ortholog but to a paralog from another
+genome) would require a substantially different evolutionary rate in paralogs to
+create a large enough similarity offset compared to orthologs \citep{koonin2005}.
 
 In a graph-based approach, an algorithm would create a two-dimensional graph
 with genes (or proteins) as nodes and evolutionary relationships as edges. The
-relationships are inferred using a symmetrical search, and clusters of
-orthologous genes are created (figure \ref{fig:graph-based-strat}). 
+relationships are inferred using a search algorithm such as Needleman-Wunsch
+\citeyearpar{needleman1970}, Smith-Waterman \citeyearpar{smith1981}, or BLAST
+\citep{altschul1990}, and clusters of orthologous genes are created (figure
+\ref{fig:graph-based-strat}). However, in such a scenario and in the event of a
+gene loss of, e.g., the blue human gene, a simple best-hit search algorithm
+would incorrectly infer an orthologous relationships between the blue dog and
+the red human gene. In order to avoid these mistakes, an additional criterion
+for orthology detection is introduced: the genes in question must be
+\emph{bidirectional best hits} (BBH), also called reciprocal best hits (RBH).
+Since orthology is also a symmetric relation, this makes sense \todo{rephrase}.
 
 \input{inc/intro/fig-graph-based-strat}
 
+Graph-based strategies are computationally much less expensive than tree-based
+strategies, since only two alignment searches have to be performed for each
+gene. The time complexity scales quadratically with the total number of genes
+\citep{altenhoff2012-1}. 
+The specificity and sensitivity of of graph-based methods depend on the search
+algorithm and the scoring scheme \citep{hulsen2006}.
+
+Many implementations of graph-based algorithms have been introduced and improved
+on the basic RBH strategy. Among the most widely known are COG (clusters of
+ortholog groups) \citep{tatusov2003}, Inparanoid \citep{ostlund2010}, and
+OrthoMCL \citep{li2003} as well as OrthoDB \citep{waterhouse2011}. These and
+many more are reviewed by, e.g., \citet{kuzniar2008} and \citet{forslund2011}.
+COG groups together genes that are BBH using BLAST. Inparanoid uses BLAST BBH as
+well, but assesses only pairwise orthology between species. OrthoMCL builds on
+the Inparanoid approach, but extends it using a Markov cluster algorithm to
+group putative orthologs and paralogs. In OrthoDB, Smith-Waterman BBH are
+triangulated.
+
+Most of the recent graph-based implementations have been used to establish
+public databases of orthologs. These can be browsed online and the material can
+be downloaded for scientific use. Of particular interest is OrthoDB, which
+provides information on ortholog relationships at any level of the available
+taxonomic tree. 
+
 something in \citet{page1997}
 
-See figure \ref{fig:hamstr}.
+Why does an approach that is used on genomes not work on transcriptomes?
+
+With a bidirectional search, it can happen that two genes that are identified as
+mutually closest to each other are in fact not orthologs, but paralogs where the
+corresponding orthologs have been lost in both species. This situation is called
+\emph{differential gene loss} and best solved using a tree-based approach. Given
+the aforementioned difficulties of a tree-based strategy, some algorithms
+implement \emph{triangulation}: To identify a gene as orthologous, it must be
+BBH not only in two, but in three species. The third gene functions as ``witness
+of non-orthology'' \citep{dessimoz2006}. This strategy must also be applied to
+transcriptomes, whose incompleteness may be seen as a similar situation as
+potential gene loss in complete genomes.

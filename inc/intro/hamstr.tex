@@ -1,4 +1,4 @@
-HaMStR (\cite{ebersberger2009}) implements a graph-based approach using hidden
+HaMStR \citep{ebersberger2009} implements a graph-based approach using hidden
 Markov models (HMMs, see section \ref{sec:hmms}). It is aimed specifically at
 searching for orthologs in expressed sequence tag (EST) data, which is sequenced
 using complementary DNA (cDNA) libraries. This cDNA is generated from mRNA and
@@ -22,10 +22,9 @@ The HaMStR algorithm goes as follows:
 \end{enumerate}
 
 \begin{figure}[h]
-		\begin{center}
-			\def\svgwidth{0.8\textwidth}
-			\input{img/triangulation.pdf_tex}
-		\end{center}
+	\centering
+	\def\svgwidth{0.8\textwidth}
+	\input{img/triangulation.pdf_tex}
 	\caption[Triangulation]{Triangulation:
 		\begin{inparaenum}
 			\item The transcript sequence space is searched using a hidden Markov
@@ -39,3 +38,6 @@ The HaMStR algorithm goes as follows:
 	}
 	\label{fig:hamstr}
 \end{figure}
+
+% enable this if you need it, it makes compilation a bit slower
+%\input{inc/intro/hamstr-flowchart}
