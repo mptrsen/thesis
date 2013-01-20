@@ -1,17 +1,16 @@
 Phylogenetic analysis has always required orthology among investigated genes.
 To make use of the speciation information contained in the ortholog property, it
 is important to classify conserved genes according to their homologous
-relationships. It is worth mentioning here that homology is a concept of
-quality, not quantity \citep{reeck1987} and thus indivisible. Two sequences can
-be \emph{similar} by a percentage (e.g., amino acid positional identity), but
-they are either homologous or they are not. The same follows for orthologs,
-paralogs, and xenologs. This distinction is important because homology implies a
-genealogical relationship, whereas similarity does not. Similarity can also be
-the result of other evolutionary processes, such as convergence, which results
-in \emph{analogy}. All variants of similarity can be grouped under the term
-\emph{homoplasy}\footnote{\emph{homos} (``equal''), \emph{plasis}
-(``shaping'')}, which encompasses similarity but excludes homology and its
-subforms \citep{page1998}.
+relationships. Homology is a concept of quality, not quantity \citep{reeck1987}
+and thus indivisible. Two sequences can be \emph{similar} by a percentage (e.g.,
+amino acid positional identity), but they are either homologous or they are not.
+The same follows for orthologs, paralogs, and xenologs. This distinction is
+important because homology implies a genealogical relationship, whereas
+similarity does not. Similarity can also be the result of other evolutionary
+processes, such as convergence, which results in \emph{analogy}. All variants of
+similarity can be grouped under the term \emph{homoplasy}\footnote{\emph{homos}
+(``equal''), \emph{plasis} (``shaping'')}, which encompasses similarity but
+excludes homology and its subforms \citep{page1998}.
 
 A simple alignment or scoring (i.e., similarity) alone cannot separate
 homologous from merely similar sequences \citep{eisen1998}. Since orthology and
@@ -55,7 +54,7 @@ are Orthostrapper \citep{jothi2006} and LOFT \citep{van_der_heijden2007} as well
 as \mbox{COCO-CL} \citep{storm2002}, which does not use a tree reconciliation
 algorithm, but builds a hierarchy of sets of outparalogs. 
 
-Faced with these fundamental problems and practical obstacles of tree-based
+Confronted with these fundamental problems and practical obstacles of tree-based
 orthology assessment strategies, most genome-wide studies employ different
 methods. Assuming that the sequences of orthologous genes or proteins are more
 similar to each other than they are to other genes or proteins in the compared
@@ -67,13 +66,14 @@ one genome being more similar not to its ortholog but to a paralog from another
 genome) would require a substantially different evolutionary rate in paralogs to
 create a large enough similarity offset compared to orthologs \citep{koonin2005}.
 
-In a graph-based approach, an algorithm would create a two-dimensional graph
-with genes (or proteins) as nodes and evolutionary relationships as edges. The
+In a graph-based approach, an algorithm creates a two-dimensional graph with
+genes (or proteins) as nodes and evolutionary relationships as edges. The
 relationships are inferred using a search algorithm such as Needleman-Wunsch
 \citeyearpar{needleman1970}, Smith-Waterman \citeyearpar{smith1981}, or BLAST
 \citep{altschul1990}, and clusters of orthologous genes are created
-(\autoref{fig:graph-based-strat}). However, in such a scenario and in the event
-of a gene loss of, e.g., the blue human gene, a simple best-hit search algorithm
+(\autoref{fig:graph-based-strat}b). However, in such a scenario and in the event
+of a gene loss of, e.g., the blue human gene in
+\autoref{fig:graph-based-strat}a, a simple best-hit search algorithm
 would incorrectly infer an orthologous relationships between the blue dog and
 the red human gene. In order to avoid these mistakes, an additional criterion
 for orthology detection is introduced: the genes in question must be
@@ -84,10 +84,10 @@ Since orthology is also a symmetric relation, this makes sense \todo{rephrase}.
 
 Graph-based strategies are computationally much less expensive than tree-based
 strategies, since only two alignment searches have to be performed for each
-gene. The time complexity scales quadratically with the total number of genes
-\citep{altenhoff2012-1}.  The specificity and sensitivity of of graph-based
-methods depend on the search algorithm and the scoring scheme
-\citep{hulsen2006}.
+gene: one for each direction\todo{rephrase?}. The time complexity scales
+quadratically with the total number of genes \citep{altenhoff2012-1}. The
+specificity and sensitivity of graph-based methods depend on the search
+algorithm and the scoring scheme \citep{hulsen2006}.
 
 Many implementations of graph-based algorithms have been introduced and improved
 on the basic RBH strategy. Among the most widely known are COG (clusters of
@@ -106,9 +106,9 @@ be downloaded for scientific use. Of particular interest is OrthoDB, which
 provides information on ortholog relationships at any level of the available
 taxonomic tree. 
 
-These methods provide scientists with powerful tools to compare genomes, and
-with next-generation, high-throughput sequencing technologies providing vast
-amounts of data, and with the ever-decreasing cost of sequencing a complete
+These methods arm scientists with powerful tools to compare genomes, and with
+next-generation, high-throughput sequencing technologies providing vast amounts
+of data as well as the ever-decreasing cost of sequencing a complete
 genome,\footnote{National Human Genome Research Institute
 (\url{http://www.genome.gov/sequencingcosts/}, last updated November 26, 2012)}
 new discoveries in the fields of comparative genomics and phylogenetics are made

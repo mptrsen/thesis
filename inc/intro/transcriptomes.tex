@@ -1,41 +1,45 @@
 Taking a step back and asking why genomes are studied, many times the answer is
 that we want to discover the function of genes and proteins. The genome is made
-up of long strands of deoxyribonucleic acid (DNA). They are grouped in
+up of long strands of deoxyribonucleic acid (DNA). They are paired in
 chromosomes and contain the necessary instructions to create and maintain cells.
 Proteins are generated according to information on the DNA in a two-step
 process: during \emph{transcription}, messenger ribonucleic acid (mRNA) is
 synthetisized, an intermediate product called \emph{transcript} that leaves the
-nucleus. In the second step, \emph{translation}, the mRNA is used by
-specialized organelles, namely ribosomes, to synthetisize proteins from amino
-acids. Note that during transcription, in a process called \emph{splicing},
-non-coding regions, so-called \emph{introns} of the mRNA are removed. The
-resulting molecule contains only \emph{exons}, coding regions of the genome
-that are relevant for translation. The ratio of exons to introns varies across
-organisms; e.g., the human genome consists of only 1.1\% to 1.4\% exons and
-24.4\% to 37.8\% introns, the rest is intergenic DNA \citep{venter2001}. The
-analysis of genomes for gene functions requires screening the data for those
-regions, which adds further challenges and complications.
+nucleus. In the second step, \emph{translation}, the mRNA is used by specialized
+organelles, namely ribosomes, to synthetisize proteins from amino acids. Note
+that during transcription, in a process called \emph{splicing}, non-coding
+regions, so-called \emph{introns} of the mRNA are removed. The resulting
+molecule contains only \emph{exons}, coding regions of the genome that are
+relevant for translation. The ratio of exons to introns varies across organisms;
+e.g., the human genome consists of only 1.1\% to 1.4\% exons and 24.4\% to
+37.8\% introns, the rest is intergenic DNA \citep{venter2001}. That means the
+majority of the genome does not code for proteins, and the analysis of genomes
+for gene functions requires screening the data for those regions, which adds
+further challenges and complications.
 
 The study of \emph{transcriptomes} circumvents these problems. Like a genome is
 a collection of all the genes in a cell, a transcriptome is the collection of
-all transcripts. In contrast to the genome, it contains neither introns nor 
+all transcripts at the time of RNA preservation. Transcriptomes are also used in
+phylogenetics and phylogenomics to reconstruct species trees based not only on
+one or a few genes, but supermatrices of more than 1,000 genes, or more than
+10,000 species \citep{beiko2011}. The combination of low-cost next-generation
+sequencing and the intron-free nature of transcriptomes allow access to the same
+gene concentration at a fraction of the cost for a complete genome. However,
+next-generation sequencing assembly products are not only fragmented and possibly
+redundant (overlapping), but most importantly they are \emph{incomplete} because
+not all genes may have been expressed at the time of preservation. Due to this
+inherent incompleteness of transcriptomes, orthology prediction approaches that
+are used on complete genomes cannot be used.
 
-Studying the transcriptome allows researchers to learn more about the makeup of
-particular cell types and how they function. Additionally, by comparing the
-transcriptomes of these cell types to the genomes as a whole, the researchers
-gain insight into what genes are active in each cell type, which could help them
-determine the functions of specific genes.
-
-Why does an approach that is used on genomes not work on transcriptomes?
-
-With a bidirectional search, it can happen that two genes that are identified as
-mutually closest to each other are in fact not orthologs, but paralogs where the
-corresponding orthologs have been lost in both species. This situation is called
-\emph{differential gene loss} and best solved using a tree-based approach. Given
-the aforementioned difficulties of a tree-based strategy, some algorithms
-implement \emph{triangulation}: To identify a gene as orthologous, it must be
-BBH not only in two, but in three species. The third gene functions as ``witness
-of non-orthology'' \citep{dessimoz2006}. This strategy must also be applied to
-transcriptomes, whose incompleteness may be seen as a similar situation as
-potential gene loss in complete genomes.
-
+Performing a bidirectional search on a complete genome as described above, it
+can happen that two genes that are identified as mutually closest to each other
+are in fact not orthologs, but paralogs where the corresponding orthologs have
+been lost in both species. This situation is called \emph{differential gene
+loss} and best solved using a tree-based approach. In the face of the
+aforementioned difficulties of a tree-based strategy, some algorithms implement
+\emph{triangulation}: To identify a gene as orthologous, it must be BBH not only
+in two, but in three species. The third gene functions as ``witness of
+non-orthology'' \citep{dessimoz2006}. A triangulation strategy can also be
+applied to transcriptomes, the incompleteness of which may be seen as a similar
+situation as potential gene loss in complete genomes. One implementation example
+is \hamstr \citep{ebersberger2009}, on which I will elaborate in the following.
