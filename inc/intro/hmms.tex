@@ -1,34 +1,19 @@
 \label{sec:hmms}
-Hidden Markov models (HMMs) are probabilistic models that are generally
-applicable to ``linear'' problems and have been widely used in speech
-recognition algorithms for thirty years. 
+Hidden Markov models (HMMs) are statistical models that are generally applicable
+to ``linear'' problems. For this property, HMMs have seen widespread use in
+temporal pattern recognition algorithms, such as speech and gesture recognition
+or musical score following for over thirty years before they were introduced
+into computational biology by \citet{churchill1989} and used as profile models
+since the 1990s \citep{krogh1994}.
 
-HMMs were introduced into computational biology by \citet{churchill1989} and
-used as profile models since the 1990s \citep{krogh1994}.
+Their statistical, linear nature makes them very useful for application on
+biological sequences.
 
-to time series or linear sequences.  This property makes them very useful for
-application on biological sequences.
+
 
 Proteins, RNAs and other biological molecular sequences can usually be
 classified into families of related sequences and structures
 (\cite{henikoff1997}).
 
-\begin{figure}[h]
-	\centering
-	\def\svgwidth{\textwidth}
-	\input{img/hmm-eddy.pdf_tex}
-	\caption[A simple hidden Markov model]{A simple, two-state hidden Markov model
-		describing a DNA sequence with a heterogenous base composition. 
-		\textbf{1.} State 1 generates AT-rich sequences. State 2 generates CG-rich
-			sequences (so-called CpG islands). State transitions and their respective
-			probabilities are indicated by arrows. Symbol emission probabilities for
-			each state are listed below the states.
-		\textbf{2.} At each position, the model not only emits a symbol with a
-			probability that is dependent on its state, it also transits to the
-			other state with a certain probability, or remains in the present state.
-		\textbf{3.} The symbol sequence is the result of of the state transitions and
-			the emission probabilities in that state.
-		Graphic from \citet{eddy1996}.
-	}
-	\label{fig:hmm}
-\end{figure}
+\input{inc/intro/fig-hmm-eddy}
+

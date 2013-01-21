@@ -8,9 +8,11 @@ called \emph{shotgun sequencing}. The cDNA is cloned from mRNA and therefore
 contains no introns, and, like a transcriptome, EST data is incomplete, i.e., it
 contains only nucleotide sequences of the genes that were expressed at the time
 of RNA preservation. Due to the way it is sequenced and assembled, EST data can
-be redundant and fragmented, which is why methods for orthology prediction in
+be redundant and fragmented as well, which is why methods for orthology prediction in
 genomic data cannot be applied, and approaches like described above have to be
-used. \hamstr uses a three-step triangulation strategy as depicted in
+used.
+
+\hamstr uses a three-step triangulation strategy as depicted in
 \autoref{fig:hamstr-triangulation}: Using a HMM that represents amino acid
 sequences that are known to be orthologous, the EST sequence space is
 searched for matches (\autoref{fig:hamstr-triangulation}a). To verify orthology
@@ -18,7 +20,7 @@ in the HMM hits, each hit sequence is compared via BLASTP \citep{altschul1997}
 to a so-called reference taxon (\autoref{fig:hamstr-triangulation}b). Note that
 the proteome, itself being complete, contains the amino acid sequences that are
 known to be orthologous. If the BLAST search hits a sequence that was used to
-generate the HMM (\autoref{fig:hamstr-triangulation}), then orthology is assumed
+generate the HMM (\autoref{fig:hamstr-triangulation}c), then orthology is assumed
 and the EST in question is added to the ortholog cluster. Otherwise, it is
 discarded.
 
@@ -26,3 +28,4 @@ discarded.
 
 % enable this if you need it, it makes compilation a bit slower
 %\input{inc/intro/hamstr-flowchart}
+
