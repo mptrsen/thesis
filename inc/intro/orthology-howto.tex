@@ -1,43 +1,48 @@
-Phylogenetic analysis has always required orthology among investigated genes.
-To make use of the speciation information contained in the ortholog property, it
-is important to classify conserved genes according to their homologous
-relationships. Homology is a concept of quality, not quantity \citep{reeck1987}
-and thus indivisible. Two sequences can be \emph{similar} by a percentage (e.g.,
-amino acid positional identity), but they are either homologous or they are not.
-The same follows for orthologs, paralogs, and xenologs. This distinction is
-important because homology implies a genealogical relationship, whereas
-similarity does not. Similarity can also be the result of other evolutionary
-processes, such as convergence, which results in \emph{analogy}. All variants of
-similarity can be grouped under the term \emph{homoplasy}\footnote{\emph{homos}
-(``equal''), \emph{plasis} (``shaping'')}, which encompasses similarity but
-excludes homology and its subforms \citep{page1998}.
+Phylogenetic analysis searches for evidence of shared ancestry and thus, when
+based on the analysis of genes, requires orthology among the compared genes. To
+make use of the speciation information contained in the ortholog property, it is
+important to classify genes according to their homologous relationships.
+Homology is a concept of quality, not quantity \citep{reeck1987} and thus
+indivisible. Two genes can be \emph{similar} by a percentage (e.g., amino acid
+positional identity), but they are either homologous or they are not. The same
+follows for orthologs, paralogs, and xenologs. The distinction between
+homologous and not homologous is important because homology implies a
+genealogical relationship, whereas similarity does not. Similarity can also be
+the result of other evolutionary processes, such as convergence, which results
+in \emph{analogy}. All variants of similarity among unrelated organisms can be
+grouped under the term \emph{homoplasy}\footnote{\emph{homos} (``equal''),
+\emph{plasis} (``shaping'')}, which was introduced by \citet{lankester1870} and
+encompasses similarity but excludes homology and its subforms \citep{page1998}.
 
-A simple alignment or scoring (i.e., similarity) alone cannot separate
-homologous from merely similar sequences \citep{eisen1998}. Since orthology and
-paralogy are notions that describe evolutionary events, they can be directly
-coupled to a species tree topology. This is how \emph{tree reconciliation}
-strategies work: a gene tree topology is compared to the topology of the chosen
-species tree. The two trees are reconciled using a maximum parsimony criterion,
-i.e., the minimal possible number of evolutionary events (speciation, gene
-duplication, gene loss). In order to produce a reconciled tree, two major
-approaches are followed: \emph{consensus} and \emph{approximation}
-(\autoref{fig:consens-approx}). Like all algorithms in this class, they consider
-a phylogenetic tree a formal mathematical object. In the consensus approach, one
-tries to find a tree that combines the features common to both of the original
-trees. This is rarely a fully resolved tree and therefore biologically not very
-relevant, as the consensus criterion leads to clustering
-(\autoref{fig:consens-approx}c). Increasing the number of initial trees reduces
-the number of common clusters, and the concept of a ``common cluster'' can be
-altered, e.g., to include only those clusters that occur in 80\% of the initial
-trees, but in most cases, clustering cannot be avoided altogether
-\citep{mirkin1995}.
+A simple gene alignment or scoring (i.e., a measure of similarity) alone cannot
+separate homologous from non-homologous, but similar sequences
+\citep{eisen1998}. Since orthology and paralogy are notions that describe
+evolutionary events, they can be directly coupled to the topology of a species
+tree. This is how \emph{tree reconciliation} strategies work, in contrast to
+\emph{graph-based} strategies, which are explained later: the topology of a gene
+tree is compared to the topology of the species tree that contains the chosen
+analyzed genes. The two trees are reconciled using an optimality criterion such
+as maximum parsimony, i.e., the minimal possible number of evolutionary events
+(speciation, gene duplication, gene loss). In order to infer a reconciled tree,
+two major approaches are frequently applied: \emph{consensus} tree inference and
+\emph{approximation} (\autoref{fig:consens-approx}). Both algorithms consider a
+phylogenetic tree a formal mathematical object.
+
+In the consensus approach, a tree is searched for that combines the features
+common to both the gene and species tree. The consensus tree is rarely fully
+resolved since the consensus criterion leads to clustering
+(\autoref{fig:consens-approx}c). Increasing the number of initial trees, e.g.,
+gene trees, can reduce the number of common clusters, and the concept of a
+``common cluster'' can be altered, e.g., to include only those clusters that
+occur in 80\% or more of the initial trees, but in most cases, clustering cannot
+be avoided altogether \citep{mirkin1995}.
 
 \input{inc/intro/fig-consens-approx}
 
 In the approximation approach to tree reconciliation, a similarity measure is
-used across the initial trees. The algorithm tries to find a tree topology that
+used across the initial trees. The algorithm tries to find a topology that
 maximizes the total similarity (minimizes the total dissimilarity) to the
-original trees. However, these measures have no explicit biological meaning
+initial trees. However, these measures have no explicit biological meaning
 \citep{mirkin1995}, and multiple approximation tree topologies can result for a
 given set of starting trees, leading to ambiguous interpretations. 
 
@@ -45,49 +50,54 @@ Tree reconciliation strategies are subject to a number of restrictions when
 applied on a genomic scale. The widespread presence of horizontal gene transfer,
 which is very common in prokaryotes, invalidates the very notion of a species
 tree \citep{doolittle2000}, because the manifold xenologous relationships
-between prokaryote genes would show up in a reconciled tree as ``just a bunch of
-clusters'' \todo{rephrase}. In addition, reconstructing a phylogenetic tree is
-computationally expensive, and doing so for all genes in sequenced genomes is a
-gargantuan task for modern software engineering and computer systems.
-Nevertheless, a number of implementations have persevered; among the most recent
-are Orthostrapper \citep{jothi2006} and LOFT \citep{van_der_heijden2007} as well
-as \mbox{COCO-CL} \citep{storm2002}, which does not use a tree reconciliation
-algorithm, but builds a hierarchy of sets of outparalogs. 
+between prokaryote genes would show up in a reconciled tree in a partly or
+completely unresolved topology.  In addition, reconstructing a phylogenetic tree
+requires a multiple sequence alignment of the analyzed genes, which can be
+automated using algorithms such as MAFFT \citep{katoh2005}, MUSCLE
+\citep{edgar2004}, CLUSTALO \cite{sievers2011}, or others, but not to perfection
+\citep{thompson2011}.  Further, the reconstruction is computationally expensive,
+and doing so for all genes in sequenced genomes is a major challenge for modern
+software engineering and computer systems. Nevertheless, a number of
+implementations have developed; among the most recent are Orthostrapper
+\citep{jothi2006} and LOFT \citep{van_der_heijden2007} as well as \mbox{COCO-CL}
+\citep{storm2002}, which does not use a tree reconciliation algorithm, but
+builds a hierarchy of sets of outparalogs. 
 
 Confronted with these fundamental problems and practical obstacles of tree-based
-orthology assessment strategies, most genome-wide studies employ different
-methods. Assuming that the sequences of orthologous genes or proteins are more
-similar to each other than they are to other genes or proteins in the compared
-genomes, a \emph{graph-based} approach can be used. All graph-based strategies
-use some form of symmetrical best hit criterion to distinguish orthologs from
-paralogs or other homolog subtypes. The validity of this criterion is made
-plausible by the above-mentioned ortholog conjecture; the opposite (a gene from
-one genome being more similar not to its ortholog but to a paralog from another
-genome) would require a substantially different evolutionary rate in paralogs to
-create a large enough similarity offset compared to orthologs \citep{koonin2005}.
+orthology assessment strategies, most genome-wide studies employ a different
+approach. Assuming that the nucleotide or amino acid sequences of orthologous
+genes or proteins are more similar to each other than they are to other genes or
+proteins in the compared genomes, a \emph{graph-based} strategy can be used. All
+graph-based strategies use some form of symmetrical best hit criterion to
+distinguish orthologs from paralogs or other homolog subtypes. The validity of
+this criterion is made plausible by the above-mentioned ortholog conjecture; the
+opposite (a gene from one genome being more similar not to its ortholog but to a
+paralog from another genome) would require a substantially different
+evolutionary rate in paralogs to create a large enough similarity offset
+compared to orthologs \citep{koonin2005}.
 
 In a graph-based approach, an algorithm creates a two-dimensional graph with
 genes (or proteins) as nodes and evolutionary relationships as edges. The
 relationships are inferred using a search algorithm such as Needleman-Wunsch
 \citeyearpar{needleman1970}, Smith-Waterman \citeyearpar{smith1981}, or BLAST
 \citep{altschul1990}, and clusters of orthologous genes are created
-(\autoref{fig:graph-based-strat}b). However, in such a scenario and in the event
-of a gene loss of, e.g., the blue human gene in
-\autoref{fig:graph-based-strat}a, a simple best-hit search algorithm
-would incorrectly infer an orthologous relationships between the blue dog and
-the red human gene. In order to avoid these mistakes, an additional criterion
-for orthology detection is introduced: the genes in question must be
-\emph{bidirectional best hits} (BBH), also called reciprocal best hits (RBH).
-Since orthology is also a symmetric relation, this makes sense \todo{rephrase}.
+(\autoref{fig:graph-based-strat}b). In the event of a gene loss of, e.g., the
+blue human gene shown in \autoref{fig:graph-based-strat}a, however, a simple
+best-hit search algorithm would incorrectly infer an orthologous relationships
+between the blue dog and the red human gene. In order to avoid these mistakes,
+an additional criterion for orthology detection is introduced: the genes in
+question must be \emph{bidirectional best hits} (BBH), also called reciprocal
+best hits (RBH).  Since orthology is also a symmetric relation, this makes sense
+\todo{rephrase}.
 
 \input{inc/intro/fig-graph-based-strat}
 
 Graph-based strategies are computationally much less expensive than tree-based
-strategies, since only two alignment searches have to be performed for each
-gene: one for each direction\todo{rephrase?}. The time complexity scales
-quadratically with the total number of genes \citep{altenhoff2012-1}. The
-specificity and sensitivity of graph-based methods depend on the search
-algorithm and the scoring scheme \citep{hulsen2006}.
+strategies, since only two pairs of sequences are compared with and thus aligned
+to each other for each gene: one for each direction\todo{rephrase?}. The time
+complexity scales quadratically with the total number of genes
+\citep{altenhoff2012-1}. The specificity and sensitivity of graph-based methods
+depend on the search algorithm and the scoring scheme \citep{hulsen2006}.
 
 Many implementations of graph-based algorithms have been introduced and improved
 on the basic RBH strategy. Among the most widely known are COG (clusters of

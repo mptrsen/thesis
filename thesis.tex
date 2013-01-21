@@ -1,16 +1,16 @@
-\RequirePackage[l2tabu, orthodox]{nag}
+%\RequirePackage[l2tabu, orthodox]{nag}
 \documentclass[a4paper,12.5pt]{scrreprt}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}		% English language 
-\usepackage[backend=bibtex,style=authoryear,bibstyle=nature,natbib=true]{biblatex}
+%\usepackage[backend=bibtex,style=authoryear,bibstyle=nature,natbib=true]{biblatex}
 %--------------------------------------------------
 % passive packages
 \usepackage{lmodern}					% font looks better on screen
 \usepackage{microtype}				% even better
 \usepackage{fullpage}					% more space on the page
 \usepackage{csquotes}
-%\usepackage{natbib}           % bibliography for scientists
+\usepackage{natbib}           % bibliography for scientists
 \usepackage{perpage}          % counters per page, not per doc
 \usepackage{graphicx}					% fancy graphics
 \usepackage{color}						% enable color
@@ -18,7 +18,6 @@
 % more features
 \usepackage{amsmath}					% all the fancy math stuff
 \usepackage{listings}         % code listings
-\usepackage{todonotes}
 %\usepackage{enumerate}				% customize numbered lists
 \usepackage{tikz}             % draw stuff with tikz
 \usepackage{xspace}						% to space or not to space
@@ -30,18 +29,20 @@
 \MakePerPage{footnote}
 
 % setup natbib citation format
-%\bibpunct{(}{)}{,}{a}{,}{,}
+\bibpunct{(}{)}{,}{a}{,}{,}
 
 % setup biblatex
-\bibliography{bib/diploma}
-\ExecuteBibliographyOptions{
-	firstinits=true,
-	backref=true,
-	isbn=false,
-	url=false,
-	maxcitenames=2,
-	maxbibnames=999,
-}
+%--------------------------------------------------
+% \bibliography{bib/diploma}
+% \ExecuteBibliographyOptions{
+% 	firstinits=true,
+% 	backref=true,
+% 	isbn=false,
+% 	url=false,
+% 	maxcitenames=2,
+% 	maxbibnames=999,
+% }
+%-------------------------------------------------- 
 
 % setup the listings package
 \lstset{%
@@ -82,7 +83,7 @@
 \newcommand{\hamstr}{HaMStR\xspace}
 \newcommand{\pname}{Orthograph\xspace}
 \newcommand{\species}[1]{\textit{#1}}
-%\newcommand{\todo}[1]{\textbf{\color{red}[#1]}}
+\newcommand{\todo}[1]{\textbf{\color{red}[#1]}}
 
 % doublespace
 \linespread{1.3}
@@ -91,7 +92,7 @@
 \author{Malte Petersen}
 
 \begin{document}
-\listoftodos
+%\listoftodos
 \maketitle
 \tableofcontents
 
@@ -168,10 +169,10 @@
 \phantomsection
 \addcontentsline{toc}{chapter}{Bibliography}
 % uncomment these two lines if using bibtex
-%\bibliographystyle{plainnat}
-%\bibliography{bib/diploma}
+\bibliographystyle{plainnat}
+\bibliography{bib/diploma}
 % uncomment this line if using biblatex
-\printbibliography
+%\printbibliography
 \clearpage
 
 \phantomsection
