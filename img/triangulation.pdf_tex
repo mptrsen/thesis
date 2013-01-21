@@ -1,4 +1,4 @@
-%% Creator: Inkscape inkscape 0.48.4, www.inkscape.org
+%% Creator: Inkscape inkscape 0.48.3.1, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
 %% Accompanies image file 'triangulation.pdf' (pdf, eps, ps)
 %%
@@ -48,11 +48,11 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.62022117)%
+  \begin{picture}(1,0.61968674)%
     \put(0,0){\includegraphics[width=\unitlength]{img/triangulation.pdf}}%
-    \put(0.17162785,0.28991295){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\textbf{1.}}}}%
-    \put(0.61125683,0.27090741){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\textbf{2.}}}}%
-    \put(0.27046644,0.11170742){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\textbf{3.}}}}%
+    \put(0.17162785,0.28991295){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\textbf{a)}}}}%
+    \put(0.61125683,0.27090741){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\textbf{b)}}}}%
+    \put(0.27046644,0.11170742){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{\textbf{c)}}}}%
     \put(0.05663243,0.07043057){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{HMM}}}%
     \put(0.44551545,0.5809491){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{transcripts}}}%
     \put(0.82270286,0.00873554){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{reference proteome}}}%

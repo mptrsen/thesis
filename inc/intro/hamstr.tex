@@ -1,41 +1,28 @@
-HaMStR \citep{ebersberger2009} implements a graph-based approach using hidden
-Markov models (HMMs, see section \ref{sec:hmms}). It is aimed specifically at
-searching for orthologs in expressed sequence tag (EST) data, which is sequenced
-using complementary DNA (cDNA) libraries. This cDNA is generated from mRNA and
-therefore contains no introns. EST data can be redundant and fragmented, which
-is why methods for orthology prediction in genomic data cannot be applied.
+\hamstr implements a graph-based approach using profile hidden Markov models
+(pHMMs, explained in section \ref{sec:hmms}). It is aimed specifically at
+searching for orthologs in \emph{expressed sequence tag} (EST)
+data,\footnote{National Center for Biotechnology Information: EST fact sheet
+(\url{http://www.ncbi.nlm.nih.gov/About/primer/est.html}, revised: March 29,
+2004)} which are sequenced using complementary DNA (cDNA) libraries in a process
+called \emph{shotgun sequencing}. The cDNA is cloned from mRNA and therefore
+contains no introns, and, like a transcriptome, EST data is incomplete, i.e., it
+contains only nucleotide sequences of the genes that were expressed at the time
+of RNA preservation. Due to the way it is sequenced and assembled, EST data can
+be redundant and fragmented, which is why methods for orthology prediction in
+genomic data cannot be applied, and approaches like described above have to be
+used. \hamstr uses a three-step triangulation strategy as depicted in
+\autoref{fig:hamstr-triangulation}: Using a HMM that represents amino acid
+sequences that are known to be orthologous, the EST sequence space is
+searched for matches (\autoref{fig:hamstr-triangulation}a). To verify orthology
+in the HMM hits, each hit sequence is compared via BLASTP \citep{altschul1997}
+to a so-called reference taxon (\autoref{fig:hamstr-triangulation}b). Note that
+the proteome, itself being complete, contains the amino acid sequences that are
+known to be orthologous. If the BLAST search hits a sequence that was used to
+generate the HMM (\autoref{fig:hamstr-triangulation}), then orthology is assumed
+and the EST in question is added to the ortholog cluster. Otherwise, it is
+discarded.
 
-The HaMStR algorithm goes as follows:
-
-\begin{enumerate}
-	\item For each HMM, do the following:
-		\begin{enumerate}
-			\item Search the EST library. If matches were found, do the following for
-				each:
-			\begin{enumerate}
-				\item Search the hit sequence against a BLAST database of all reference
-					proteomes (the ``reciprocal BLAST''). 
-				\item If matches were found: 
-
-			\end{enumerate}
-		\end{enumerate}
-\end{enumerate}
-
-\begin{figure}[h]
-	\centering
-	\def\svgwidth{0.8\textwidth}
-	\input{img/triangulation.pdf_tex}
-	\caption[Triangulation]{Triangulation:
-		\textbf{1.} The transcript sequence space is searched using a hidden Markov
-			model (HMM), which is a statistical representation of the reference
-			sequences that were used to build it.
-		\textbf{2.} A reference proteome is searched using the match sequence from the
-			HMM search (reciprocal search).
-		\textbf{3.} If the reciprocal search match sequence is one that was used to
-			build the HMM, then orthology is assumed.
-	}
-	\label{fig:hamstr}
-\end{figure}
+\input{inc/intro/fig-hamstr-triangulation}
 
 % enable this if you need it, it makes compilation a bit slower
 %\input{inc/intro/hamstr-flowchart}
