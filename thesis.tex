@@ -1,4 +1,4 @@
-\RequirePackage[l2tabu, orthodox]{nag}
+%\RequirePackage[l2tabu, orthodox]{nag}
 \documentclass[a4paper,12pt]{scrreprt}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -26,7 +26,7 @@
 %--------------------------------------------------
 
 % setup the footnote counter per page
-\MakePerPage{footnote}
+%\MakePerPage{footnote}
 
 % setup natbib citation format
 \bibpunct{(}{)}{,}{a}{,}{,}
@@ -121,6 +121,7 @@
 \chapter{Material and methods}
 	\section{Hardware}
 		\input{inc/methods/hardware}
+	\section{Programs}
 		\input{inc/methods/programs}
 		\subsection{HMMER3}
 			\input{inc/methods/hmmer}
@@ -128,29 +129,31 @@
 			\input{inc/methods/blast}
 		\subsection{Exonerate}
 			\input{inc/methods/exonerate}
-	\section{Glue}
-		\subsection{Perl programming}
-			\input{inc/methods/perl}
 		\subsection{MySQL}
 			\input{inc/methods/mysql}
+	\section{Perl programming}
+		\input{inc/methods/perl}
 
 \chapter{Results}
-	\section{Graph}
-		\input{inc/results/graph}
+	\input{inc/results/intro}
 	\section{Algorithm}
 		\subsection{Analysis}
 			\input{inc/results/algorithm-analysis}
 		\subsection{Reporting}
 			\input{inc/results/algorithm-reporting}
-	\section{Implementation decisions}
-		\input{inc/results/implementation}
+	\section{Graph}
+		\input{inc/results/graph}
 	\section{Database design}
 		\input{inc/results/database-structure}
+	\section{Implementation decisions}
+		\subsubsection{Traversing the hit list by e-value}
+		\input{inc/results/implementation}
 	\section{Performance tweaks}
 		\subsection{One BLAST database comprising all core taxa proteomes}
 			\input{inc/results/one-blast}
 		\subsection{RBDMS vs. flat files}
 		\subsection{MySQL performance}
+		\subsubsection{Individual tables per query species}
 	\section{SHA-256 checksums as sequence identifiers}
 		\input{inc/results/checksums}
 	\section{Benchmarks}

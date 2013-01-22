@@ -1,4 +1,3 @@
-
 The analysis algorithm is as follows:
 
 \begin{enumerate}
@@ -6,7 +5,8 @@ The analysis algorithm is as follows:
 	\item Check the following:
 	\begin{enumerate}
 		\item Do the user settings make sense? If not, exit.
-		\item Are the paths to the input file and the programs correct? If not, exit.
+		\item Are the paths to the input file and the programs correct? If not,
+			exit.
 		\item Do the output directories exist? If not, create them.
 		\item Does the database structure exist? If not, exit.
 	\end{enumerate}
@@ -15,27 +15,27 @@ The analysis algorithm is as follows:
 	\item Create the HMMs, if they do not exist.
 	\item Create the BLAST database of all core taxa, if it does not exist.
 	\item Configure the hmmsearch and BLAST modules.
-	\item Translate the input file in all six reading frames, if it is nucleic acid data.
-	\item Load the translated sequences into the database, generating unique SHA256
-		digests on the way.
+	\item Translate the input file in all six reading frames, if it is nucleic
+		acid data.
+	\item Load the translated sequences into the database, generating unique
+		SHA256 digests on the way.
 	\item Get all translated sequences of the target species from the database.
 		Sequence identifiers are now SHA256 digests. Write the sequences into a
-		Fasta file.
+		temporary file.
 	\item For each HMM, do the following:
 	\begin{enumerate}
-		\item Search the translated sequences with this HMM. Read the tabular search
-			report and store it in the database. Skip to the next HMM if no hits were
-			obtained.
+		\item Search the translated sequences in the temporary file with this HMM.
+			Skip to the next HMM if no hits were obtained. Otherwise, read the tabular
+			search report and store it in the database. 
 		\item For each hit, do the following:
 		\begin{enumerate}
 			\item Get the hit sequence from the database and write the relevant
 				subsequence to a Fasta file. This information has been gained from the
 				hmmsearch report file.
-			\item Search this sequence against the BLAST database. Read the tabular
-			search report and store it in the database. Skip to the next HMM if no
-			hits were obtained.
+			\item Search this sequence against the BLAST database. Skip to the next
+				HMM if no hits were obtained. Otherwise, read the tabular search report
+				and store it in the database. 
 		\end{enumerate}
 	\end{enumerate}
-	\item Print some statistics and exit.
 \end{enumerate}
 

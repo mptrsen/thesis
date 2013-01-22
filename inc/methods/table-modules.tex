@@ -4,21 +4,22 @@
 		Module & Description \\
 		\hline
 		\code{autodie}        & Pragmatic module: automatically calls \code{die} on I/O errors \\
-		\code{strict}         & Pragmatic module: enforces certain programming conventions \\
+		\code{strict}         & Pragmatic module: enforces safe programming conventions \\
 		\code{warnings}       & Pragmatic module: enables warning messages during runtime \\
 		\code{Archive::Tar}   & Handles tar archive files \\
-		\code{Carp}           & Enables extended warning and error output, including call stack \\
+		\code{Carp}           & Extended warning and error output, including call stack \\
 		\code{Config}         & Allows reading of the system configuration \\
 		\code{DBD::mysql}     & MySQL database driver \\
 		\code{DBI}            & Database interface \\
 		\code{Digest::SHA}    & Implements the SHA hashing algorithm \\
 		\code{File::Basename} & Provides \code{basename()}, which returns the basename of a file\\
 		\code{File::Path}     & Create or remove directory trees \\
+		\code{File::Spec}     & Platform-independent path handling; loaded by \code{File::Path} \\
 		\code{File::Temp}     & Handles temporary files and directories \\
-		\code{FindBin}        & Provides the location of the running script during compile time \\
+		\code{FindBin}        & Provides the location of the script during compile time \\
 		\code{IO::Dir}        & Provides object-oriented access to directories \\
 		\code{IO::File}       & Provides object-oriented access to files \\
-		\code{IO::Tee}        & Enables simultaneous writing to STDOUT/STDERR and to files \\
+		\code{IO::Tee}        & Enables multiplexed output to multiple buffers \\
 		\code{Time::HiRes}    & Enables high-resolution timer \\
 		\hline
 		\code{Seqload::Fasta}        & Provides object-oriented access to fasta files \\
@@ -28,6 +29,10 @@
 		\code{Orthograph::Functions} & Functions for all \pname tools \\
 		\code{Orthograph::Config}    & Reads configuration files and provides configuration variables \\
 	\end{tabular}
-	\caption[Perl modules used in this project]{Perl modules used this project. Modules above the line are present in any standard Perl distribution, with the exception of \code{IO::Tee}. Modules listed below the line were written by me.}
+	\caption[Perl modules used in this project]{Perl modules used this project.
+		Modules above the line are present in any standard Perl distribution, with the
+		exception of \code{IO::Tee}, which is bundled with \pname. Modules listed
+		below the line were written by me.
+	}
 	\label{tab:modules}
 \end{table}
