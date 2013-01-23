@@ -1,7 +1,7 @@
 In this project, a MySQL relational database management system (RDBMS) is used
 for fast and efficient sequence data storage and retrieval. It is published
 under the GPL license for open source applications. MySQL was installed from the
-Fedora repositories using the package manager.
+Fedora repositories using the package manager yum.
 
 The introduction of a RDBMS has a number of advantages over file-based sequence
 storage:
@@ -22,12 +22,12 @@ storage:
 		and output.
 \end{description}
 
-This version of MySQL supports a number of storage engines, such as InnoDB (the
-default), MyISAM or MEMORY. InnoDB is a so-called transactional database storage
-engine and is ACID compliant. ACID stands for Atomicity, Consistency, Isolation
-and Durability \citep{haerder1983}. This is a set of database design principles
-that emphasize aspects of reliability that are important for data-critical
-applications \citep{balling2005}:
+This version of MySQL supports the InnoDB and MyISAM storage engines. InnoDB is
+a so-called transactional database storage engine and is ACID compliant. ACID
+stands for Atomicity, Consistency, Isolation and Durability \citep{haerder1983}.
+This is a set of database design principles that emphasize aspects of
+reliability that are important for data-critical applications
+\citep{schwartz2012}:
 
 \begin{description}
 	\item[Atomicity.] A transaction must function as a single indivisible unit of
@@ -49,10 +49,13 @@ row-level locking instead of table-level locking. This means that when
 inserting, updating or deleting rows, not the entire table is locked, but only
 the row that is being worked on, enabling highly parallel transactions. 
 
-MyISAM used to be the default storage engine for MySQL up to version 5.1. It
-does not support transactions or row-level locks and is not crash-safe. In terms
-of performance, most of the time InnoDB is the better choice. However, due to
-its much less complex nature, MyISAM tables can be compressed to take up much
-less space both on disk and in memory. In addition, MyISAM allows the disabling
-of indices during data upload, which, especially with large datasets such as
-entire transcriptomes (as will be explained later), can be a performance gain. 
+MyISAM used to be the default storage engine for MySQL up to version 5.1
+\citep{schwartz2012}. It does not support transactions or row-level locks and is
+not crash-safe. In terms of performance, most of the time InnoDB is the better
+choice. However, due to its much less complex nature, MyISAM tables can be
+compressed to take up much less space both on disk and in memory. In addition,
+MyISAM allows the disabling of indices during data upload, which, especially
+with large datasets such as entire transcriptomes (as will be explained later),
+can be a performance gain. 
+
+\pname uses both InnoDB and MyISAM storage engines on different tables. 
