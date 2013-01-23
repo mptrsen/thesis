@@ -22,3 +22,37 @@ storage:
 		and output.
 \end{description}
 
+This version of MySQL supports a number of storage engines, such as InnoDB (the
+default), MyISAM or MEMORY. InnoDB is a so-called transactional database storage
+engine and is ACID compliant. ACID stands for Atomicity, Consistency, Isolation
+and Durability \citep{haerder1983}. This is a set of database design principles
+that emphasize aspects of reliability that are important for data-critical
+applications \citep{balling2005}:
+
+\begin{description}
+	\item[Atomicity.] A transaction must function as a single indivisible unit of
+		work. It either can be applied or must be rolled back. There is no
+		``partially completed'' transaction.
+	\item[Consistency.] The database should always be in a consistent state. Since
+		transactions either do or do not succeed due to atomicity, corruption due to
+		partial or conflicting alterations is impossible.
+	\item[Isolation.] Results of a transaction are invisible to other
+		transactions until the transaction is complete. This is true for
+		transactions on the same isolation level.
+	\item[Durability.] Once commited, changes made by a transaction are permanent.
+		This means that the changes must be recorded such that data cannot be lost
+		in a system crash. 
+\end{description}
+
+These properties ensure reliability and data integrity. InnoDB also implements
+row-level locking instead of table-level locking. This means that when
+inserting, updating or deleting rows, not the entire table is locked, but only
+the row that is being worked on, enabling highly parallel transactions. 
+
+MyISAM used to be the default storage engine for MySQL up to version 5.1. It
+does not support transactions or row-level locks and is not crash-safe. In terms
+of performance, most of the time InnoDB is the better choice. However, due to
+its much less complex nature, MyISAM tables can be compressed to take up much
+less space both on disk and in memory. In addition, MyISAM allows the disabling
+of indices during data upload, which, especially with large datasets such as
+entire transcriptomes (as will be explained later), can be a performance gain. 
