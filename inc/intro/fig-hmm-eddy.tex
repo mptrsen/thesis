@@ -1,0 +1,20 @@
+\begin{figure}[t]
+	\centering
+	\def\svgwidth{\textwidth}
+	\input{img/hmm-eddy.pdf_tex}
+	\caption[A simple hidden Markov model]{A simple, two-state hidden Markov model
+		describing a DNA sequence with a heterogenous base composition. 
+		\textbf{a)} State 1 generates AT-rich sequences. State 2 generates CG-rich
+			sequences (so-called CpG islands). State transitions and their respective
+			probabilities are indicated by arrows. Symbol emission probabilities for
+			each state are listed below the states.
+		\textbf{b)} At each position, the model not only emits a symbol with a
+			probability that is dependent on its state, it also transits to the
+			other state with a certain probability, or remains in the present state.
+		\textbf{c)} The symbol sequence is the result of of the state transitions and
+			the emission probabilities in that state.
+		Graphic from \citet{eddy1996}.
+	}
+	\label{fig:hmm}
+\end{figure}
+
