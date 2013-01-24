@@ -6,31 +6,25 @@
 %\usepackage[backend=bibtex,style=authoryear,bibstyle=nature,natbib=true]{biblatex}
 %--------------------------------------------------
 % passive packages
+\usepackage{color}						% enable color
+\usepackage{graphicx}					% fancy graphics
 \usepackage{lmodern}					% font looks better on screen
 \usepackage{microtype}				% even better
-\usepackage{fullpage}					% more space on the page
-\usepackage{csquotes}
 \usepackage{natbib}           % bibliography for scientists
-\usepackage{perpage}          % counters per page, not per doc
-\usepackage{graphicx}					% fancy graphics
-\usepackage{color}						% enable color
+%--------------------------------------------------
+% if using biblatex
+%\usepackage{csquotes}
 %--------------------------------------------------
 % more features
+%\usepackage{enumerate}				% customize numbered lists
 \usepackage{amsmath}					% all the fancy math stuff
 \usepackage{listings}         % code listings
 \usepackage{tabularx}
-%\usepackage{enumerate}				% customize numbered lists
 \usepackage{tikz}             % draw stuff with tikz
-\usepackage{xspace}						% to space or not to space
 \usepackage{url}							% URL handling
+\usepackage{xspace}						% to space or not to space
 \usepackage{hyperref} 				% should be loaded last
 %--------------------------------------------------
-
-% setup the footnote counter per page
-%\MakePerPage{footnote}
-
-% setup natbib citation format
-\bibpunct{(}{)}{,}{a}{,}{,}
 
 % setup biblatex
 %--------------------------------------------------
@@ -44,6 +38,9 @@
 % 	maxbibnames=999,
 % }
 %-------------------------------------------------- 
+
+% setup natbib citation format
+\bibpunct{(}{)}{,}{a}{,}{,}
 
 % setup the listings package
 \lstset{%
@@ -86,23 +83,21 @@
 \newcommand{\species}[1]{\textit{#1}}
 \newcommand{\todo}[1]{\textbf{\color{red}[#1]}}
 
-% doublespace
-\linespread{1.3}
+
 
 \title{Fast and efficient mapping of transcript sequences to ortholog groups}
 \author{Malte Petersen}
 
 \begin{document}
-%\listoftodos
+% doublespace
+\linespread{1.3}
 \maketitle
+\pagestyle{headings}
 \tableofcontents
 
 \chapter*{Paper notes}
 	\input{notes}
 
-%\mainmatter
-%\chapter{Journal}
-	%\include{inc/journal}
 \include{inc/quotes}
 
 \chapter{Introduction}
