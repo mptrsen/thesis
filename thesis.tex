@@ -5,22 +5,21 @@
 \usepackage[english]{babel}		% English language 
 %\usepackage[backend=bibtex,style=authoryear,bibstyle=nature,natbib=true]{biblatex}
 %--------------------------------------------------
-% passive packages
+% if using biblatex
+%\usepackage{csquotes}
+%--------------------------------------------------
 \usepackage{color}						% enable color
 \usepackage{graphicx}					% fancy graphics
 \usepackage{lmodern}					% font looks better on screen
-\usepackage{microtype}				% even better
+\usepackage{microtype}				% improve kerning
 \usepackage{natbib}           % bibliography for scientists
-%--------------------------------------------------
-% if using biblatex
-%\usepackage{csquotes}
 %--------------------------------------------------
 % more features
 %\usepackage{enumerate}				% customize numbered lists
 \usepackage{amsmath}					% all the fancy math stuff
 \usepackage{listings}         % code listings
-\usepackage{tabularx}
-\usepackage{tikz}             % draw stuff with tikz
+%\usepackage{tabularx}         % extended tables
+%\usepackage{tikz}             % draw stuff with tikz
 \usepackage{url}							% URL handling
 \usepackage{xspace}						% to space or not to space
 \usepackage{hyperref} 				% should be loaded last
@@ -130,18 +129,20 @@
 			\input{inc/methods/mysql}
 	\section{Perl programming}
 		\input{inc/methods/perl}
+	\section{HMM sensitivity}
+		\input{inc/results/hmmtest}
 
 \chapter{Results}
 	\input{inc/results/intro}
+	\section{Graph}
+		\input{inc/results/graph}
+	\section{Database design}
+		\input{inc/results/database-structure}
 	\section{Algorithm}
 		\subsection{Analysis}
 			\input{inc/results/algorithm-analysis}
 		\subsection{Reporting}
 			\input{inc/results/algorithm-reporting}
-	\section{Graph}
-		\input{inc/results/graph}
-	\section{Database design}
-		\input{inc/results/database-structure}
 	\section{Implementation decisions}
 		\subsubsection{Traversing the hit list by e-value}
 		\input{inc/results/implementation}
@@ -151,11 +152,10 @@
 		\subsection{RBDMS vs. flat files}
 		\subsection{MySQL performance}
 		\subsubsection{Individual tables per query species}
+			\input{inc/results/table-per-species}
 	\section{SHA-256 checksums as sequence identifiers}
 		\input{inc/results/checksums}
 	\section{Benchmarks}
-	\section{HMM sensitivity}
-		\input{inc/results/hmmtest}
 
 \chapter{Discussion and outlook}
 	\input{inc/discussion/intro}

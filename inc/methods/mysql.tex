@@ -1,4 +1,4 @@
-In this project, a MySQL relational database management system (RDBMS) is used
+In this project, the MySQL relational database management system (RDBMS) is used
 for fast and efficient sequence data storage and retrieval. It is published
 under the GPL license for open source applications. MySQL was installed from the
 Fedora repositories using the package manager yum.
@@ -17,17 +17,16 @@ storage:
 		DBMS has to search a smaller space to find a given sequence.
 	\item[Performance.] The DBMS is highly optimized for speed and efficiency. If
 		configured correctly, complex joins comprising millions of rows are executed
-		quickly due to the use of B-tree indices (\cite{comer1979}).
+		quickly due to the use of B-tree indices \citep{comer1979}.
 	\item[Flexibility.] SQL queries allow fine-grained, custom-tailored filtering
 		and output.
 \end{description}
 
-This version of MySQL supports the InnoDB and MyISAM storage engines. InnoDB is
-a so-called transactional database storage engine and is ACID compliant. ACID
-stands for Atomicity, Consistency, Isolation and Durability \citep{haerder1983}.
-This is a set of database design principles that emphasize aspects of
-reliability that are important for data-critical applications
-\citep{schwartz2012}:
+MySQL supports the InnoDB and MyISAM storage engines. InnoDB is a so-called
+transactional database storage engine and is ACID compliant. ACID stands for
+Atomicity, Consistency, Isolation and Durability \citep{haerder1983}.  This is a
+set of database design principles that emphasize aspects of reliability that are
+important for data-critical applications \citep{schwartz2012}:
 
 \begin{description}
 	\item[Atomicity.] A transaction must function as a single indivisible unit of
@@ -58,4 +57,4 @@ MyISAM allows the disabling of indices during data upload, which, especially
 with large datasets such as entire transcriptomes (as will be explained later),
 can be a performance gain. 
 
-\pname uses both InnoDB and MyISAM storage engines on different tables. 
+\pname uses both InnoDB and MyISAM storage engines on different tables.
