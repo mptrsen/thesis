@@ -73,12 +73,24 @@ analogue of equation \eqref{eqn:markov-chain-general} \citep{durbin1998}.
 \input{inc/intro/fig-hmm-eddy}
 
 HMMs can be used in a pairwise sequence alignment algorithm using transition
-scores according to the transition probabilities. The transitions are assigned a
-score increment, and the states each specify a $\Delta(i,i)$ pair. The alignment
-algorithm uses a \emph{finite state automaton} (FSA), which is a concept from
-computer science and describes an abstract machine that can be in one of a
-finite number of states. A FSA is defined by a list of its states and the
-triggering condition for each transition, and can be described with a HMM. An
-alignment corresponds to a path through the states, with symbols from the
-underlying pair of sequences being transferred to the alignment according to the
-$\Delta(i,j)$ values in the states \citep{durbin1998}.
+scores: the transitions are assigned a score increment according to the
+transition probabilities, and the resulting states each specify a $\Delta(i,i)$
+pair for the transition from $s_i$ to $s_j$. The alignment algorithm uses a
+\emph{finite state automaton} (FSA), which is a concept from computer science
+and describes an abstract machine that can be in one of a finite number of
+states. A FSA is defined by a list of its states and the triggering condition
+for each transition, and can be described with a HMM. An alignment corresponds
+to a path through the states, with symbols from the underlying pair of sequences
+being transferred to the alignment according to the $\Delta(i,j)$ values in the
+states \citep{durbin1998}. 
+
+HMM-based alignment algorithms have been demonstrated to be very effective in
+detecting conserved patterns in multiple sequences \citep{eddy1995, hughey1996}. 
+This performance is achieved by \emph{training} the HMM on a multiple sequence
+alignment of amino acid sequences (when attempting to align amino acid
+sequences) that are members of a protein family. The resulting HMM can
+discriminate between protein family members and non-family members with great
+accuracy, even if they are very remotely related \citep{karplus1998}. In the
+HMMER3 implementation (see \autoref{sec:programs}), HMM searches exhibit a
+better specificity \citep{korf2004} than both PSI-BLAST \citep{altschul1997} and BLAST
+\citep{altschul1990}.
