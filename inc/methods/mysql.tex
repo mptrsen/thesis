@@ -53,8 +53,9 @@ MyISAM used to be the default storage engine for MySQL up to version 5.1
 not crash-safe. In terms of performance, most of the time InnoDB is the better
 choice. However, due to its much less complex nature, MyISAM tables can be
 compressed to take up much less space both on disk and in memory. In addition,
-MyISAM allows the disabling of indices during data upload, which, especially
-with large datasets such as entire transcriptomes (as will be explained later),
-can be a performance gain. 
+MyISAM allows the disabling of indices during data upload, which---especially
+with large datasets such as nucleotide or peptide sequences from entire
+transcriptomes (as will be explained later) and in tables with with many
+indices---can be a performance gain \citep{mysql2013}. 
 
 \pname uses both InnoDB and MyISAM storage engines on different tables.
