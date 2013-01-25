@@ -4,7 +4,7 @@ under the GPL license for open source applications. MySQL was installed from the
 Fedora repositories using the package manager yum.
 
 The introduction of a RDBMS has a number of advantages over file-based sequence
-storage:
+data storage:
 
 \begin{description}
 	\item[Memory efficiency.] The sequence data does not need to be loaded into
@@ -46,7 +46,8 @@ important for data-critical applications \citep{schwartz2012}:
 These properties ensure reliability and data integrity. InnoDB also implements
 row-level locking instead of table-level locking. This means that when
 inserting, updating or deleting rows, not the entire table is locked, but only
-the row that is being worked on, enabling highly parallel transactions. 
+the row that is being worked on, enabling parallel transactions for higher
+performance. 
 
 MyISAM used to be the default storage engine for MySQL up to version 5.1
 \citep{schwartz2012}. It does not support transactions or row-level locks and is
