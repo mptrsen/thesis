@@ -1,7 +1,7 @@
 \label{sec:hmms}
 Proteins, RNAs and other biological molecular sequences can usually be
 classified into families of related sequences and structures
-(\cite{henikoff1997}). Since a similarity measure bears no genealogical
+\citep{henikoff1997}. Since a similarity measure bears no genealogical
 meaning---as explained in \autoref{sec:orthology-howto}---more appropriate
 approaches must be tried.
 
@@ -85,9 +85,11 @@ pair for the transition from $s_i$ to $s_j$. The alignment algorithm uses a
 and describes an abstract machine that can be in one of a finite number of
 states. A FSA is defined by a list of its states and the triggering condition
 for each transition, and can be described with a HMM. An alignment corresponds
-to a path through the states, with symbols from the underlying pair of sequences
-being transferred to the alignment according to the $\Delta(i,j)$ values in the
-states \citep{durbin1998}. 
+to a path through the states, with symbols from the underlying pair of
+sequences (which can also be gaps) being transferred to the alignment according
+to the $\Delta(i,j)$ values in the states \citep{durbin1998}. 
+
+\todo{elaborate?}
 
 HMM-based alignment algorithms have been demonstrated to be very effective in
 detecting conserved patterns in multiple sequences \citep{eddy1995, hughey1996}.

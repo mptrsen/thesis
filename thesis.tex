@@ -1,20 +1,19 @@
 %\RequirePackage[l2tabu, orthodox]{nag}
 \documentclass[a4paper,12pt]{scrreprt}
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}   % input encoding
+\usepackage[T1]{fontenc}      % font encoding
 \usepackage[english]{babel}		% English language 
 \usepackage[backend=bibtex,style=authoryear,bibstyle=nature,natbib=true]{biblatex}
-%--------------------------------------------------
-% if using biblatex
-\usepackage{csquotes}
-%--------------------------------------------------
-\usepackage{color}						% enable color
-\usepackage{graphicx}					% fancy graphics
 \usepackage{lmodern}					% font looks better on screen
 \usepackage{microtype}				% improve kerning
+\usepackage{color}						% enable color
+% if using natbib
 %\usepackage{natbib}           % bibliography for scientists
+% if using biblatex
+\usepackage{csquotes}         % dunno what this does
 %--------------------------------------------------
 % more features
+\usepackage{graphicx}					% fancy graphics
 %\usepackage{enumerate}				% customize numbered lists
 \usepackage{amsmath}					% all the fancy math stuff
 \usepackage{listings}         % code listings
@@ -43,16 +42,16 @@
 % setup the listings package
 \lstset{%
 	language=perl,
-	basicstyle=,                       % the size of the fonts that are used for the code
-	numbers=left,                      % where to put the line-numbers
-	numberstyle=\tiny,                 % the size of the fonts that are used for the line-numbers
-	%stepnumber=2,                      % the step between two line-numbers. If it is 1 each line will be numbered
+	basicstyle=,                       % size of the fonts that are used for the code
+	numbers=left,                      % where to put the line numbers
+	numberstyle=\tiny,                 % size of the fonts that are used for the line numbers
+	%stepnumber=2,                      % step between two line numbers. 
 	numbersep=5pt,                     % how far the line numbers are from the code
-	backgroundcolor=\color{lightgrey}, % choose the background color. You must add \usepackage{color}
+	backgroundcolor=\color{lightgrey}, % choose the background color. Requires \usepackage{color}
 	showspaces=false,                  % show spaces adding particular underscores
 	showstringspaces=false,            % underline spaces within strings
 	showtabs=false,                    % show tabs 
-	frame=none,                        % can be: none, leftline, topline, bottomline, lines, single, shadowbox 
+	frame=none,                        % none|leftline|topline|bottomline|lines|single, shadowbox 
 	%frameround=tttt,                   % rounded corners; t=round, f=corner
 	tabsize=2,                         % sets default tabsize to 2 spaces
 	captionpos=t,                      % caption position (t|b)

@@ -7,12 +7,14 @@
 		\textbf{a)} State 1 generates AT-rich sequences. State 2 generates CG-rich
 			sequences (so-called CpG islands). State transitions and their respective
 			probabilities are indicated by arrows. Symbol emission probabilities for
-			each state are listed below the states.
-		\textbf{b)} At each position, the model not only emits a symbol with a
-			probability that is dependent on its state, it also transits to the
-			other state with a certain probability, or remains in the present state.
-		\textbf{c)} The symbol sequence is the result of of the state transitions and
-			the emission probabilities in that state.
+			each state are listed below the states. State transition probabilities
+			and emission probabilities are model parameters.
+		\textbf{b)} At each position, the model not only emits a symbol (e.g., a
+			nucleotide character) with a probability that is dependent on its state, it
+			also transits to the other state with a certain probability, or remains in
+			the present state.
+		\textbf{c)} The symbol sequence is the result of the state transitions and
+			the emission probabilities in those states. 
 		Graphic from \citet{eddy1996}.
 	}
 	\label{fig:hmm}
