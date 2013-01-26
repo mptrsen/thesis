@@ -3,16 +3,16 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[english]{babel}		% English language 
-%\usepackage[backend=bibtex,style=authoryear,bibstyle=nature,natbib=true]{biblatex}
+\usepackage[backend=bibtex,style=authoryear,bibstyle=nature,natbib=true]{biblatex}
 %--------------------------------------------------
 % if using biblatex
-%\usepackage{csquotes}
+\usepackage{csquotes}
 %--------------------------------------------------
 \usepackage{color}						% enable color
 \usepackage{graphicx}					% fancy graphics
 \usepackage{lmodern}					% font looks better on screen
 \usepackage{microtype}				% improve kerning
-\usepackage{natbib}           % bibliography for scientists
+%\usepackage{natbib}           % bibliography for scientists
 %--------------------------------------------------
 % more features
 %\usepackage{enumerate}				% customize numbered lists
@@ -26,20 +26,19 @@
 %--------------------------------------------------
 
 % setup biblatex
-%--------------------------------------------------
-% \bibliography{bib/diploma}
-% \ExecuteBibliographyOptions{
-% 	firstinits=true,
-% 	backref=true,
-% 	isbn=false,
-% 	url=false,
-% 	maxcitenames=2,
-% 	maxbibnames=999,
-% }
-%-------------------------------------------------- 
+\bibliography{bib/diploma}
+\ExecuteBibliographyOptions{
+	firstinits=true,
+	backref=true,
+	isbn=false,
+	url=false,
+	maxcitenames=2,
+	maxbibnames=999,
+}
+\renewcommand{\bibfont}{\normalfont\footnotesize}
 
 % setup natbib citation format
-\bibpunct{(}{)}{,}{a}{,}{,}
+%\bibpunct{(}{)}{,}{a}{,}{,}
 
 % setup the listings package
 \lstset{%
@@ -169,10 +168,12 @@
 \phantomsection
 \addcontentsline{toc}{chapter}{Bibliography}
 % uncomment these two lines if using bibtex
-\bibliographystyle{plainnat}
-\bibliography{bib/diploma}
+\footnotesize
+%\bibliographystyle{plainnat}
+%\bibliography{bib/diploma}
 % uncomment this line if using biblatex
-%\printbibliography
+\printbibliography
+\normalsize
 \clearpage
 
 \phantomsection

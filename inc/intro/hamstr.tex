@@ -13,7 +13,7 @@ methods for orthology prediction in genomic data cannot be applied, and
 approaches like described above have to be used.
 
 \hamstr cannot be used to perform \emph{de novo} orthology assessment. Instead,
-it relies on pre-computed ortholog goups that data from the query EST library is
+it relies on pre-computed ortholog groups that data from the query EST library is
 clustered to. These so-called \emph{core orthologs} are compiled from existing
 databases such as OrthoDB and must be of species for which a complete genome is
 available. From each \emph{ortholog group} (OG, a set of genes that are known to
@@ -36,4 +36,6 @@ is discarded.
 % enable this if you need it, it makes compilation a bit slower
 %\input{inc/intro/hamstr-flowchart}
 
-\todo{more elaboration here}
+\hamstr is written in the Perl programming language for a Linux or UNIX
+operating system. It makes use of tools that are part of those environments, and
+is therefore not portable to other platforms.

@@ -1,1 +1,41 @@
-\todo{elaborate on how \hamstr could be improved}
+The \hamstr approach, applying a triangulation strategy with a joint application
+of profile HMMs and BLAST, exhibits a very low false positive rate and good
+sensitivity \citep{ebersberger2009}. Despite these demonstrated advantages of
+the \hamstr algorithm, there are opportunities for improvement on this approach.
+
+The most prominent issue, and a very practical one, was that of usability:
+\hamstr in its original version is excessively hard to install and run
+successfully for a user who is not proficient with a UNIX operating system and
+Perl (Meusemann 2011, pers. comm.). The reason for this difficulty is threefold:
+firstly, the Perl program code has to be edited and adjusted for the given
+environment. This is an error-prone practice and for a non-technical user a
+major obstacle. Secondly, the programs that make up the substeps of the
+pipeline, i.e., HMMER3, BLAST, Genewise, and ClustalW, must be installed prior
+to running \hamstr. Some Linux distributions provide these programs in their
+package repositories for easy installation, but since these are highly
+specialized tools, the packages lack general attention and maintenance and are
+mostly outdated or not present and must be installed manually\footnote{The
+widely-used general-purpose Linux distribution Ubuntu provides up-to-date
+packages for all programs (\url{http://packages.ubuntu.com}, accessed
+2013-01-26), but Fedora, another widely-used general-purpose distribution, does
+not provide any of the required packages in its repositories
+(\url{https://admin.fedoraproject.org/pkgdb}, accessed 2013-01-26). A Fedora
+user has to manually install the programs. This is trivial in the case of
+HMMER3, BLAST and ClustalW, as these programs are provided in binary form and do
+not require compilation, but Genewise is available only as source code, which
+must be compiled before usage.}
+
+The third reason for \hamstr's user-unfriendliness is the generation of custom
+ortholog sets. The files containing the amino acid sequence data must be
+provided to the pipeline in a special structure that is not trivial to set up
+manually, and frequently requires scripting to automate repetitive tasks. A
+``normal'' user with no knowledge of programming is not able to perform this,
+and as a consequence, is restrained to ortholog sets that are provided by the
+developers\footnote{\url{http://www.deep-phylogeny.org/hamstr/download/datasets/hmmer3/}}.
+
+In addition to \hamstr being user-unfriendly, it can be argued that using
+BLAST---which does not benefit from the accuracy of a HMM profile---for the
+reciprocal search is a waste of specificity: HMM technology is capable of
+detecting peptide sequences so remotely similar that BLAST would not find them,
+therefore they would be discarded during the step in which the ortholog status
+of these sequences is verified.

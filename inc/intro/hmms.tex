@@ -26,14 +26,17 @@ P(s_{ik} | s_{i1}, s_{i2}, ..., s_{ik-1}) = P(s_{ik} | s_{ik-1})
 \label{eqn:markov-chain}
 \end{equation}
 
-For example, in a simple Markov model with the two possible states ``rain''
+For example, in a simple Markov chain with the two possible states ``rain''
 ($s_1$) and ``dry'' ($s_2$) that have the transition probabilities $P(s_1|s_1) =
 0.3$, $P(s_2|s_2) = 0.2$, $P(s_2|s_1) = 0.7$, $P(s_1|s_2) = 0.8$, and the
 initial probabilities $P(s_1) = 0.4$, $P(s_2) = 0.6$, the probability of the
 state sequence ``dry'', ``dry'', ``rain'', ``rain'' is
 
 \begin{equation}
-P(\{s_2, s_2, s_1, s_1\}) = P(s_1|s_1) P(s_1|s_2) P(s_2|s_2) P(s_2) = 0.3 \cdot 0.2 \cdot 0.8 \cdot 0.6
+	\begin{split}
+		P(\{s_2, s_2, s_1, s_1\}) &= P(s_2) P(s_2|s_2) P(s_1|s_2) P(s_1|s_1) \\
+		&= 0.6 \cdot 0.8 \cdot 0.2 \cdot 0.3 
+	\end{split}
 \label{eqn:markov-chain-weather}
 \end{equation}
 
@@ -56,27 +59,27 @@ two-state Markov chain that emits a sequence of characters, e.g., nucleotide
 symbols, each with a probability that is dependent on the state. The state chain
 transits between two states that have different emission probabilities for the
 four possible symbols. Only the output sequence is visible to the observer, the
-state sequence remains hidden (\autoref{fig:hmm}).
+state sequence remains hidden (see \autoref{fig:hmm} on page \pageref{fig:hmm}).
 % However, using stochastic theory, it can be inferred.
-Generally, a HMM generates a state sequence as follows: First a state $\pi_1$ is
-chosen according to the probabilities $a_{0i}$. Then a new state $\pi_2$ is
-chosen according to the transition probabilities $a_{\pi_{1}i}$ and so forth
+Generally, a HMM generates a state sequence as follows: First a state $s_1$ is
+chosen according to the probabilities $a_{0i}$. Then a new state $s_2$ is
+chosen according to the transition probabilities $a_{s_{1}i}$ and so forth
 \citep{durbin1998}. The general joint probability of an observed sequence $x$
-and a state sequence $\pi$ is written as follows:
+and a state sequence $s$ is written as follows:
 
 \begin{equation}
-P(x,\pi) = a_{0\pi_1} \prod_{i=1}^L e_{\pi_i}(x_i)a_{\pi_i\pi_{i+1}}
+P(x,s) = a_{0s_1} \prod_{i=1}^L e_{s_i}(x_i)a_{s_is_{i+1}}
 \label{eqn:hmm-general}
 \end{equation}
 
-where $\pi_{L+1} = 0$ is required. Equation \eqref{eqn:hmm-general} is the HMM
+where $s_{L+1} = 0$ is required. Equation \eqref{eqn:hmm-general} is the HMM
 analogue of equation \eqref{eqn:markov-chain-general} \citep{durbin1998}.
 
 \input{inc/intro/fig-hmm-eddy}
 
 HMMs can be used in a pairwise sequence alignment algorithm using transition
 scores: the transitions are assigned a score increment according to the
-transition probabilities, and the resulting states each specify a $\Delta(i,i)$
+transition probabilities, and the resulting states each specify a $\Delta(i,j)$
 pair for the transition from $s_i$ to $s_j$. The alignment algorithm uses a
 \emph{finite state automaton} (FSA), which is a concept from computer science
 and describes an abstract machine that can be in one of a finite number of

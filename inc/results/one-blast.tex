@@ -6,4 +6,6 @@ on the database size, cannot be compared across reference taxa. To generate a
 ClustalW.
 
 \pname uses one BLAST database comprising all reference taxa proteomes. E-values
-are comparable across taxa since the database is of constant size. 
+are comparable across taxa since the database is of constant size. Additionally,
+only one BLAST search is required instead of $n$ searches, where $n$ is the
+number of reference taxa, leading to a performance boost of up to $n-1$.
