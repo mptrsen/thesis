@@ -11,36 +11,42 @@ contain only nucleotide sequences of the genes that were expressed at the time
 of RNA preservation. Due to the way they are sequenced and assembled, EST data
 can be redundant and fragmented as well, which is why methods for orthology
 prediction in genomic data cannot be applied, and approaches like described
-above have to be used.
+in \autoref{sec:orthology-howto} have to be used.
 
-\hamstr cannot be used to perform \emph{de novo} orthology assessment. Instead,
-it relies on pre-computed ortholog groups that data from the query EST library
-is clustered to. These so-called \emph{core orthologs} are compiled from
-existing databases such as OrthoDB or Inparanoid and must be of species for
-which a completely sequenced and annotated genome and proteome is available.
-From each \emph{ortholog group} (OG, a set of genes that are known to be
-one-to-one orthologous), a HMM is generated: each HMM is a probabilistic
+\emph{De novo} orthology assessment cannot be performed with \hamstr. Instead,
+the pipeline relies on pre-computed ortholog groups that data from the query
+EST library is clustered to. These so-called \emph{core orthologs} are compiled
+from existing databases such as OrthoDB or Inparanoid and must be of species
+for which a completely sequenced and annotated genome and proteome is
+available. From each \emph{ortholog group} (OG, a set of genes that are known
+to be one-to-one orthologs), a HMM is generated: each HMM is a statistical
 representation of the amino acid sequence of a gene. 
 
-\hamstr uses a three-step triangulation strategy as depicted in
-\autoref{fig:hamstr-triangulation}: the EST sequence space is searched with the
-HMMs for matches (\autoref{fig:hamstr-triangulation}a). To verify orthology in
-the HMM hits, each hit sequence is compared with BLASTP \citep{altschul1997} to
-the proteome of a so-called reference taxon
+In \hamstr, a three-step triangulation strategy is employed as depicted in
+\autoref{fig:hamstr-triangulation}: the (translated) EST sequence space is
+searched with the HMMs for matches (\autoref{fig:hamstr-triangulation}a). To
+verify orthology in the HMM hits, each hit sequence is compared with BLAST
+\citep{altschul1997} to the proteome of a so-called reference taxon
 (\autoref{fig:hamstr-triangulation}b). Note that the proteome, itself being
 completely sequenced and annotated, contains the amino acid sequences that are
-known to be orthologous. If the BLAST search hits a sequence that was used to
-generate the HMM (\autoref{fig:hamstr-triangulation}c), then orthology is
-assumed and the contig in question is added to the ortholog cluster. Otherwise,
-it is discarded.
-
-\todo{more elaboration!}
+known to be orthologous. If the BLAST search hits a amino acid sequence that was
+used to generate the HMM (\autoref{fig:hamstr-triangulation}c), then orthology
+is assumed and the contig in question is added to the ortholog cluster.
+Otherwise, it is discarded.
 
 \input{inc/intro/fig-hamstr-triangulation}
+
+After identification of the ortholog status, post-processing takes place: if
+multiple contigs were mapped to a single OG, they are concatenated unless they
+overlap. This concatenated amino acid sequence is screened for stop codons and
+frameshifts caused by sequencing errors using Genewise \citep{birney2004}. 
 
 % enable this if you need it, it makes compilation a bit slower
 %\input{inc/intro/hamstr-flowchart}
 
 \hamstr is written in the Perl programming language for a Linux or UNIX
-operating system. It makes use of tools that are part of those environments, and
-is therefore not portable to other platforms.
+operating system. It makes use of tools that are part of those environments,
+and is therefore not portable to other platforms.
+
+\todo{more elaboration?}
+

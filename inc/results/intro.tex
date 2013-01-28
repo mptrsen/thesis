@@ -1,10 +1,35 @@
-The results of this thesis are contained mostly in the code I have written for
-\pname, and in the knowledge that I gained during its development. 
-
 The graph-based approach to orthology prediction is in principle a simple
 algorithm and easy to implement, but in practice offers not only technical
-challenges when applied on a large scale such as on the 1,000 transcriptome data
-for the 1KITE\footnote{\url{http://1kite.org}} project, but also numerous
-opportunities for extension and improvement. In the following, I will elaborate
-on both.
+challenges when applied on a large scale such as on the 1,000 transcriptome
+sequence data for the 1KITE\footnote{\url{http://1kite.org}} project, but also
+numerous opportunities for extension and improvement. 
 
+The results of this thesis are contained in the code I have written for this
+project. The resulting program is called \pname (\emph{Ortho}logy prediction
+using a \emph{gr}aph-based \emph{a}pproach with \emph{p}rofile \emph{h}idden
+Markov models). It is a rewrite of \hamstr using state-of-the-art technology and
+programming techniques. Like in \hamstr, orthologs are clustered on a
+two-dimensional graph based on triangular relationships, but the algorithm is
+different and disallows redundant assignment of transcript to different ortholog
+groups.
+
+\pname is licensed under the GPL and provided for download at
+\url{https://github.com/mptrsen/Orthograph}. 
+
+The most outstanding novelty in comparison to \hamstr is the use of the
+relational database management system MySQL. It enables the program to
+efficiently store and retrieve data as well as---with complex \code{JOIN}
+queries---establish ortholog relationships. Additionally, the server-client
+model of MySQL facilitates analyses on networked computer systems and, if
+configured correctly, allows for high performance.
+
+\pname is user-friendly in that it is mainly configuration file driven instead
+of only accepting options on the command line. This allows for clear,
+reproducible and easily automatable analyses. However, all options may also be
+set on the command line, and will fall back to default values if left
+unspecified.
+
+The pipeline does not make use of external programs where avoidable, i.e., it
+uses Perl built-in functionality for, e.g., pattern substitution. Subprocesses
+are only started where the search programs are called, i.e., hmmsearch, BLASTP
+and Exonerate. 

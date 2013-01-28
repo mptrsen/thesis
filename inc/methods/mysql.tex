@@ -23,17 +23,17 @@ data storage:
 \end{description}
 
 MySQL supports the InnoDB and MyISAM storage engines. InnoDB is a so-called
-transactional database storage engine and is ACID compliant. ACID stands for
-Atomicity, Consistency, Isolation and Durability \citep{haerder1983}.  This is a
-set of database design principles that emphasize aspects of reliability that are
-important for data-critical applications \citep{schwartz2012}:
+transactional database storage engine and is fully ACID compliant. ACID stands
+for Atomicity, Consistency, Isolation and Durability \citep{haerder1983}.  This
+is a set of database design principles that emphasize aspects of reliability
+that are important for data-critical applications \citep{schwartz2012}:
 
 \begin{description}
 	\item[Atomicity.] A transaction must function as a single indivisible unit of
 		work. It either can be applied or must be rolled back. There is no
 		``partially completed'' transaction.
 	\item[Consistency.] The database should always be in a consistent state. Since
-		transactions either do or do not succeed due to atomicity, corruption due to
+		transactions either do or do not succeed (see atomicity), corruption due to
 		partial or conflicting alterations is impossible.
 	\item[Isolation.] Results of a transaction are invisible to other
 		transactions until the transaction is complete. This is true for
@@ -59,4 +59,5 @@ with large datasets such as nucleotide or peptide sequences from entire
 transcriptomes (as will be explained later) and in tables with with many
 indices---can be a performance gain \citep{mysql2013}. 
 
-\pname uses both InnoDB and MyISAM storage engines on different tables.
+In this project, both InnoDB and MyISAM storage engines are used on different
+tables.

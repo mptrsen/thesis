@@ -6,31 +6,16 @@ the \hamstr algorithm, there are opportunities for improvement on this approach.
 The most prominent issue, and a very practical one, was that of usability:
 \hamstr in its original version is excessively hard to install and run
 successfully for a user who is not proficient with a UNIX operating system and
-Perl (Meusemann 2011, pers. comm.). The reason for this difficulty is threefold:
-firstly, the Perl program code has to be edited and adjusted for the given
-environment. This is an error-prone practice and for a non-technical user a
-major obstacle. Secondly, the programs that make up the substeps of the
-pipeline, i.e., HMMER3, BLAST, Genewise, and ClustalW, must be installed prior
-to running \hamstr. Some Linux distributions provide these programs in their
-package repositories for easy installation, but since these are highly
-specialized tools, the packages lack general attention and maintenance and are
-mostly outdated or not present and must be installed manually\footnote{The
-widely-used general-purpose Linux distribution Ubuntu provides up-to-date
-packages for all programs (\url{http://packages.ubuntu.com}, accessed
-2013-01-26), but Fedora, another widely-used general-purpose distribution, does
-not provide any of the required packages in its repositories
-(\url{https://admin.fedoraproject.org/pkgdb}, accessed 2013-01-26). A Fedora
-user has to manually install the programs. This is trivial in the case of
-HMMER3, BLAST and ClustalW, as these programs are provided in binary form and do
-not require compilation, but Genewise is available only as source code, which
-must be compiled before usage.}
-
-The third reason for \hamstr's user-unfriendliness is the generation of custom
-ortholog sets. The files containing the amino acid sequence data must be
-provided to the pipeline in a special structure that is not trivial to set up
-manually, and frequently requires scripting to automate repetitive tasks. A
-``normal'' user with no knowledge of programming is not able to perform this,
-and as a consequence, is restrained to ortholog sets that are provided by the
+Perl (Meusemann 2011, pers. comm.). The reason for this difficulty is twofold:
+firstly, the Perl program code has to be edited prior to running the pipeline
+and adjusted for the given environment. This is an error-prone practice and for
+a non-technical user a major obstacle. The second reason for \hamstr's
+user-unfriendliness is the generation of custom ortholog sets. The files
+containing the amino acid sequence data must be provided to the pipeline in a
+special structure that is not trivial to set up manually, and frequently
+requires scripting to automate repetitive tasks. A ``normal'' user with no
+knowledge of programming is not able to perform this, and as a consequence, is
+restrained to ortholog sets that are provided by the
 developers\footnote{\url{http://www.deep-phylogeny.org/hamstr/download/datasets/hmmer3/}}.
 
 In addition to \hamstr being user-unfriendly, it can be argued that using
@@ -38,4 +23,36 @@ BLAST---which does not benefit from the accuracy of a HMM profile---for the
 reciprocal search is a waste of specificity: HMM technology is capable of
 detecting peptide sequences so remotely similar that BLAST would not find them,
 therefore they would be discarded during the step in which the ortholog status
-of these sequences is verified.
+of these sequences is verified. If \hamstr were written in a modular fashion, it
+would be easy to switch from BLAST to HMMER or other search algorithms for the
+reciprocal search in order to test this hypothesis. 
+
+\hamstr makes use of many external tools such as grep or sed to
+perform tasks such as identifying a specific sequence in a Fasta file or
+do pattern substitution in a string. These tasks can (and should) be done using
+built-in Perl functions. Starting a subprocess to call an external program adds
+overhead and makes the pipeline slower.
+
+Genewise, which is used in \hamstr to predict open reading frames, cannot output
+frameshift-corrected, corresponding nucleotide sequences for the amino acid
+sequences. Using the advanced Exonerate \citep{slater2005}, the successor to
+Genewise, which is around 1,000 fold
+faster\footnote{\url{http://archive.sciencewatch.com/dr/fmf/2008/08julfmf/08julfmfBirney/}},
+this is possible. Implementing Exonerate in a pipeline for orthology prediction
+pipeline would, besides accelerating the process, enable output of
+frameshift-corrected nucleotide sequence data.
+
+Due to the algorithm that \hamstr uses, it is ``memoryless'', meaning it does
+not cache whether a specific contig has already been mapped to an ortholog
+cluster. As a result, it is possible that the same contig is mapped to two (or
+more) different ortholog groups. This has happened in practice (Struck 2012,
+pers. comm.), and can be considered a serious bug.
+
+All these issues converge to the necessity of a rewrite of \hamstr. In the
+present thesis, I will infer a software pipeline for orthology prediction in
+transcriptomic sequence data that is easy to use by employing configuration
+files instead of editing the program source code, faster by not relying on
+external tools where which built-in functionality is available, and more
+flexible and modern by incorporating up-to-date technology. A modular design
+will facilitate future extension as well as multithreaded implementation to
+benefit from parallel computing environments for additional speed.
