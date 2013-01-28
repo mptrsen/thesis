@@ -1,9 +1,10 @@
-All program code was written in Perl. Only core modules were used, i.e., modules
-that are present in any standard Perl distribution (see table \ref{tab:modules}),
-with the exception of \code{IO::Tee} \citep{shan2001}, which was downloaded from
-the Comprehensive Perl Archive Network
-(CPAN\footnote{\url{http://search.cpan.org}}) and bundled with \pname. All other
-modules were custom-written by me.
+The program \pname, that I developed and that I present here and all related
+helper scripts were written in Perl. When using existing Perl modules written
+by others, I only relied on core modules, i.e., modules that are present in any
+standard Perl distribution (see table \ref{tab:modules}), with the exception of
+\code{IO::Tee} \citep{shan2001}, which was downloaded from the Comprehensive
+Perl Archive Network (CPAN\footnote{\url{http://search.cpan.org}}) and bundled
+with \pname. All other modules were custom-written by me.
 
 \input{inc/methods/table-modules}
 
@@ -11,10 +12,9 @@ Well aware of the fact that with BioPerl\footnote{\url{http://www.bioperl.org}}
 there exists an extensive library of Perl modules for bioinformatic tasks, I
 chose to write my own wrapper modules. BioPerl provides an exhaustive,
 object-oriented interface to biological sequence handling and wrappers for
-various programs, including HMMER3 and BLAST. However, BioPerl has not always
-been bug-free (Niehuis and Misof 2011, pers. comm.). In addition, its multiple
-layers of object-oriented abstraction carry a lot of overhead, which I wanted to
-avoid if possible. These points convinced me not to rely on the BioPerl wrapper
-libraries for the programs in this pipeline, but to write them from scratch.
-This ensures a minimum of overhead while providing the required features and
-maximum control.
+various programs, including HMMER3, Exonerate and BLAST. However, I wanted
+\pname to remain as independent as possible from the development of other
+software packages. In addition, BioPerl's multiple layers of object-oriented
+abstraction carry a lot of overhead, which I wanted to avoid if possible. This
+ensures a minimum of overhead while providing the required features and maximum
+control.
