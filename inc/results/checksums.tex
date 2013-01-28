@@ -9,10 +9,10 @@ identifiers, this checksum is used. This also eliminates the problem with
 \code{fastatranslate} introducing whitespace that might confuse
 \code{hmmsearch}.
 
-It must be guaranteed that no two checksums, i.e., two sequence identifiers, are
+It must be guaranteed that no two checksums, \ie, two sequence identifiers, are
 ever the same. The SHA-256 hashing algorithm generates a checksum that is 160 bits,
 or 40 hexadecimal characters in length. The probability $p$ of a hash collision
-(i.e., two hashed elements returning the same checksum) in $n$ elements is
+(\ie, two hashed elements returning the same checksum) in $n$ elements is
 
 \begin{equation}
 p \ge \frac{n (n-1)}{2} \times \frac{1}{2^b}

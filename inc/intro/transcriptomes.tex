@@ -11,8 +11,8 @@ process includes \emph{splicing}, during which non-coding regions, so-called
 requires typically no further processing before translation. The resulting
 molecule contains only \emph{exons}, coding regions of the genome that are
 relevant for translation. The ratio of exons to introns varies across organisms;
-e.g., the human genome consists of only 1.1\% to 1.4\% exons and 24.4\% to
-37.8\% introns, the remainder is intergenic DNA \citep{venter2001}. That means
+\eg, the human genome consists of only 1.1\% to 1.4\% exons and 24.4\% to
+37.8\% introns, the rest is intergenic DNA \citep{venter2001}. That means
 that in eukaryotes, the majority of the genome does not code for proteins, and
 the functional analysis of the genes in an eukaryote genome requires screening
 the nucleotide sequence data for those non-coding regions.
@@ -37,8 +37,8 @@ the technology used). These fragments must be \emph{assembled} to form so-called
 \emph{contigs}, contiguous sequences of nucleotides that most closely resembles
 the nucleotide sequence present in the sequenced specimen. The assembly process
 is a computationally complex problem that has not yet been solved to
-perfection. Reviews of different strategies have been written by, e.g.,
-\citet{zhang2011}. The assembled data may be redundant due to, e.g.,
+perfection. Reviews of different strategies have been written by, \eg,
+\citet{zhang2011}. The assembled data may be redundant due to, \eg,
 alternative splicing products \citep{black2003} or multiple, non-overlapping
 sequencing of C-terminus and N-terminus (the two ends of a DNA strand or gene).
 Most assembly software cannot detect these issues reliably
@@ -58,13 +58,14 @@ When performing a bidirectional search on a fully sequenced and annotated
 complete genome as described above, it can happen that two genes that are
 identified as BBH are paralogs because the corresponding orthologs have been
 lost in both investigated species. This situation is called \emph{differential
-gene loss} and best solved using a tree-based approach. In the face of the
-aforementioned difficulties of a tree-based strategy, some graph-based
-algorithms implement \emph{triangulation} (\autoref{fig:triangulation-bbh}): to
-identify two genes as orthologous, they must be BBH not only in two, but in
-three species. The third gene functions as possible ``witness of non-orthology''
-\citep{dessimoz2006}. A triangulation strategy can also be applied to orthology
-prediction in transcriptomic data, the incompleteness of which may be seen as a
-similar situation as potential gene loss in fully sequenced and annotated
-genomes. This approach has been implemented in \hamstr \citep{ebersberger2009},
-which I will describe in the following section.
+gene loss}\cite{altenhoff2012} and best solved using a tree-based approach. In
+the face of the aforementioned difficulties of a tree-based strategy, some
+graph-based algorithms implement \emph{triangulation}
+(\autoref{fig:triangulation-bbh}): to identify two genes as orthologous, they
+must be BBH not only in two, but in three species. The third gene functions as
+possible ``witness of non-orthology'' \citep{dessimoz2006}. A triangulation
+strategy can also be applied to orthology prediction in transcriptomic data, the
+incompleteness of which may be seen as a similar situation as potential gene
+loss in fully sequenced and annotated genomes. This approach has been
+implemented in \hamstr \citep{ebersberger2009}, which I will describe in the
+following section.

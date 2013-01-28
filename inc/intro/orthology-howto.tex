@@ -4,7 +4,7 @@ based on the analysis of genes, requires orthology among the compared genes. To
 make use of the speciation information contained in the ortholog property, it is
 important to classify genes according to their homologous relationships.
 Homology is a concept of quality, not quantity \citep{reeck1987} and thus
-indivisible. Two genes can be \emph{similar} by a percentage (e.g., amino acid
+indivisible. Two genes can be \emph{similar} by a percentage (\eg, amino acid
 positional identity), but they are either homologous or they are not. The same
 follows for orthologs, paralogs, and xenologs. The distinction between
 homologous and not homologous is important because homology implies a
@@ -15,7 +15,7 @@ grouped under the term \emph{homoplasy}\footnote{\emph{homos} (``equal''),
 \emph{plasis} (``shaping'')}, which was introduced by \citet{lankester1870} and
 encompasses similarity but excludes homology and its subforms \citep{page1998}.
 
-A simple gene alignment or scoring (i.e., a measure of similarity) alone cannot
+A simple gene alignment or scoring (\ie, a measure of similarity) alone cannot
 separate homologous from non-homologous, but similar sequences
 \citep{eisen1998}. Since orthology and paralogy are notions that describe
 evolutionary events, they can be directly coupled to the topology of a species
@@ -23,7 +23,7 @@ tree. This is how \emph{tree reconciliation} strategies work, in contrast to
 \emph{graph-based} strategies, which are explained later: the topology of a gene
 tree is compared to the topology of the species tree that contains the chosen
 analyzed genes. The two trees are reconciled using an optimality criterion such
-as maximum parsimony, i.e., the minimal possible number of evolutionary events
+as maximum parsimony, \ie, the minimal possible number of evolutionary events
 (speciation, gene duplication, gene loss). In order to infer a reconciled tree,
 two major approaches are frequently applied: \emph{consensus} tree inference and
 \emph{approximation} (\autoref{fig:consens-approx}). Both algorithms consider a
@@ -32,9 +32,9 @@ phylogenetic tree a formal mathematical object.
 In the consensus approach, a tree is searched for that combines the features
 common to both the gene and species tree. The consensus tree is rarely fully
 resolved since the consensus criterion leads to clustering
-(\autoref{fig:consens-approx}c). Increasing the number of initial trees, e.g.,
+(\autoref{fig:consens-approx}c). Increasing the number of initial trees, \eg,
 gene trees, can reduce the number of common clusters, and the concept of a
-``common cluster'' can be altered, e.g., to include only those clusters that
+``common cluster'' can be altered, \eg, to include only those clusters that
 occur in 80\% or more of the initial trees, but in most cases, clustering cannot
 be avoided altogether \citep{mirkin1995}.
 
@@ -59,7 +59,7 @@ automated using algorithms such as MAFFT \citep{katoh2005}, MUSCLE
 \citep{thompson2011}.  Further, the reconstruction is computationally expensive,
 and doing so for all genes in sequenced genomes is a major challenge for modern
 software engineering and computer systems. Nevertheless, a number of
-implementations have developed; among the most recent are Orthostrapper
+implementations have been developed; among the most recent are Orthostrapper
 \citep{jothi2006} and LOFT \citep{van_der_heijden2007} as well as \mbox{COCO-CL}
 \citep{storm2002}, which does not use a tree reconciliation algorithm, but
 builds a hierarchy of sets of outparalogs. 
@@ -82,7 +82,7 @@ genes (or proteins) as nodes and evolutionary relationships as edges. The
 relationships are inferred using a search algorithm such as Needleman-Wunsch
 \citeyearpar{needleman1970}, Smith-Waterman \citeyearpar{smith1981}, or BLAST
 \citep{altschul1990}, and clusters of orthologous genes are created
-(\autoref{fig:graph-based-strat}b). In the event of a gene loss of, e.g., the
+(\autoref{fig:graph-based-strat}b). In the event of a gene loss of, \eg, the
 blue human gene shown in \autoref{fig:graph-based-strat}a, however, a simple
 best-hit search algorithm would incorrectly infer an orthologous relationships
 between the blue dog and the red human gene. In order to avoid these mistakes,
@@ -108,7 +108,7 @@ together genes that are BBH using BLAST. Inparanoid uses BLAST-assesed BBH as
 well, and establishes pairwise orthology between species. OrthoMCL builds on the
 Inparanoid approach, but extends it using a Markov cluster algorithm to group
 putative orthologs and paralogs. In OrthoDB, Smith-Waterman BBH are
-triangulated. These and many more are reviewed by, e.g., \citet{kuzniar2008} and
+triangulated. These and many more are reviewed by, \eg, \citet{kuzniar2008} and
 \citet{forslund2011}.
 
 Most of the recent graph-based implementations for gene orthology prediction
@@ -123,5 +123,5 @@ vast amounts of data as well as the ever-decreasing cost of sequencing a
 complete genome\footnote{National Human Genome Research Institute
 (\url{http://www.genome.gov/sequencingcosts/}, last updated November 26,
 2012)}---new discoveries in the fields of comparative genomics and phylogenetics
-are made every day (e.g., \citet{niehuis2012, bradbury2012}).
+are made every day (\eg, \citet{niehuis2012, bradbury2012}).
 

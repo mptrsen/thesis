@@ -14,9 +14,10 @@ disallows redundant assignment of transcript to different ortholog groups.
 
 \pname is licensed under the GPL. The source code is hosted on GitHub at
 \url{https://github.com/mptrsen/Orthograph}. This platform allows code version
-synchronization using the revision control software Git. If Git is installed on
-the computer, installation of \pname is simple: the user only needs to execute
-\code{git fetch https://github.com/mptrsen/Orthograph.git} once. Subsequent
+synchronization using the revision control software Git. If Git is present on
+the computer, the installation of \pname is simple: the user only needs to
+execute \code{git clone https://github.com/mptrsen/Orthograph.git} once. Git
+will automatically download the program to the local hard drive. Subsequent
 updates to the code repository can be synchronized by executing \code{git pull}
 in the \pname directory. If Git is not available, the package can be downloaded
 from GitHub as a zip archive and unpacked normally.
@@ -30,18 +31,17 @@ configured correctly, allows for high performance.
 
 \pname is user-friendly in that it is mainly configuration file driven instead
 of only accepting options on the command line. This allows for clear,
-reproducible and easily automatable analyses. However, all options may also be
-set on the command line, and will fall back to default values if left
-unspecified.
+reproducible and easily automatable analyses. All options may also be set on the
+command line, and will fall back to default values if left unspecified.
 
-The pipeline does not make use of external programs where avoidable, i.e., it
-uses Perl built-in functionality for, e.g., pattern substitution. Subprocesses
-are only started where the search programs are called, i.e., hmmsearch, BLASTP
+The pipeline does not make use of external programs where avoidable, \ie, it
+uses Perl built-in functionality for, \eg, pattern substitution. Subprocesses
+are only started where the search programs are called, \ie, hmmsearch, BLASTP
 and Exonerate. For MySQL, the internal driver and native Perl interface are
 used.
 
 In the following sections, I will explain the algorithm that \pname employs, the
 database structure it uses, and how the graph of ortholog relationships is
-constructed. During the development of \pname, I was faced with challenges of both
-theoretical and practical nature, and I will also report on the techniques that
-I implemented to overcome these obstacles.
+constructed. During the development of \pname, I was faced with challenges of
+both theoretical and practical nature, and I will also report on the techniques
+that I implemented to overcome these obstacles.
