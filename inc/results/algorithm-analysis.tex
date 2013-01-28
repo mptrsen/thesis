@@ -14,7 +14,6 @@ The analysis algorithm is as follows:
 	\item Clear old results from file system and database, if requested.
 	\item Create the HMMs, if they do not exist.
 	\item Create the BLAST database of all core taxa, if it does not exist.
-	\item Configure the hmmsearch and BLAST modules.
 	\item Translate the input file in all six reading frames, if it is nucleic
 		acid data.
 	\item Load the translated sequences into the database, generating unique
@@ -39,3 +38,5 @@ The analysis algorithm is as follows:
 	\end{enumerate}
 \end{enumerate}
 
+Note that the analysis algorithm does not imply ortholog relationships. Only the
+bidirectional searches are performed during this step. 

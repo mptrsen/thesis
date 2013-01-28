@@ -5,16 +5,21 @@ sequence data for the 1KITE\footnote{\url{http://1kite.org}} project, but also
 numerous opportunities for extension and improvement. 
 
 The results of this thesis are contained in the code I have written for this
-project. The resulting program is called \pname (\emph{Ortho}logy prediction
-using a \emph{gr}aph-based \emph{a}pproach with \emph{p}rofile \emph{h}idden
-Markov models). It is a rewrite of \hamstr using state-of-the-art technology and
-programming techniques. Like in \hamstr, orthologs are clustered on a
-two-dimensional graph based on triangular relationships, but the algorithm is
-different and disallows redundant assignment of transcript to different ortholog
-groups.
+project. For the present thesis, I have developed a pipeline called \pname
+(\pfullname). It is a rewrite of the \hamstr approach using state-of-the-art
+technology and programming techniques. Like in \hamstr, orthologs are clustered
+on a two-dimensional graph based on triangular relationships (see
+\autoref{sec:graph}), but the algorithm is different and, among other features,
+disallows redundant assignment of transcript to different ortholog groups.
 
-\pname is licensed under the GPL and provided for download at
-\url{https://github.com/mptrsen/Orthograph}. 
+\pname is licensed under the GPL. The source code is hosted on GitHub at
+\url{https://github.com/mptrsen/Orthograph}. This platform allows code version
+synchronization using the revision control software Git. If Git is installed on
+the computer, installation of \pname is simple: the user only needs to execute
+\code{git fetch https://github.com/mptrsen/Orthograph.git} once. Subsequent
+updates to the code repository can be synchronized by executing \code{git pull}
+in the \pname directory. If Git is not available, the package can be downloaded
+from GitHub as a zip archive and unpacked normally.
 
 The most outstanding novelty in comparison to \hamstr is the use of the
 relational database management system MySQL. It enables the program to
@@ -32,4 +37,11 @@ unspecified.
 The pipeline does not make use of external programs where avoidable, i.e., it
 uses Perl built-in functionality for, e.g., pattern substitution. Subprocesses
 are only started where the search programs are called, i.e., hmmsearch, BLASTP
-and Exonerate. 
+and Exonerate. For MySQL, the internal driver and native Perl interface are
+used.
+
+In the following sections, I will explain the algorithm that \pname employs, the
+database structure it uses, and how the graph of ortholog relationships is
+constructed. During the development of \pname, I was faced with challenges of both
+theoretical and practical nature, and I will also report on the techniques that
+I implemented to overcome these obstacles.
