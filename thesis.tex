@@ -5,7 +5,6 @@
 \usepackage[english]{babel}		% English language 
 \usepackage{lmodern}					% font looks better on screen
 \usepackage{microtype}				% improve kerning
-\usepackage{color}						% enable color
 % if using natbib
 \usepackage{natbib}           % bibliography for scientists
 % if using biblatex
@@ -13,11 +12,13 @@
 %\usepackage{csquotes}         % dunno what this does
 %--------------------------------------------------
 % more features
-\usepackage{graphicx}					% fancy graphics
-%\usepackage{enumerate}				% customize numbered lists
 \usepackage{amsmath}					% all the fancy math stuff
+\usepackage{caption}          % customize captions
+\usepackage{color}						% enable color
+%\usepackage{enumerate}				% customize numbered lists
+\usepackage{graphicx}					% fancy graphics
 \usepackage{listings}         % code listings
-%\usepackage{tabularx}         % extended tables
+\usepackage{tabularx}         % extended tables
 %\usepackage{tikz}             % draw stuff with tikz
 \usepackage{url}							% URL handling
 \usepackage{xspace}						% to space or not to space
@@ -40,6 +41,9 @@
 
 % setup natbib citation format
 \bibpunct{(}{)}{,}{a}{,}{,}
+
+% setup caption format
+\captionsetup{font=small, labelfont=bf}
 
 % setup the listings package
 \lstset{%

@@ -17,17 +17,18 @@ data storage:
 		performance because the DBMS has to search a smaller search space to find a
 		given sequence.
 	\item[Performance.] The DBMS is highly optimized for speed and efficiency. If
-		configured correctly, complex joins comprising millions of rows are executed
-		quickly due to the use of B-tree indices \citep{comer1979} \todo{explain?}.
+		configured correctly, complex queries comprising millions of rows are
+		executed quickly.
 	\item[Flexibility.] SQL queries allow fine-grained, custom-tailored filtering
 		and output.
 \end{description}
 
-MySQL supports the InnoDB and MyISAM storage engines. InnoDB is a so-called
-transactional database storage engine and is fully ACID compliant. ACID stands
-for Atomicity, Consistency, Isolation and Durability \citep{haerder1983}. It
-is a set of database design principles that emphasize aspects of reliability
-that are important for data-critical applications \citep{schwartz2012}:
+MySQL supports the InnoDB \citep{mysql2012} and MyISAM \citep{mysql2012} storage
+engines. InnoDB is a so-called transactional database storage engine and is
+fully ACID compliant. ACID stands for Atomicity, Consistency, Isolation and
+Durability \citep{haerder1983}. It is a set of database design principles that
+emphasize aspects of reliability that are important for data-critical
+applications \citep{schwartz2012}:
 
 \begin{description}
 	\item[Atomicity.] A transaction must function as a single indivisible unit of
@@ -57,7 +58,7 @@ choice. However, due to its much less complex nature, MyISAM tables can be
 compressed to take up much less space both on disk and in memory. In addition,
 MyISAM allows the disabling of indices during data upload, which---especially
 with large datasets such as nucleotide or amino acid sequences from a genome
-project and in tables with with many indices---can be a performance gain
+project and in tables with many indices---can be a performance gain
 \citep{mysql2013}. 
 
 I made use of both the InnoDB and MyISAM storage engines on different
