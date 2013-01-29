@@ -1,4 +1,11 @@
 \label{sec:algorithm-reporting}
+The evaluation program orthograph-reporter assesses gene orthology among the
+transcript sequence data in the database on the basis of the bidirectional
+search results that were obtained using orthograph-analyzer. Note that this step
+is intended to be independent of the search algorithm and does not modify
+the results that are already present in the database, leaving them in a
+consistent state for evaluation under different criteria.
+
 The reporting algorithm is as follows:
 
 \begin{enumerate}
@@ -19,26 +26,25 @@ The reporting algorithm is as follows:
 		...
 	}
 	\end{lstlisting}
-	\item Sort the e-values in ascending order.
+	\item Sort the hmmsearch e-values in ascending order.
 	\item Starting with the lowest hmmsearch e-value, do the following:
 	\begin{enumerate}
-		\item For each ortholog group that has a hit with this e-value, do the following:
-		\begin{enumerate}
-			\item Check whether this ortholog group is present in the list that was
-				generated in step 2. If not, skip to the next group (this ortholog group
-				has already been assigned a transcript).
-			\item Sort the reciprocal hits by BLAST e-value in ascending order.
-			\item For each reciprocal hit, do the following:
+		\item For each ortholog group that has obtained a hmmsearch hit with this
+			e-value, do the following:
 			\begin{enumerate}
-				\item If the reciprocal search hit a sequence that is in this ortholog
-					group, and this transcript has not been assigned previously, then this
-					is a valid match. Otherwise, skip to the next reciprocal hit unless
-					the ``soft threshold'' has been reached (in that case, skip to the
-					next ortholog group).
-				\item Assign this transcript to this ortholog group if it does not
-					overlap with an existing assignment. This transcript cannot be
-					assigned again.
-			\end{enumerate}
+				\item Sort the reciprocal hits by BLAST e-value in ascending order.
+				\item For each reciprocal hit, do the following:
+				\begin{enumerate}
+					\item If the reciprocal search for this transcript hit a sequence that
+						is in this ortholog group, and this transcript has not been assigned
+						previously, then this is assumed to be a valid match. Continue.
+						Otherwise, skip to the next reciprocal hit unless the ``soft
+						threshold'' has been reached (in that case, skip to the next
+						ortholog group).
+					\item If the transcript does not overlap with an existing assignment,
+						assign this transcript to this ortholog group. This transcript cannot
+						be assigned again. 
+				\end{enumerate}
 			\item If there is a gap between the transcripts (the end of one transcript
 				lies more than 1 bp before the start of the next), fill the gap with
 				'X' and concatenate the fragments.

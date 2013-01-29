@@ -35,8 +35,8 @@
 \newcommand{\myself}{Malte Petersen}
 \newcommand{\mytitle}{Fast and efficient mapping of transcript sequences to ortholog groups}
 \newcommand{\species}[1]{\textit{#1}}
-\newcommand{\ie}[1]{\textit{i.e.}}
-\newcommand{\eg}[1]{\textit{e.g.}}
+\newcommand{\ie}[1]{\textit{i.e.,}}
+\newcommand{\eg}[1]{\textit{e.g.,}}
 \newcommand{\todo}[1]{\textbf{\color{red}[#1]}}
 
 % setup biblatex
@@ -104,10 +104,9 @@
 	\include{inc/titlepage}
 \end{titlepage}
 
-%--------------------------------------------------
-% \chapter*{Paper notes}
-% 	\input{notes}
-%-------------------------------------------------- 
+\pagestyle{empty}
+\chapter*{Paper notes}
+	\input{inc/notes}
 
 \phantomsection
 %\addcontentsline{toc}{chapter}{Declaration of authorship}
@@ -185,7 +184,7 @@
 			\input{inc/results/algorithm-reporting}
 	\section{Implementation decisions}
 		\subsubsection{Traversing the hit list by e-value}
-		\input{inc/results/implementation}
+			\input{inc/results/traversing-by-evalue}
 	\section{Performance tweaks}
 		\subsection{One BLAST database comprising all core taxa proteomes}
 			\input{inc/results/one-blast}

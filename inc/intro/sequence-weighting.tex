@@ -1,9 +1,10 @@
 \label{sec:hmmtest}
 To avoid statistical bias by uneven phylogenetic representation when creating a
-hidden Markov model (HMM), the HMMER3 package \citep{eddy2009} uses a
-position-based weighting scheme as applied by \citet{henikoff1994} by default:
-The sequence distances are not calculated based on the sequences as a whole, but
-use a diversity measure for each position in the alignment. From the paper:
+hidden Markov model (HMM), HMMER3 \citep{eddy2009} uses a position-based
+weighting scheme as applied by \citet{henikoff1994} by default: The sequence
+distances are not calculated based on the sequences as a whole, but use a
+diversity measure for each position in the alignment. From the paper by
+\citet{henikoff1994}:
 
 \begin{quote}
 	A simple method to represent the diversity at a position is to award each
@@ -21,10 +22,10 @@ weighting scheme would penalize that by weighting the sequences down
 position-wise. Highly diverse positions, on the other hand, would receive a
 bonus. 
 
-In comparison to two species $a$ and $b$ from the same family, the remotely
-related species $a$ and $c$ have more divergent sequences. Highly conserved
-domains may still be similar, but for the most part, more divergence is
-expected. Under the Henikoff weighting scheme, closely related domains will
+In comparison to, \eg, two species $a$ and $b$ from the same family, the
+remotely related species $a$ and $c$ have more divergent sequences. Highly
+conserved domains may still be similar, but for the most part, more divergence
+is expected. Under the Henikoff weighting scheme, closely related domains will
 receive a penalty, while divergent ones are upweighted. Because $a$ and $b$ are
 expected to have more positions in common, which results in downweighting of a
 larger percentage of their entire sequences, these two sequences are each
