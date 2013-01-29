@@ -7,8 +7,9 @@ The \pname package consists of three separate tools:
 		ortholog set and nucleic or amino acid sequence data and manage present
 		ortholog sets.
 	\item[orthograph-analyzer] is the actual pipeline that performs the
-		bidirectional searches using hmmsearch and BLAST. It loads the results into
-		the database, but does not attempt to infer ortholog relationships. 
+		bidirectional searches using \tool{hmmsearch} and BLAST. It loads the
+		results into the database, but does not attempt to infer ortholog
+		relationships. 
 	\item[orthograph-reporter] is the reporting program that fetches the data that
 		orthograph-analyzer stored in the database and establishes ortholog
 		relationships by means of an iterative algorithm (see
@@ -34,10 +35,10 @@ assessed under a different algorithm or with different criteria. This versatile
 implementation provides programmers and researchers alike with a flexible
 framework for analyses on multiple levels. 
 
-The searching and reporting programs can be chained into a single run
-with a simple batch script. The configuration file-driven design facilitates
-this: a single configuration file contains the necessary information for all
-\pname programs.
+The searching and reporting programs can be chained into a single run with a
+simple batch script. The configuration file-driven design facilitates this: a
+single configuration file contains the necessary information for all \pname
+programs.
 
-In the following subsections, the algorithms for analysis and reporting
-evaluation are outlined in detail.
+In the following subsections, the algorithms for analysis and evaluation are
+outlined in detail.

@@ -4,12 +4,13 @@ challenges when applied on a large scale such as on the 1,000 transcriptome
 sequence data for the 1KITE\footnote{\url{http://1kite.org}} project, but also
 numerous opportunities for extension and improvement. 
 
-For the present thesis, I have developed a pipeline called \pname.
-It is a rewrite of the \hamstr approach using state-of-the-art technology and
-programming techniques. Like in \hamstr, orthologs are clustered on a
-two-dimensional graph based on triangular relationships (see
-\autoref{sec:graph}), but the algorithm is different and, among other features,
-disallows redundant assignment of transcript to different ortholog groups.
+For the present thesis, I have developed a pipeline called \pname.  It is a
+rewrite of the \hamstr implementation using state-of-the-art technology and
+programming techniques. Like in \hamstr, orthologous amino acid or nucleotide
+sequences are clustered on a two-dimensional graph based on triangular
+relationships (see \autoref{sec:graph}), but the algorithm is different and,
+among other features, disallows redundant assignment of transcripts to different
+ortholog groups.
 
 \pname is licensed under the GPL. The source code is hosted on
 GitHub\footnote{\url{https://github.com/mptrsen/Orthograph}}. This platform
@@ -33,13 +34,16 @@ configured correctly, allows for high performance.
 \pname is user-friendly in that it is mainly configuration file-driven instead
 of only accepting options on the command line. This allows for clear,
 reproducible and easily automatable analyses. All options may also be set on the
-command line, and will fall back to default values if left unspecified.
+command line, and will assume to default values if left unspecified. This
+enables usage of \pname in a larger pipeline. Convenience of use is further
+enhanced by automatically generating an ortholog
+set from provided information.
 
 The pipeline does not make use of external programs where avoidable, \ie, it
 uses Perl built-in functionality for, \eg, pattern substitution. Subprocesses
-are only started where the search programs are called, \ie, hmmsearch, BLASTP
-and Exonerate. For interactions with the MySQL database, the MySQL driver DBD
-for Perl and the native Perl database interface DBI are used.
+are only started where the search programs are called, \ie, \tool{hmmsearch},
+BLAST and Exonerate. For interactions with the MySQL database, the MySQL driver
+DBD for Perl and the native Perl database interface DBI are used.
 
 In the following sections, I will explain the algorithm that \pname employs, the
 database structure it uses, and how the graph of ortholog relationships is

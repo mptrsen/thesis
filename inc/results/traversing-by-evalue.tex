@@ -1,21 +1,21 @@
 The \pname algorithm is different from the one that is implemented in \hamstr:
 It does not assign transcript sequences to ortholog groups (OG) based on a
 per-OG basis, but instead first collects all possible graph edges (see
-\autoref{fig:graph}) and traverses them by ascending hmmsearch e-value. This has
+\autoref{fig:graph}) and traverses them by ascending \tool{hmmsearch} e-value. This has
 two obvious advantages: firstly, it assures that the transcript sequences are
 mapped to the most relevant OG, and not the one that was processed first.
 Secondly, by removing the transcript sequences from the list of candidate
 transcripts, it precludes redundant assignment, \ie, the same transcript being
 mapped to multiple OGs or vice versa.
 
-In \pname, not only the e-value threshold for both the hmmsearch and BLAST
+In \pname, not only the e-value threshold for both the \tool{hmmsearch} and BLAST
 searches define a criterion that must be met in order for a transcript to be
 considered orthologous to a given OG. Here, a so-called ``soft threshold'' is
-introduced: When traversing the graph by ascending hmmsearch e-value edges, it
+introduced: When traversing the graph by ascending \tool{hmmsearch} e-value edges, it
 may happen that, for a given OG--transcript combination, multiple BLAST searches
 that are consecutive in e-value did not hit an amino acid sequence that was used
 to build the HMM for this OG. In \pname, the soft threshold defines a number of
 reciprocal searches for a single OG that did not fulfill the triangulation
 criterion. If that number is exceeded, the algorithm skips this OG (for that
-given hmmsearch e-value). Above this threshold, the reliability of this ortholog
+given \tool{hmmsearch} e-value). Above this threshold, the reliability of this ortholog
 relationship is mistrusted.

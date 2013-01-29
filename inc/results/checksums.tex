@@ -1,4 +1,5 @@
-Unique sequence IDs are necessary in order for \code{hmmsearch} not to create
+\label{sec:checksums}
+Unique sequence IDs are necessary in order for \tool{hmmsearch} not to create
 confusion by treating whitespace in sequence headers as a description
 separator. To avoid this, and to maintain a consistent naming scheme across
 applications, \pname~uses a SHA-256 checksum to generate a unique ID for every
@@ -6,8 +7,8 @@ sequence. The checksum is generated using both the original header and the
 sequence. Sequences are loaded into the database along with these checksums.
 During the analysis, wherever a file is generated that includes sequence
 identifiers, this checksum is used. This also eliminates the problem with
-\code{fastatranslate} introducing whitespace that might confuse
-\code{hmmsearch}.
+\tool{fastatranslate} introducing whitespace that might confuse
+\tool{hmmsearch}.
 
 It must be guaranteed that no two checksums, \ie, two sequence identifiers, are
 ever the same. The SHA-256 hashing algorithm generates a checksum that is 160 bits,

@@ -6,30 +6,43 @@ is intended to be independent of the search algorithm and does not modify
 the results that are already present in the database, leaving them in a
 consistent state for evaluation under different criteria.
 
+For generating the graph, orthograph-reporter organizes the data from the database
+in a special, multidimensional structure that is easy to parse:
+
+\begin{lstlisting}[label={lst:structure},caption={Data structure for parsing the triangular
+relationships between ortholog groups and transcripts}]
+hmmsearch_evalue => {
+	ortholog_group_id => [
+		reciprocal_hit,
+		reciprocal_hit,
+	],
+	ortholog_group_id => [
+		reciprocal_hit,
+		reciprocal_hit,
+	],
+	. . .
+},
+. . .
+\end{lstlisting}
+
+Each \emph{reciprocal\_hit} represents a BLAST search with the transcript
+sequence as query in the proteome database for the ortholog set that was used.
+The target can be compared to a list of amino acid sequences that were used in
+constructing the HMM for the given \emph{ortholog\_group\_id}. If the reciprocal
+search hit a matching amino acid sequence, this pair of [ortholog group +
+transcript sequence] is considered orthologous.
+
 The reporting algorithm is as follows:
 
 \begin{enumerate}
 	\item Get configuration, initialize global variables.
 	\item Get a list of ortholog group IDs and their associated ortholog sequences
 		from the database.
-	\item Get all results in the form:
-	\begin{lstlisting}
-	hmmsearch_evalue => {
-		ortholog_group_id => [
-			reciprocal_hit,
-			reciprocal_hit,
-		],
-		ortholog_gene_id => [
-			reciprocal_hit,
-			reciprocal_hit,
-		],
-		...
-	}
-	\end{lstlisting}
-	\item Sort the hmmsearch e-values in ascending order.
-	\item Starting with the lowest hmmsearch e-value, do the following:
+	\item Get all search results from the database.
+	\item Sort the \tool{hmmsearch} e-values in ascending order.
+	\item Starting with the lowest \tool{hmmsearch} e-value, do the following:
 	\begin{enumerate}
-		\item For each ortholog group that has obtained a hmmsearch hit with this
+		\item For each ortholog group that has obtained a \tool{hmmsearch} hit with this
 			e-value, do the following:
 			\begin{enumerate}
 				\item Sort the reciprocal hits by BLAST e-value in ascending order.
@@ -47,7 +60,10 @@ The reporting algorithm is as follows:
 				\end{enumerate}
 			\item If there is a gap between the transcripts (the end of one transcript
 				lies more than 1 bp before the start of the next), fill the gap with
-				'X' and concatenate the fragments.
+				'X' and concatenate the fragments. This ortholog group can also not be
+				assigned again.
+			\item Correct for frameshift errors and infer the coding sequence using
+				Exonerate (not implemented at the time of writing).
 		\end{enumerate}
 	\end{enumerate}
 \end{enumerate}

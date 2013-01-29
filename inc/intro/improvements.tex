@@ -26,12 +26,12 @@ built-in Perl functions. Starting a subprocess to call an external program adds
 overhead and makes the pipeline slower as well as increase portability issues.
 
 Genewise, which is used in \hamstr to predict open reading frames, cannot output
-frameshift-corrected, corresponding nucleotide sequences for the amino acid
-sequences. Using the advanced Exonerate \citep{slater2005}, the successor to
+frameshift-corrected, corresponding nucleotide sequences for a given amino acid
+sequence. Using the advanced Exonerate \citep{slater2005}, the successor to
 Genewise, which is around 1,000 fold
 faster\footnote{\url{http://archive.sciencewatch.com/dr/fmf/2008/08julfmf/08julfmfBirney/}},
-this is possible. Implementing Exonerate in a pipeline for orthology prediction
-pipeline would, besides accelerating the process, enable output of
+is therefore advisable. Implementing Exonerate in a pipeline for orthology
+prediction pipeline would, besides accelerating the process, enable output of
 frameshift-corrected nucleotide sequence data.
 
 Due to the algorithm that \hamstr uses, it is ``memoryless'', meaning it does
