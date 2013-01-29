@@ -1,24 +1,22 @@
 \label{sec:hmmtest}
 To avoid statistical bias by uneven phylogenetic representation when creating a
 hidden Markov model (HMM), HMMER3 \citep{eddy2009} uses a position-based
-weighting scheme as applied by \citet{henikoff1994} by default: The sequence
-distances are not calculated based on the sequences as a whole, but use a
-diversity measure for each position in the alignment. From the paper by
-\citet{henikoff1994}:
+weighting scheme as applied by \citet{henikoff1994} by default: 
 
 \begin{quote}
-	A simple method to represent the diversity at a position is to award each
+	``A simple method to represent the diversity at a position is to award each
 	different residue an equal share of the weight, and then to divide that
-	weight equally among the sequences sharing the same residue. So, if in a
-	position of a multiple alignment, $r$ different residues are represented, a
-	residue represented in only one sequence contributes a score of $l/r$ to that
-	sequence, whereas a residue represented in $s$ sequences contributes a score
-	$l/rs$ to each of the $s$ sequences. For each sequence, the contributions
-	from each position are summed to give a sequence weight.
-\end{quote}
+	weight equally among the [residue] sequences sharing the same residue. So, if
+	in a position of a multiple alignment, $r$ different residues are represented,
+	a residue represented in only one sequence contributes a score of $1/r$ to
+	that sequence, whereas a residue represented in $s$ sequences contributes a
+	score $1/rs$ to each of the $s$ sequences. For each sequence, the
+	contributions from each position are summed to give a sequence weight.''
+	\hfill\citep{henikoff1994}
+\end{quote} 
 
 Thus, if two sequences are very similar in a particular domain, the Henikoff
-weighting scheme would penalize that by weighting the sequences down
+weighting scheme penalizes that by weighting the sequences down
 position-wise. Highly diverse positions, on the other hand, would receive a
 bonus. 
 

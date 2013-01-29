@@ -1,6 +1,6 @@
 %% Creator: Inkscape inkscape 0.48.4, www.inkscape.org
 %% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
-%% Accompanies image file 'orthograph_graph.pdf' (pdf, eps, ps)
+%% Accompanies image file 'transaction-time.pdf' (pdf, eps, ps)
 %%
 %% To include the image in your LaTeX document, write
 %%   \input{<filename>.pdf_tex}
@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{556.31272526bp}%
+    \setlength{\unitlength}{541.913bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,22 +48,19 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.7192207)%
-    \put(0,0){\includegraphics[width=\unitlength]{img/orthograph_graph.pdf}}%
-    \put(0.45608974,0.62242639){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{OG A}}}%
-    \put(0.20027135,0.10473194){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{OG B}}}%
-    \put(0.91795554,0.19532846){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{OG C}}}%
-    \put(0.12207734,0.6345186){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{transcript 1}}}%
-    \put(0.69526129,0.56050147){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{1e-20}}}%
-    \put(0.92499127,0.37913893){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{1e-12}}}%
-    \put(0.65607777,0.27560004){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{1e-5}}}%
-    \put(0.51802592,0.48555392){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{1e-195}}}%
-    \put(0.29062291,0.28080043){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{1e-205}}}%
-    \put(0.81800105,0.0611065){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{1e-22}}}%
-    \put(0.36559367,0.02106699){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{1e-15}}}%
-    \put(0.28321661,0.66319784){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{1e-1}}}%
-    \put(0.49517176,0.36153488){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{transcript 3}}}%
-    \put(0.59687728,0.0166651){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{transcript 4}}}%
-    \put(0.86435274,0.4764784){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{transcript 2}}}%
+  \begin{picture}(1,0.65921975)%
+    \put(0,0){\includegraphics[width=\unitlength]{img/transaction-time.pdf}}%
+    \put(0.10104574,0.05797241){\makebox(0,0)[lb]{\smash{0}}}%
+    \put(0.25298894,0.05797241){\makebox(0,0)[lb]{\smash{$2\cdot10^6$}}}%
+    \put(0.40495062,0.05797241){\makebox(0,0)[lb]{\smash{$4\cdot10^6$}}}%
+    \put(0.55691229,0.05797241){\makebox(0,0)[lb]{\smash{$6\cdot10^6$}}}%
+    \put(0.70887391,0.05797241){\makebox(0,0)[lb]{\smash{$8\cdot10^6$}}}%
+    \put(0.86083558,0.05797241){\makebox(0,0)[lb]{\smash{$10^7$}}}%
+    \put(0.06928787,0.11925531){\rotatebox{90}{\makebox(0,0)[lb]{\smash{0}}}}%
+    \put(0.06928787,0.23587918){\rotatebox{90}{\makebox(0,0)[lb]{\smash{5000}}}}%
+    \put(0.06928787,0.36482977){\rotatebox{90}{\makebox(0,0)[lb]{\smash{10000}}}}%
+    \put(0.06928787,0.49994372){\rotatebox{90}{\makebox(0,0)[lb]{\smash{15000}}}}%
+    \put(0.38162583,0.00482734){\makebox(0,0)[lb]{\smash{Number of sequences in database}}}%
+    \put(0.01614281,0.28188289){\rotatebox{90}{\makebox(0,0)[lb]{\smash{Re−indexing time [s]}}}}%
   \end{picture}%
 \endgroup%

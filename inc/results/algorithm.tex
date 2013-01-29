@@ -11,18 +11,18 @@ The \pname package consists of three separate tools:
 		the database, but does not attempt to infer ortholog relationships. 
 	\item[orthograph-reporter] is the reporting program that fetches the data that
 		orthograph-analyzer stored in the database and establishes ortholog
-		relationships by a iterative algorithm (see
+		relationships by means of an iterative algorithm (see
 		\autoref{sec:algorithm-reporting})
 \end{description}
 
-The decision to implement three different tools (a so-called modular design) has
-advantages over a monolithic design, where a single application would do
-every task: database management is separated from the actual analysis. This
-distinction is of particular importance when running \pname in a multi-user
-environment where the researcher does not have administrative access to the
-computer or the database server. Here, the system administrator can manage the
-database with orthograph-manager and provide the researcher with the required
-environment for analysis. No knowledge of Perl or SQL is required.
+The decision to implement three different tools  has advantages over a
+monolithic design, where a single application would do every task: database
+management is separated from the actual analysis. This distinction is of
+particular importance when running \pname in a multi-user environment where the
+researcher does not have administrative access to the computer or the database
+server. Here, the system administrator can manage the database with
+orthograph-manager and provide the researcher with the required environment for
+analysis. No knowledge of Perl or SQL is required.
 
 The separation of searching and reporting algorithms into discrete programs is
 beneficial because it facilitates implementation of different analysis

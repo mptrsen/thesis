@@ -1,9 +1,10 @@
 The \hamstr approach, applying a triangulation strategy with a joint application
 of profile HMMs and BLAST, exhibits a very low false positive rate and good
 sensitivity \citep{ebersberger2009}. Despite these demonstrated advantages of
-the \hamstr algorithm, there are opportunities for improvement on this approach.
+the \hamstr algorithm, there are opportunities for improvement on this
+implementation.
 
-The most prominent issue, and a very practical one, was that of usability:
+The most prominent issue, and a very practical one, is that of usability:
 \hamstr in its original version is excessively hard to install and run
 successfully for a user who is not proficient with a UNIX operating system and
 Perl (Meusemann 2011, pers. comm.). The reason for this difficulty is twofold:
@@ -13,7 +14,7 @@ a non-technical user a major obstacle. The second reason for \hamstr's
 user-unfriendliness is the generation of custom ortholog sets. The files
 containing the amino acid sequence data must be provided to the pipeline in a
 special structure that is not trivial to set up manually, and frequently
-requires scripting to automate repetitive tasks. A ``normal'' user with no
+requires scripting to automate repetitive tasks. An unexperienced user with no
 knowledge of programming is not able to perform this, and as a consequence, is
 restrained to ortholog sets that are provided by the
 developers\footnote{\url{http://www.deep-phylogeny.org/hamstr/download/datasets/hmmer3/}}.
@@ -27,11 +28,11 @@ of these sequences is verified. If \hamstr were written in a modular fashion, it
 would be easy to switch from BLAST to HMMER or other search algorithms for the
 reciprocal search in order to test this hypothesis. 
 
-\hamstr makes use of many external tools such as grep or sed to
-perform tasks such as identifying a specific sequence in a Fasta file or
-do pattern substitution in a string. These tasks can (and should) be done using
+\hamstr makes use of many external tools such as \tool{grep} or \tool{sed} to
+perform tasks such as identifying a specific sequence in a Fasta file or to
+substitute patterns in a string. These tasks can (and should) be done using
 built-in Perl functions. Starting a subprocess to call an external program adds
-overhead and makes the pipeline slower.
+overhead and makes the pipeline slower as well as adds to portability issues.
 
 Genewise, which is used in \hamstr to predict open reading frames, cannot output
 frameshift-corrected, corresponding nucleotide sequences for the amino acid
@@ -46,13 +47,13 @@ Due to the algorithm that \hamstr uses, it is ``memoryless'', meaning it does
 not cache whether a specific contig has already been mapped to an ortholog
 cluster. As a result, it is possible that the same contig is mapped to two (or
 more) different ortholog groups. This has happened in practice (Struck 2012,
-pers. comm.), and can be considered a serious bug.
+pers. comm.), and can be considered a serious problem.
 
-All these issues converge to the necessity of a rewrite of \hamstr. In the
-present thesis, I will infer a software pipeline for orthology prediction in
-transcriptomic sequence data that is easy to use by employing configuration
-files instead of editing the program source code, faster by not relying on
-external tools where which built-in functionality is available, and more
-flexible and modern by incorporating up-to-date technology. A modular design
-will facilitate future extension as well as multithreaded implementation to
-benefit from parallel computing environments for additional speed.
+All these issues converge to the necessity of implementing the approach used in
+\hamstr in a new, user-friendly software solution. In the present thesis, I will
+infer a software pipeline for orthology prediction in transcriptomic sequence
+data that is easy to use by employing configuration files, faster by relying on
+only the necessary external tools, and more flexible and modern by incorporating
+up-to-date technology. A modular design will facilitate future extension as well
+as multithreaded implementation to benefit from parallel computing environments
+for additional speed.
