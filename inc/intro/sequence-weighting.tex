@@ -1,7 +1,7 @@
 \label{sec:hmmtest}
 To avoid statistical bias by uneven phylogenetic representation when creating a
-hidden Markov model (HMM), HMMER3 \citep{eddy2009} uses a position-based
-weighting scheme as applied by \citet{henikoff1994} by default: 
+HMM, HMMER3 \citep{eddy2009} uses a position-based weighting scheme as applied
+by \citet{henikoff1994} by default: 
 
 \begin{quote}
 	``A simple method to represent the diversity at a position is to award each
@@ -15,17 +15,18 @@ weighting scheme as applied by \citet{henikoff1994} by default:
 	\hfill\citep{henikoff1994}
 \end{quote} 
 
-Thus, if two sequences are very similar in a particular domain, the Henikoff
-weighting scheme penalizes that by weighting the sequences down
+Thus, if two or more sequences are very similar in a particular region, the
+Henikoff weighting scheme penalizes that by weighting the sequences down
 position-wise. Highly diverse positions, on the other hand, would receive a
 bonus. 
 
-In comparison to, \eg, two species $a$ and $b$ from the same family, the
-remotely related species $a$ and $c$ have more divergent sequences. Highly
-conserved domains may still be similar, but for the most part, more divergence
-is expected. Under the Henikoff weighting scheme, closely related domains will
-receive a penalty, while divergent ones are upweighted. Because $a$ and $b$ are
-expected to have more positions in common, which results in downweighting of a
-larger percentage of their entire sequences, these two sequences are each
-``worth'' less than the more remotely related sequence $c$. Two identical
-sequences would each receive half the weight that one sequence would.
+In comparison to, \eg, two species $a$ and $b$ from the same taxonomic family, the
+remotely related species $a$ and $c$ are expected to have more divergent
+sequences. Highly conserved domains may still be similar, but for the most part,
+more divergence is expected. Under the Henikoff weighting scheme, closely
+related domains will receive a penalty, while divergent ones are upweighted.
+Because $a$ and $b$ are expected to have more positions in common, which results
+in downweighting of a larger percentage of their entire sequences, these two
+sequences are each ``worth'' less than the more remotely related sequence $c$.
+Two identical sequences would each receive half the weight that one sequence
+would.

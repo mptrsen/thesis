@@ -1,7 +1,13 @@
 \begin{figure}[h]
 \centering
-\def\svgwidth{\textwidth}
+\def\svgwidth{0.8\textwidth}
 \input{img/transaction-time.pdf_tex}
-\caption{Transaction time}
+\caption[Re-indexing performance on MyISAM tables]{
+	Re-indexing performance on MyISAM tables. Starting with about $5.5\cdot10^6$
+	rows in the table ``ests'', MyISAM re-indexing performance starts to drop.
+	The indices had been disabled prior to data upload in order to improve upload
+	performance. A solution to this problem is to split up the table ``ests'' into
+	separate tables for each query taxon.
+}
 \label{fig:transaction-time}
 \end{figure}

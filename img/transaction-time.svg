@@ -37,8 +37,8 @@
      id="namedview9037"
      showgrid="false"
      inkscape:zoom="1.2361274"
-     inkscape:cx="305.30822"
-     inkscape:cy="186.27777"
+     inkscape:cx="305.51607"
+     inkscape:cy="153.51926"
      inkscape:window-x="1280"
      inkscape:window-y="2"
      inkscape:window-maximized="1"
@@ -206,21 +206,24 @@
        inkscape:connector-curvature="0"
        id="path9123"
        style="fill:none;stroke:#000000;stroke-width:0.75;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-opacity:1;stroke-dasharray:none"
-       d="m 59.04,73.44 486.72,0 0,299.52 -486.72,0 0,-299.52" /><g
-       id="g9125"><text
-         transform="matrix(1,0,0,-1,211.02,18.72)"
-         id="text9127"><tspan
-           style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Helvetica;font-variant:normal;font-weight:normal;font-size:12;writing-mode:lr;-inkscape-font-specification:Helvetica"
-           x="0 8.664 15.336 25.332 32.004 38.676 42.672 46.008 52.68 56.016 59.352 65.352 72.024 78.696 85.368 92.04 98.712 104.712 111.384 117.384 120.72 123.384 130.056 133.392 140.064 146.736 150.072 156.744 163.416 170.088 176.088"
-           y="0"
-           sodipodi:role="line"
-           id="tspan9129">Number of sequences in database</tspan></text>
+       d="m 59.04,73.44 486.72,0 0,299.52 -486.72,0 0,-299.52" /><text
+       id="text9127"
+       transform="scale(1,-1)"
+       x="211.02"
+       y="-18.719999"><tspan
+         id="tspan9129"
+         sodipodi:role="line"
+         style="font-size:12px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Helvetica;-inkscape-font-specification:Helvetica"
+         x="211.02"
+         y="-18.719999">Number of records in table</tspan></text>
 <text
-         transform="matrix(0,1,1,0,12.96,168.86)"
-         id="text9131"><tspan
-           style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Helvetica;font-variant:normal;font-weight:normal;font-size:12;writing-mode:lr;-inkscape-font-specification:Helvetica"
-           x="0 8.664 15.336 22.344 25.008 31.68 38.352 44.664 50.664 53.328 60 66.672 70.008 73.344 76.008 86.004 92.676 96.012 99.348 105.348"
-           y="0"
-           sodipodi:role="line"
-           id="tspan9133">Re−indexing time [s]</tspan></text>
-</g></g></svg>
+       id="text9131"
+       transform="matrix(0,1,1,0,0,0)"
+       x="168.86"
+       y="12.96"><tspan
+         id="tspan9133"
+         sodipodi:role="line"
+         style="font-size:12px;font-variant:normal;font-weight:normal;writing-mode:lr-tb;fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none;font-family:Helvetica;-inkscape-font-specification:Helvetica"
+         x="168.86"
+         y="12.96">Re-indexing time [s]</tspan></text>
+</g></svg>

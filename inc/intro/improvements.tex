@@ -11,28 +11,19 @@ Perl (Meusemann 2011, pers. comm.). The reason for this difficulty is twofold:
 firstly, the Perl program code has to be edited prior to running the pipeline
 and adjusted for the given environment. This is an error-prone practice and for
 a non-technical user a major obstacle. The second reason for \hamstr's
-user-unfriendliness is the generation of custom ortholog sets. The files
-containing the amino acid sequence data must be provided to the pipeline in a
-special structure that is not trivial to set up manually, and frequently
-requires scripting to automate repetitive tasks. An unexperienced user with no
-knowledge of programming is not able to perform this, and as a consequence, is
-restrained to ortholog sets that are provided by the
+inconvenience is the generation of custom ortholog sets. The files containing
+the amino acid sequence data must be provided to the pipeline in a special
+structure that is not trivial to set up manually, and frequently requires
+scripting to automate repetitive tasks. An unexperienced user with no knowledge
+of programming is not able to perform this, and as a consequence, is restrained
+to ortholog sets that are provided by the
 developers\footnote{\url{http://www.deep-phylogeny.org/hamstr/download/datasets/hmmer3/}}.
-
-In addition to \hamstr being user-unfriendly, it can be argued that using
-BLAST---which does not benefit from the accuracy of a HMM profile---for the
-reciprocal search is a waste of specificity: HMM technology is capable of
-detecting peptide sequences so remotely similar that BLAST would not find them,
-therefore they would be discarded during the step in which the ortholog status
-of these sequences is verified. If \hamstr were written in a modular fashion, it
-would be easy to switch from BLAST to HMMER or other search algorithms for the
-reciprocal search in order to test this hypothesis. 
 
 \hamstr makes use of many external tools such as \tool{grep} or \tool{sed} to
 perform tasks such as identifying a specific sequence in a Fasta file or to
 substitute patterns in a string. These tasks can (and should) be done using
 built-in Perl functions. Starting a subprocess to call an external program adds
-overhead and makes the pipeline slower as well as adds to portability issues.
+overhead and makes the pipeline slower as well as increase portability issues.
 
 Genewise, which is used in \hamstr to predict open reading frames, cannot output
 frameshift-corrected, corresponding nucleotide sequences for the amino acid
@@ -49,11 +40,11 @@ cluster. As a result, it is possible that the same contig is mapped to two (or
 more) different ortholog groups. This has happened in practice (Struck 2012,
 pers. comm.), and can be considered a serious problem.
 
-All these issues converge to the necessity of implementing the approach used in
-\hamstr in a new, user-friendly software solution. In the present thesis, I will
-infer a software pipeline for orthology prediction in transcriptomic sequence
-data that is easy to use by employing configuration files, faster by relying on
-only the necessary external tools, and more flexible and modern by incorporating
-up-to-date technology. A modular design will facilitate future extension as well
-as multithreaded implementation to benefit from parallel computing environments
-for additional speed.
+In addition to \hamstr being inconvenient for the average user, it can be argued
+that using BLAST---which does not benefit from the accuracy of a HMM
+profile---for the reciprocal search is a waste of specificity: HMM technology is
+capable of detecting peptide sequences so remotely similar that BLAST would not
+find them, therefore they would be discarded during the step in which the
+ortholog status of these sequences is verified. If \hamstr were written in a
+modular fashion, it would be easy to switch from BLAST to HMMER or other search
+algorithms for the reciprocal search in order to test this hypothesis. 
