@@ -1,13 +1,13 @@
 \label{sec:algorithm-reporting}
-The evaluation program orthograph-reporter assesses gene orthology among the
-transcript sequence data in the database on the basis of the bidirectional
-search results that were obtained using orthograph-analyzer. Note that this step
-is intended to be independent of the search algorithm and does not modify
-the results that are already present in the database, leaving them in a
+The evaluation program \tool{orthograph-reporter} assesses gene orthology among
+the transcript sequence data in the database on the basis of the bidirectional
+search results that were obtained using \tool{orthograph-analyzer}. Note that
+this step is intended to be independent of the search algorithm and does not
+modify the results that are already present in the database, leaving them in a
 consistent state for evaluation under different criteria.
 
-For generating the graph, orthograph-reporter organizes the data from the database
-in a special, multidimensional structure that is easy to parse:
+For generating the graph, \tool{orthograph-reporter} organizes the data from the
+database in a special, multidimensional structure that is easy to parse:
 
 \begin{lstlisting}[label={lst:structure},caption={Data structure for parsing the triangular
 relationships between ortholog groups and transcripts}]
@@ -32,7 +32,7 @@ constructing the HMM for the given \emph{ortholog\_group\_id}. If the reciprocal
 search hit a matching amino acid sequence, this pair of [ortholog group +
 transcript sequence] is considered orthologous.
 
-The reporting algorithm is as follows:
+The reporting algorithm is as follows (see also \autoref{fig:orthograph-graph}:
 
 \begin{enumerate}
 	\item Get configuration, initialize global variables.
@@ -63,8 +63,12 @@ The reporting algorithm is as follows:
 				'X' and concatenate the fragments. This ortholog group can also not be
 				assigned again.
 			\item Correct for frameshift errors and infer the coding sequence using
-				Exonerate (not implemented at the time of writing).
+				Exonerate (not yet implemented at the time of this writing).
 		\end{enumerate}
 	\end{enumerate}
 \end{enumerate}
 
+\input{inc/results/fig-orthograph-graph}
+
+The results are written to Fasta files---one for each ortholog group with the
+transcript sequences that were mapped to it---and a summary table. 

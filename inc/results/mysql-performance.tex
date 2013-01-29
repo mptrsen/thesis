@@ -1,1 +1,34 @@
+As outlined in \autoref{sec:mysql}, MySQL was used for various reasons, one of
+which is that a DBMS is optimized for speed and efficiency. This is true
+especially for small databases with tables that contain less than five million
+records in this schema (see \autoref{sec:database-structure}). Above of 5
+million records, MyISAM performance for re-indexing after uploading new
+transcriptome sequence data starts to drop noticeably (see
+\autoref{fig:transaction-time}). A solution to this issue is to partition the
+tables ``ests'', ``hmmsearch'', and ``blast''. 
+
 \input{inc/results/fig-transaction-time}
+
+During testing, it became obvious that not only the indexing strategy and the
+query design, but also the database structure plays a major part in terms of
+performance. Especially the tables ``ests'', ``hmmsearch'' and ``blast'' become
+excessively large after a few analyses: assume a number of 500,000 transcript
+sequences that are uploaded and an ortholog set of 4,000 OGs. If each of the
+4,000 HMM searches obtains an average of 20 hits during the HMM search, and each
+of the 20 BLAST searches obtain an average of 50 hits, this amounts to $4,000
+\cdot 20 = 8 \cdot 10^4$ rows in the table ``hmmsearch'' and $4 \cdot 10^6$ rows in the
+table ``blast''. The rows themselves do not contain much data (131 B
+on average), but their sheer number brings InnoDB performance to its knees.
+Insertion of new data does not become noticably slow, but the deletion of
+unneeded records in the event of a repeated analysis that clears previous
+results from the same query species from the database prior to the actual
+analysis. The InnoDB cluster index physically orders the table based on the
+primary key or the first unique key it can utilize. When one row is removed, the
+entire table is reordered on disk for speed and defragmentation. With increasing
+table size, this operation takes exponentially long (see
+\autoref{fig:transaction-time}).
+
+From what I have learned, the simplest and most performant solution to this
+problem is to create individual tables for each query taxon. Dropping or
+truncating (emptying) a table and recreating it is much faster than deleting a
+large portion out of a huge table. 
