@@ -72,7 +72,7 @@ makeblastdb-program  = makeblastdb
 # programs, though.
 translate-program    = fastatranslate
 
-# HMMsearch, of course. Also part of the HMMER3 package.
+# hmmsearch, of course. Also part of the HMMER3 package.
 hmmsearch-program    = hmmsearch
 
 # BLAST. Should be blastp from the NCBI BLAST+ package.
@@ -98,7 +98,7 @@ blast-program        = blastp
 #
 # # Settings that affect the HMM and BLAST searches.
 #
-# E-value threshold. The HMMsearch e-value threshold affects the specificity of
+# E-value threshold. The hmmsearch e-value threshold affects the specificity of
 # the HMM search, the first step in the reciprocal algorithm. It defines how
 # distantly related candidate orthologs may be when searching through the
 # transcriptome file. The BLAST e-value threshold affects the second step, the
@@ -108,15 +108,15 @@ hmmsearch-evalue-threshold    = 1e-05
 blast-evalue-threshold        = 1e-05
 
 # You can also set a score threshold. A higher score means a better match. For
-# HMMsearch, E-value and score thresholds are mutually exclusive. If both are
+# hmmsearch, E-value and score thresholds are mutually exclusive. If both are
 # set, the E-value threshold will be used (to use the score threshold, you have
 # to unset the E-value threshold). BLAST accepts both E-value and score
 # thresholds simultaneously.
 #hmmsearch-score-threshold	  = 10
 #blast-score-threshold        = 10
 
-# Maximum number of HMMsearch hits to consider. This setting is useful to limit
-# the number of reciprocal searches for very large number of HMMsearch hits.
+# Maximum number of hmmsearch hits to consider. This setting is useful to limit
+# the number of reciprocal searches for very large number of hmmsearch hits.
 # However, it is also useful to limit the scope of your HMM searches, which you
 # normally don't want to do. Unless you have an idea of how many reciprocal
 # searches are required to effectively verify or reject a candidate ortholog,
@@ -150,9 +150,9 @@ blast-max-hits                = 100
 # This is the default, uncomment this line if you want to turn it off.
 #clear-results-from-database  = 0
 
-# Delete old result files. This means the HMMsearch and BLAST report files found
+# Delete old result files. This means the hmmsearch and BLAST report files found
 # in the output directory. If you plan to run the same analysis multiple times
-# with the same HMMsearch and BLAST settings, then don't have them deleted. This
+# with the same hmmsearch and BLAST settings, then don't have them deleted. This
 # will speed up the process significantly, since the search programs don't have
 # to be run again.
 # This is the default. Uncomment this line if you want the files deleted.
@@ -164,7 +164,7 @@ blast-max-hits                = 100
 # character. The default is not to substitute.
 #substitute-u-with            = X
 
-# Verbose output. More information about the HMMsearch and BLAST hits. Normally
+# Verbose output. More information about the hmmsearch and BLAST hits. Normally
 # you don't want to see this. If you are really interested in what Orthograph is
 # thinking during the analysis, uncomment this. Verbose and quiet are mutually
 # exclusive.
