@@ -1,8 +1,8 @@
 The \pname algorithm is different from the one that is implemented in \hamstr:
 It does not assign transcript sequences to ortholog groups (OG) based on a
-per-OG basis, but instead first collects all possible graph edges (see
-\autoref{fig:graph}) and traverses them by ascending \tool{hmmsearch} e-value. This has
-two obvious advantages: firstly, it assures that the transcript sequences are
+per-OG basis, but instead first collects all possible graph edges  and traverses
+them by ascending \tool{hmmsearch} e-value (see \autoref{fig:orthograph-graph}).
+This has two advantages: firstly, it assures that the transcript sequences are
 mapped to the most relevant OG, and not the one that was processed first.
 Secondly, by removing the transcript sequences from the list of candidate
 transcripts, it precludes redundant assignment, \ie, the same transcript being

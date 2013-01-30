@@ -1,11 +1,12 @@
 \label{sec:mysql}
-I used the MySQL relational database management system (DBMS) 
+I used the MySQL relational database management system
+(\nomenclature{DBMS}{Database management system}) 
 for fast and efficient sequence data storage and retrieval. It is published
 under the GPL license for open source applications. MySQL was installed from the
 Fedora repositories using the package manager yum.
 
-The use of a RDBMS has a number of advantages over file-based sequence
-data storage:
+The use of a DBMS has a number of advantages over file-based sequence data
+storage:
 
 \begin{description}
 	\item[Memory efficiency.] The amino acid or nucleotide sequence data do not
@@ -20,16 +21,17 @@ data storage:
 	\item[Performance.] The DBMS is highly optimized for speed and efficiency. If
 		configured correctly, complex queries comprising millions of rows are
 		executed quickly.
-	\item[Flexibility.] SQL queries allow fine-grained, custom-tailored filtering
-		and output.
+	\item[Flexibility.] \nomenclature{SQL}{Structured query language} queries
+		allow fine-grained, custom-tailored filtering and output.
 \end{description}
 
 MySQL supports the InnoDB \citep{mysql2013} and MyISAM \citep{mysql2013} storage
 engines. InnoDB is a so-called transactional database storage engine and is
-fully ACID compliant. ACID stands for Atomicity, Consistency, Isolation and
-Durability \citep{haerder1983}. It is a set of database design principles that
-emphasize aspects of reliability that are important for data-critical
-applications \citep{schwartz2012}:
+fully \nomenclature{ACID}{Atomicity, Consistency, Isolation, Durability}
+compliant. ACID stands for Atomicity, Consistency, Isolation and Durability
+\citep{haerder1983}. It is a set of database design principles that emphasize
+aspects of reliability that are important for data-critical applications
+\citep{schwartz2012}:
 
 \begin{description}
 	\item[Atomicity.] A transaction must function as a single indivisible unit of

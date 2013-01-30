@@ -32,7 +32,7 @@ constructing the HMM for the given \emph{ortholog\_group\_id}. If the reciprocal
 search hit a matching amino acid sequence, this pair of [ortholog group +
 transcript sequence] is considered orthologous.
 
-The reporting algorithm is as follows (see also \autoref{fig:orthograph-graph}:
+The reporting algorithm is as follows (see also \autoref{fig:orthograph-graph}):
 
 \begin{enumerate}
 	\item Get configuration, initialize global variables.
@@ -60,7 +60,8 @@ The reporting algorithm is as follows (see also \autoref{fig:orthograph-graph}:
 				\end{enumerate}
 			\item If there is a gap between the transcripts (the end of one transcript
 				lies more than 1 bp before the start of the next), fill the gap with
-				'X' and concatenate the fragments. This ortholog group can also not be
+				'\nomenclature{X}{Ambiguity character in amino acid sequences; may be
+				any amino acid}' and concatenate the fragments. This ortholog group can also not be
 				assigned again.
 			\item Correct for frameshift errors and infer the coding sequence using
 				Exonerate (not yet implemented at the time of this writing).
@@ -68,7 +69,13 @@ The reporting algorithm is as follows (see also \autoref{fig:orthograph-graph}:
 	\end{enumerate}
 \end{enumerate}
 
+The results are written to Fasta files---one for each ortholog group with the
+transcript sequences that were mapped to it---and a summary table. The presence
+of corresponding protein-coding nucleotide sequence data for the reference
+proteomes in the database allows output of the corresponding nucleotide
+sequences along with the amino acid sequences.
+
 \input{inc/results/fig-orthograph-graph}
 
-The results are written to Fasta files---one for each ortholog group with the
-transcript sequences that were mapped to it---and a summary table. 
+\input{inc/results/fig-graph}
+

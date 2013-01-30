@@ -17,7 +17,8 @@ The analysis, \ie, the searching algorithm is as follows:
 	\item Translate the input file in all six reading frames, if it is nucleic
 		acid data.
 	\item Load the translated sequences into the database, generating unique
-		SHA256 digests (see \autoref{sec:checksums}) on the way.
+		\nomenclature{SHA256}{Secure hash algorithm} digests (see
+		\autoref{sec:checksums}) on the way.
 	\item Get all translated sequences of the target species from the database.
 		Sequence identifiers are now SHA256 digests. Write the sequences into a
 		temporary file.

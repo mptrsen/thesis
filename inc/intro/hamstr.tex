@@ -1,22 +1,25 @@
 \label{sec:hamstr}
 The program \hamstr (\emph{H}idden M\emph{a}rkov \emph{M}odel based
 \emph{S}earch for or\emph{t}hologs using \emph{R}eciprocity) implements a
-graph-based approach using hidden Markov models (HMMs, explained in
-\autoref{sec:hmms}) for assessing gene orthology. It is aimed specifically at
-searching for orthologs in \emph{expressed sequence tag} (EST)
-data\footnote{National Center for Biotechnology Information: EST fact sheet
+graph-based approach using hidden Markov models (\nomenclature{HMM}{Hidden
+Markov model}s, explained in \autoref{sec:hmms}) for assessing gene orthology.
+It is aimed specifically at searching for orthologs in \emph{expressed sequence
+tag} (\nomenclature{EST}{Expressed sequence tag}) data\footnote{National Center
+for Biotechnology Information: EST fact sheet
 (\url{http://www.ncbi.nlm.nih.gov/About/primer/est.html}, revised: March 29,
-2004)}, which are sequenced using copy DNA (cDNA) libraries in a process called
-\emph{shotgun sequencing}. The cDNA is synthetisized from mRNA and therefore
-contains no introns. Like a transcriptome, EST data are incomplete, \ie, they
-contain only nucleotide sequences of the genes that were expressed at the time
-of RNA preservation. Due to the way EST data are sequenced and assembled, these
-data can be redundant and fragmented as well, which is why methods for orthology
-prediction in genomic data cannot be applied, and approaches like described in
-\autoref{sec:orthology-howto} have to be used.
+2004)}, which are sequenced using copy DNA (\nomenclature{cDNA}{Copy DNA})
+libraries in a process called \emph{shotgun sequencing}. The cDNA is
+synthetisized from mRNA and therefore contains no introns. Like a transcriptome,
+EST data are incomplete, \ie, they contain only nucleotide sequences of the
+genes that were expressed at the time of RNA preservation. Due to the way EST
+data are sequenced and assembled, these data can be redundant and fragmented as
+well, which is why methods for orthology prediction in genomic data cannot be
+applied, and approaches like described in \autoref{sec:orthology-howto} have to
+be used.
 
 \emph{De novo} orthology assessment cannot be performed with \hamstr. Instead,
-the pipeline relies on pre-computed \emph{ortholog groups} (OG, a set of genes
+the pipeline relies on pre-computed \emph{ortholog groups}
+(\nomenclature{OG}{Ortholog group}, a set of genes
 that are known to be one-to-one orthologs) that data from the query EST library
 is clustered to. These so-called \emph{core orthologs} are compiled from
 existing databases, such as OrthoDB or Inparanoid, and must be of species 
