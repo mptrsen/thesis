@@ -1,0 +1,15 @@
+When triangulating bidirectional best hits as explained in
+\autoref{sec:orthology-howto}, an exhaustive assessment of gene orthology in
+transcriptome data, using a search algorithm like BLAST, must try to align all
+orthologous amino acid sequences against all transcriptome sequences.  
+
+\pname uses HMMs for the forward search, \ie, for identification of ortholog
+candidates in the query library of transcriptome sequences. However, in addition
+to harnessing the power of the underlying mathematical models for obtaining
+remotely similar amino acid sequences---which a similarity-based algorithm like
+BLAST would not find (see \autoref{sec:hmms})---a HMM-based search offers an additional
+performance value: it pools the substitution probability information contained
+in a multiple sequence alignment in a single statistical model. By using that
+for performing a search comprising homology information of $n$ sequences
+in that ortholog group, the number of required searches is reduced to only $1$;
+this leads to a speedup of up to $n-1$ compared to an all-against-all BLAST search.

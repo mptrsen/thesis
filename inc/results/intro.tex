@@ -11,6 +11,8 @@ two-dimensional graph (see \autoref{fig:graph}) based on triangular
 relationships, but the algorithm is different and, among other features, avoids
 redundant assignment of transcripts to different ortholog groups.
 
+\input{inc/results/fig-graph}
+
 The program itself has been designed to be platform-independent and has been
 developed and tested on Linux systems.  In theory, the pipeline runs in Windows
 environments as well, however, the installation of the packages it depends on
@@ -51,9 +53,9 @@ BLAST and Exonerate. For interactions with the MySQL database, the MySQL driver
 \nomenclature{DBD}{Database driver} for Perl and the native Perl database
 interface \nomenclature{DBI}{Database interface} are used.
 
-In the following sections, I will explain the algorithm that \pname employs, the
+In the following sections, I explain the algorithm that \pname employs, the
 database structure it relies on, and how the graph of ortholog relationships is
 constructed. During the development of \pname, I was faced with challenges of
-both theoretical and practical nature, and I will also report on the techniques
-that I implemented to overcome these obstacles.
+both theoretical and practical nature, and I also report on the techniques that
+I implemented to overcome these obstacles.
 

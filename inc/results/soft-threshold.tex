@@ -1,0 +1,12 @@
+In \pname, not only the e-value threshold for both the \tool{hmmsearch} and
+BLAST searches define a criterion that must be met in order for a transcript to
+be considered orthologous to a given OG. Here, a so-called \emph{soft threshold}
+is introduced: When traversing the graph by ascending \tool{hmmsearch} e-value
+edges, it may happen that, for a given OG--transcript combination, multiple
+BLAST searches that are consecutive in e-value did not hit an amino acid
+sequence that was used to build the HMM for this OG. In \pname, the soft
+threshold defines a number of reciprocal searches for a single OG that did not
+fulfill the triangulation criterion. Above the soft threshold, the reliability
+of this ortholog relationship is considered insufficient, and the given OG is
+skipped (for that given \tool{hmmsearch} e-value). 
+

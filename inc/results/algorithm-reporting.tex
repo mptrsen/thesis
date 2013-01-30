@@ -7,7 +7,8 @@ modify the results that are already present in the database, leaving them in a
 consistent state for evaluation under different criteria.
 
 For generating the graph, \tool{orthograph-reporter} organizes the data from the
-database in a special, multidimensional structure that is easy to parse:
+database in a special, multidimensional structure that is easy to parse
+(\autoref{lst:structure}).
 
 \begin{lstlisting}[label={lst:structure},caption={Data structure for parsing the triangular
 relationships between ortholog groups and transcripts}]
@@ -36,6 +37,8 @@ The reporting algorithm is as follows (see also \autoref{fig:orthograph-graph}):
 
 \begin{enumerate}
 	\item Get configuration, initialize global variables.
+	\item Check whether the configuration is acceptable (see algorithm for
+		\tool{orthograph-analyzer}).
 	\item Get a list of ortholog group IDs and their associated ortholog sequences
 		from the database.
 	\item Get all search results from the database.
@@ -69,13 +72,11 @@ The reporting algorithm is as follows (see also \autoref{fig:orthograph-graph}):
 	\end{enumerate}
 \end{enumerate}
 
-The results are written to Fasta files---one for each ortholog group with the
+The results are written to output files---one for each ortholog group with the
 transcript sequences that were mapped to it---and a summary table. The presence
 of corresponding protein-coding nucleotide sequence data for the reference
 proteomes in the database allows output of the corresponding nucleotide
 sequences along with the amino acid sequences.
 
 \input{inc/results/fig-orthograph-graph}
-
-\input{inc/results/fig-graph}
 

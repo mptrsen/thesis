@@ -121,8 +121,10 @@
 
 %
 % paper notes, remove this later
-\chapter*{Paper notes}
-	\input{inc/notes}
+%--------------------------------------------------
+% \chapter*{Paper notes}
+% 	\input{inc/notes}
+%-------------------------------------------------- 
 
 %
 % declaration of authorship
@@ -225,18 +227,21 @@
 	% 	\input{inc/results/graph}
 	%-------------------------------------------------- 
 	\section{Implementation decisions}
-		\subsubsection{Traversing the hit list by e-value}
+		\subsection{HMM-based forward search}
+			\input{inc/results/hmm-search}
+		\subsection{Traversing the graph by e-value}
 			\input{inc/results/traversing-by-evalue}
-	\section{Performance tweaks}
+		\subsection{Soft threshold}
+			\input{inc/results/soft-threshold}
+		\subsection{SHA-256 digests as sequence identifiers}
+			\input{inc/results/checksums}
+	\section{Performance considerations}
 		\subsection{One BLAST database comprising all core taxa proteomes}
 			\input{inc/results/one-blast}
 		\subsection{MySQL performance}
 			\input{inc/results/mysql-performance}
 		\subsection{Distributed analysis}
 			\input{inc/results/distributed-analysis}
-	\section{SHA-256 checksums as sequence identifiers}
-		\input{inc/results/checksums}
-	\section{Benchmarks}
 
 \chapter{Discussion and outlook}
 	\input{inc/discussion/intro}
