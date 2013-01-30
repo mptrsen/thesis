@@ -14,7 +14,7 @@
    version="1.1"
    id="svg25779"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="dbstructure.pdf">
+   sodipodi:docname="dbstructure.svg">
   <sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -29,8 +29,8 @@
      id="namedview27786"
      showgrid="false"
      inkscape:zoom="1.4142136"
-     inkscape:cx="387.47705"
-     inkscape:cy="584.09372"
+     inkscape:cx="238.98027"
+     inkscape:cy="619.35263"
      inkscape:window-x="1280"
      inkscape:window-y="2"
      inkscape:window-maximized="1"
@@ -41,7 +41,8 @@
      inkscape:bbox-nodes="true"
      inkscape:object-nodes="true"
      inkscape:bbox-paths="true"
-     inkscape:snap-page="true">
+     inkscape:snap-page="true"
+     inkscape:snap-bbox-edge-midpoints="true">
     <sodipodi:guide
        orientation="1,0"
        position="79.999999,680.875"
@@ -86,6 +87,10 @@
        orientation="0,1"
        position="194.0973,517.99999"
        id="guide8995" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="517.11819,623.66816"
+       id="guide4424" />
   </sodipodi:namedview>
   <metadata
      id="metadata27788">
@@ -95,7 +100,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -2356,7 +2361,7 @@
      style="fill:none;stroke:#000000;stroke-width:0.56692898;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1" />
   <g
      id="g8566"
-     transform="translate(16,0)">
+     transform="translate(299.23702,98.429262)">
     <path
        sodipodi:nodetypes="sssssssss"
        style="fill:#7ebf7e;fill-opacity:0.50196078;fill-rule:nonzero;stroke:#7f7f7f;stroke-width:0.56692898;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:10;stroke-opacity:1"

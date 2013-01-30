@@ -1,16 +1,22 @@
 The graph-based approach to orthology prediction is in principle a simple
-algorithm and easy to implement, but in practice offers not only technical
+algorithm and easy to implement in a program. However, in practice, it offers not only technical
 challenges when applied on a large scale such as on the 1,000 transcriptome
-sequence data for the 1KITE\footnote{\url{http://1kite.org}} project, but also
+sequence data from the 1KITE\footnote{\url{http://1kite.org}} project, but also
 numerous opportunities for extension and improvement. 
 
-For the present thesis, I have developed a pipeline called \pname.  It is a
-rewrite of the \hamstr implementation using state-of-the-art technology and
+For the present thesis, I developed a pipeline called \pname
+and used state-of-the-art technology and
 programming techniques. Like in \hamstr, orthologous amino acid or nucleotide
 sequences are clustered on a two-dimensional graph based on triangular
 relationships (see \autoref{sec:graph}), but the algorithm is different and,
-among other features, disallows redundant assignment of transcripts to different
+among other features, avoids redundant assignment of transcripts to different
 ortholog groups.
+
+The program itself has been designed to be platform-independent and has been
+developed and tested on Linux systems.  In theory, the pipeline runs in Windows
+environments as well, however, the installation of the packages it depends on
+(HMMER3, BLAST, Exonerate, and the MySQL driver for Perl) may be problematic on
+Windows systems. This has not been tested.
 
 \pname is licensed under the GPL. The source code is hosted on
 GitHub\footnote{\url{https://github.com/mptrsen/Orthograph}}. This platform
@@ -28,25 +34,25 @@ The most outstanding novelty in comparison to \hamstr is the use of the
 relational database management system MySQL. It enables the program to
 efficiently store and retrieve data as well as---with complex \code{JOIN}
 queries---establish ortholog relationships. Additionally, the server-client
-model of MySQL facilitates analyses on networked computer systems and, if
-configured correctly, allows for high performance.
+model of MySQL facilitates analyses on networked computer systems and allows for
+high performance.
 
 \pname is user-friendly in that it is mainly configuration file-driven instead
 of only accepting options on the command line. This allows for clear,
-reproducible and easily automatable analyses. All options may also be set on the
-command line, and will assume to default values if left unspecified. This
-enables usage of \pname in a larger pipeline. Convenience of use is further
-enhanced by automatically generating an ortholog
-set from provided information.
+reproducible, and easily automatable analyses. All options may also be set on
+the command line and the program applies default values if none are explicitly
+specified. This enables usage of \pname in a larger pipeline. Convenience of use
+is further enhanced by automatically generating an ortholog set from provided
+information.
 
-The pipeline does not make use of external programs where avoidable, \ie, it
+The pipeline makes use of as few external programs as possible, \ie, it
 uses Perl built-in functionality for, \eg, pattern substitution. Subprocesses
-are only started where the search programs are called, \ie, \tool{hmmsearch},
+are only started if the following search programs are required: \tool{hmmsearch},
 BLAST and Exonerate. For interactions with the MySQL database, the MySQL driver
 DBD for Perl and the native Perl database interface DBI are used.
 
 In the following sections, I will explain the algorithm that \pname employs, the
-database structure it uses, and how the graph of ortholog relationships is
+database structure it relies on, and how the graph of ortholog relationships is
 constructed. During the development of \pname, I was faced with challenges of
 both theoretical and practical nature, and I will also report on the techniques
 that I implemented to overcome these obstacles.

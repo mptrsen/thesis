@@ -1,43 +1,71 @@
 \label{sec:database-structure}
-The database was designed in a way that reduces redundant information to a
-minimum. The complete structure diagram is shown in Figure \ref{fig:dbstructure}
-(page \pageref{fig:dbstructure}). All tables except the ``ests'', ``hmmsearch'',
-and ``blast'' tables are used to store information about the amino acid or
-nucleotide sequences that belong to either an ortholog set or a proteome of a
-core taxon, or both. 
+The database was designed in a way that keeps generation or storage of redundant
+information at a minimum. The complete structure diagram of the database is
+shown in Figure \ref{fig:dbstructure} (page \pageref{fig:dbstructure}). All
+tables, except the ``ests'', ``hmmsearch'', and ``blast'' tables, are used to
+store information about the amino acid or nucleotide sequences that belong to
+either an ortholog set or a proteome of a core taxon, or both. 
+
+The database is structured ``from inside out'': the core data that all record
+relationships are derived from are the reference proteomes. These are stored in
+the table ``aaseqs'' as amino acid sequences. If nucleotide sequences from the
+corresponding set of protein-coding genes are present, they are stored in the
+table ``ntseqs''. The corresponding sequences are grouped together as records in
+the table ``sequence\_pairs''. The proteome and annotated set of protein-coding
+genes are commonly referred to and published as ``official gene set'' (OGS).
+Multiple OGS versions of the same species can be stored concurrently; they are
+distinguished by their version number in the database, which is stored in the
+table ``ogs''.  All sequence records and the sequence\_pairs couples are
+referenced to a taxon ID. The taxon information is stored in the table ``taxa''.
+OGS data can be of either nucleotide or amino acid sequences; the sequence type
+column is referenced to the table ``types'', which has only two records---``nt''
+for nucleotide and ``aa'' for amino acid sequences---and serves as a labeling
+table.
+
+A subset of the genes contained in the reference proteomes can be classified
+into ortholog groups. This relationship is reflected in the database: the table
+``orthologs'' holds the necessary information to construct clusters of ortholog
+groups; each group is tagged with an identifier and references the table
+``sequence\_pairs'', where the sequences in question are in turn referenced.
+Each ortholog group is part of an ortholog set, which is detailed with a
+shorthand name and a description in the table ``set\_details''.
 
 All tables have an ``id'' column with an auto-incremented integer as a unique
-identifier. Normally, this identifier is used in \code{JOIN} queries that
-reference other tables. The tables ``aaseqs'' and ``ntseqs'' contain the
-amino acid or nucleotide sequences, respectively, that belong to the ortholog
-sets. One of these tables is (or both are, if nucleotide sequences are present)
-referenced to a sequence pair in the table ``sequence\_pairs''. The table
-``set\_details'' contains a shorthand name for each ortholog set along with its
-longer name or description. The ``id'' columns can be used to, \eg, construct a
+identifier. This identifier is used in \code{JOIN} queries that
+reference other tables. The ``id'' columns can be used to, \eg, construct a
 SQL query that outputs all amino acid sequences that belong to a given ortholog
 set (see \autoref{fig:db-orthoset} for this example). 
-
-The tables ``aaseqs'' and ``ntseqs'' also contain amino acid and nucleotide
-sequences that make up the reference proteomes and genomes, respectively. A
-subset of these sequences is part of the ortholog sets. The proteome and genome
-are commonly referred to and published as ``official gene set'' (OGS). Multiple
-OGS versions of the same species can be stored concurrently; they are
-distinguished by their version number in the database. Both OGS and EST data
-can be of either nucleotide or amino acid sequences; the sequence type column is
-referenced to the table ``types'', which has only two records---``nt'' for
-nucleotide and ``aa'' for amino acid sequences---and serves only as a labeling
-table.
 
 All tables that contain sequence data, \ie, ``aaseqs'', ``ntseqs'', and
 ``ests'' have a column that holds a user ID. The table ``users'' can be
 referenced to identify a username. This was introduced to connect the uploading
-of a amino acid or nucleotide sequence dataset to a specific user in order to
+of an amino acid or nucleotide sequence dataset to a specific user in order to
 facilitate separation of multiple datasets by different researchers in the same
 database.
 
 \input{inc/results/fig-db-orthoset}
 
 \clearpage
+
+Data that is relevant to a specific analysis, \eg, newly constructed ortholog
+relationships, are stored in the tables ``ests'', ``hmmsearch'', and ``blast''.
+The first table contains the transcriptome sequence data from a query species.
+This table, like the other tables that contain sequence data, has a column that
+specifies a taxon ID as well as a column that specifies a sequence type.
+
+In the table ``hmmsearch'' are the results of the HMM search located. This table
+also has a column that specifies a taxon ID, but it stores no amino acid or
+nucleotide sequence data. Instead, it records \emph{references} to the sequences
+in question. This practice helps avoid redundant storage of nucleotide or amino
+acid sequence data, which can take up much space on the hard drive. Frequently,
+not an entire amino acid sequence is part of a best hit during a HMM search, but
+only a particular domain, \ie, a subsequence. This is reflected by storing the
+start and end of the hit in the respective columns. This also contributes to
+non-redundant data storage. 
+
+The table ``blast'' is similar to the table ``hmmsearch'': it, too, stores only
+references to amino acid sequence records that were hit by a BLAST search, and
+defines the start and end of the hit subsequence.
 
 \input{inc/results/fig-dbstructure}
 
