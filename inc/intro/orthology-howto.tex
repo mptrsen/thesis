@@ -80,18 +80,16 @@ compared to orthologs \citep{koonin2005}.
 In a graph-based approach, an algorithm creates a two-dimensional graph with
 genes (or proteins) as nodes and evolutionary relationships as edges. The
 relationships are inferred using a search algorithm such as Needleman-Wunsch
-\citeyearpar{needleman1970}, Smith-Waterman \citeyearpar{smith1981}, or
-\nomenclature{BLAST}{Basic local alignment search tool} \citep{altschul1990},
-and clusters of orthologous genes are created
+\citeyearpar{needleman1970}, Smith-Waterman \citeyearpar{smith1981}, or BLAST
+\citep{altschul1990}, and clusters of orthologous genes are created
 (\autoref{fig:graph-based-strat}b). In the event of a gene loss of, \eg, the
 blue human gene shown in \autoref{fig:graph-based-strat}a, however, a simple
 best-hit search algorithm would incorrectly infer an orthologous relationships
 between the blue dog and the red human gene. In order to avoid these mistakes,
 an additional criterion for orthology detection is introduced: the genes in
-question must be \emph{bidirectional best hits}
-(\nomenclature{BBH}{Bidirectional best hits}), also called reciprocal best hits
-(\nomenclature{RBH}{Reciprocal best hit}).  Since orthology is also a symmetric
-relation, this makes sense \todo{rephrase}.
+question must be \emph{bidirectional best hits} (BBH), also called reciprocal
+best hits (RBH). Since orthology is also a symmetric relation, this makes sense
+\todo{rephrase}.
 
 \input{inc/intro/fig-graph-based-strat}
 

@@ -18,12 +18,12 @@ corresponding set of protein-coding genes are present, they are stored in the
 table ``ntseqs''. What nucleotide sequence corresponds to what amino acid
 sequence is stored in the table ``sequence\_pairs''. The proteome and annotated
 set of protein-coding genes are commonly referred to and published as ``official
-gene set'' (\nomenclature{OGS}{Official gene set}).  Multiple OGS versions of
+gene set'' (OGS).  Multiple OGS versions of
 the same species can be stored concurrently; they are distinguished by their
 version number in the database, which is stored in the table ``ogs'' and
 referenced by the column ``ogs\_id'' in the table ``sequence\_pairs''.  All
 sequence records and the sequence\_pairs couples are referenced to a taxon
-\nomenclature{ID}{Identifier}. The taxon information is stored in the table
+ID. The taxon information is stored in the table
 ``taxa''.  OGS data can be of either nucleotide or amino acid sequences; the
 sequence type column is referenced to the table ``types'', which has only two
 records---``nt'' for nucleotide and ``aa'' for amino acid sequences---and serves

@@ -1,0 +1,26 @@
+The algorithm in \pname has been distributed into three programs:
+\tool{orthograph-manager}, \tool{orthograph-analyzer}, and
+\tool{orthograph-reporter}. The decision to implement three different tools
+has advantages over a monolithic design, where a single application would do
+every task: database management is separated from the actual analysis. This
+distinction is of particular importance when running \pname in a multi-user
+environment where the researcher does not have administrative access to the
+computer or the database server. Here, the system administrator can manage the
+database with \tool{orthograph-manager} and provide the researcher with the
+required environment for analysis. No knowledge of Perl or SQL is required.
+
+The separation of searching and reporting algorithms into discrete programs is
+beneficial because it facilitates implementation of different analysis
+strategies. The data in the database can be evaluated in multiple ways without
+having to run the searches again. \tool{orthograph-reporter} provides the
+algorithm for predicting gene orthology that is described in
+\autoref{sec:algorithm-reporting}, but for a different question, the data may be
+assessed under a different algorithm or with different criteria. This versatile
+implementation provides programmers and researchers alike with a flexible
+framework for analyses on multiple levels. 
+
+The searching and reporting programs can be chained into a single run with a
+simple batch script. The configuration file-driven design facilitates this: a
+single configuration file contains the necessary information for all \pname
+programs.
+

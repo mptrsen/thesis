@@ -1,37 +1,38 @@
 \label{sec:algorithm-reporting}
-The evaluation program \tool{orthograph-reporter} assesses gene orthology among
-the transcript sequence data in the database on the basis of the bidirectional
-search results that were obtained using \tool{orthograph-analyzer}. Note that
-this step is intended to be independent of the search algorithm and does not
-modify the results that are already present in the database, leaving them in a
-consistent state for evaluation under different criteria.
+The evaluation program \tool{orthograph-reporter} assesses ortholog
+relationships among the transcript sequence data and the known groups of
+orthologous amino acid or nucleotide sequences in the database on the basis of
+the bidirectional search results that were obtained using
+\tool{orthograph-analyzer}. Note that this step is intended to be independent of
+the search algorithm and does not modify the results that are already present in
+the database, leaving them in a consistent state for evaluation under different
+criteria.
 
-For generating the graph, \tool{orthograph-reporter} organizes the data from the
-database in a special, multidimensional structure that is easy to parse
-(\autoref{lst:structure}).
+For generating the graph, \tool{orthograph-reporter} organizes the information
+from the database in a multidimensional data structure that is easy to parse:
 
-\begin{lstlisting}[label={lst:structure},caption={Data structure for parsing the triangular
-relationships between ortholog groups and transcripts}]
+\begin{verbatim}
 hmmsearch_evalue => {
-	ortholog_group_id => [
-		reciprocal_hit,
-		reciprocal_hit,
-	],
-	ortholog_group_id => [
-		reciprocal_hit,
-		reciprocal_hit,
-	],
-	. . .
+  ortholog_group_id => [
+    reciprocal_hit,
+    reciprocal_hit,
+  ],
+  ortholog_group_id => [
+    reciprocal_hit,
+    reciprocal_hit,
+  ],
+  . . .
 },
 . . .
-\end{lstlisting}
+\end{verbatim}
 
-Each \emph{reciprocal\_hit} represents a BLAST search with the transcript
-sequence as query in the proteome database for the ortholog set that was used.
-The target can be compared to a list of amino acid sequences that were used in
-constructing the HMM for the given \emph{ortholog\_group\_id}. If the reciprocal
-search hit a matching amino acid sequence, this pair of [ortholog group +
-transcript sequence] is considered orthologous.
+Each \emph{reciprocal\_hit} represents a BLAST search against the database of
+reference proteomes for the ortholog set that was used. The query amino acid
+sequence was obtained during the preceding HMM search. The BLAST search hit can
+be compared to a complete list of amino acid sequences that were used in
+constructing the HMM for the given ortholog group. If the reciprocal search has
+hit a matching amino acid sequence, this pair of [ortholog group + transcript
+sequence] is considered orthologous.
 
 The reporting algorithm is as follows (see also \autoref{fig:orthograph-graph}):
 
@@ -48,23 +49,22 @@ The reporting algorithm is as follows (see also \autoref{fig:orthograph-graph}):
 		\item For each ortholog group that has obtained a \tool{hmmsearch} hit with this
 			e-value, do the following:
 			\begin{enumerate}
-				\item Sort the reciprocal hits by BLAST e-value in ascending order.
+				\item Sort the reciprocal hits by their BLAST e-value in ascending order.
 				\item For each reciprocal hit, do the following:
 				\begin{enumerate}
-					\item If the reciprocal search for this transcript hit a sequence that
-						is in this ortholog group, and this transcript has not been assigned
-						previously, then this is assumed to be a valid match. Continue.
-						Otherwise, skip to the next reciprocal hit unless the ``soft
-						threshold'' has been reached (in that case, skip to the next
-						ortholog group).
+					\item If the reciprocal search for this transcript has hit a sequence
+						that belongs to this ortholog group, and this transcript has not been
+						assigned previously, then this pair of [ortholog group + transcript
+						sequence] is assumed to be a valid match.  Continue. Otherwise, skip
+						to the next reciprocal hit unless the ``soft threshold'' has been
+						reached. In the latter case, skip to the next ortholog group.
 					\item If the transcript does not overlap with an existing assignment,
 						assign this transcript to this ortholog group. This transcript cannot
-						be assigned again. 
+						be assigned again.
 				\end{enumerate}
 			\item If there is a gap between the transcripts (the end of one transcript
 				lies more than 1 bp before the start of the next), fill the gap with
-				'\nomenclature{X}{Ambiguity character in amino acid sequences; may be
-				any amino acid}' and concatenate the fragments. This ortholog group can also not be
+				'X' and concatenate the fragments. This ortholog group can also not be
 				assigned again.
 			\item Correct for frameshift errors and infer the coding sequence using
 				Exonerate (not yet implemented at the time of this writing).
@@ -74,9 +74,9 @@ The reporting algorithm is as follows (see also \autoref{fig:orthograph-graph}):
 
 The results are written to output files---one for each ortholog group with the
 transcript sequences that were mapped to it---and a summary table. The presence
-of corresponding protein-coding nucleotide sequence data for the reference
-proteomes in the database allows output of the corresponding nucleotide
-sequences along with the amino acid sequences.
+of protein-coding nucleotide sequence data for the reference proteomes in the
+database allows output of the corresponding nucleotide sequences along with the
+amino acid sequences.
 
 \input{inc/results/fig-orthograph-graph}
 

@@ -139,6 +139,8 @@
 
 %
 % table of contents
+\phantomsection
+\addcontentsline{toc}{chapter}{Contents}
 \tableofcontents
 \clearpage
 
@@ -161,6 +163,8 @@
 \phantomsection
 \addcontentsline{toc}{chapter}{List of abbreviations}
 \markboth{\nomname}{\nomname}
+\setlength{\nomitemsep}{-\parsep}
+\include{inc/nomenclature}
 \printnomenclature[2cm]
 \clearpage
 
@@ -220,17 +224,9 @@
 		\input{inc/results/algorithm}
 		\subsection{Analysis}
 			\input{inc/results/algorithm-analysis}
-		\subsection{Reporting}
+		\subsection{Evaluation}
 			\input{inc/results/algorithm-reporting}
-	%--------------------------------------------------
-	% \section{Graph}
-	% 	\input{inc/results/graph}
-	%-------------------------------------------------- 
 	\section{Implementation decisions}
-		\subsection{HMM-based forward search}
-			\input{inc/results/hmm-search}
-		\subsection{Traversing the graph by e-value}
-			\input{inc/results/traversing-by-evalue}
 		\subsection{Soft threshold}
 			\input{inc/results/soft-threshold}
 		\subsection{SHA-256 digests as sequence identifiers}
@@ -243,11 +239,25 @@
 		\subsection{Distributed analysis}
 			\input{inc/results/distributed-analysis}
 
-\chapter{Discussion and outlook}
+\chapter{Discussion}
 	\input{inc/discussion/intro}
+	\section{Algorithm}
+		\input{inc/discussion/algorithm}
+	\section{Implementation decisions}
+		\subsubsection{HMM-based forward search}
+			\input{inc/discussion/hmm-forward-search}
+		\subsection{Traversing the graph by e-value}
+			\input{inc/discussion/traversing-by-evalue}
+		\subsection{Soft threshold}
+		\subsection{SHA-256 digests as sequence identifiers}
+			\input{inc/discussion/checksums}
+		\subsection{Performance considerations}
+			\subsubsection{One BLAST database comprising all reference proteomes}
+				\input{inc/discussion/one-blast}
 	\section{Conclusion and outlook}
 		\subsection{Future development}
-		\input{inc/discussion/future-devel}
+			\input{inc/discussion/future-devel}
+			\subsubsection{Reciprocal HMM search}
 	\section{Summary}
 
 %

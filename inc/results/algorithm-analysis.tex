@@ -4,8 +4,8 @@ The analysis, \ie, the bidirectional searching algorithm is as follows:
 	\item Get configuration, initialize global variables.
 	\item Check the following:
 	\begin{enumerate}
-		\item Do the user settings make sense (\eg, were there syntax errors in the
-			configuration file, were database connection settings specified, etc.)? If
+		\item Do the user settings make sense (\eg, are there syntax errors in the
+			configuration file, are database connection settings specified, etc.)? If
 			not, exit.
 		\item Are the paths to the input file and the programs correct? If not,
 			exit.
@@ -19,8 +19,7 @@ The analysis, \ie, the bidirectional searching algorithm is as follows:
 	\item Translate the input file in all six reading frames, if it is nucleic
 		acid data.
 	\item Load the translated sequences into the database, generating unique
-		\nomenclature{SHA-256}{Secure hash algorithm} digests (see
-		\autoref{sec:digests}) on the way.
+		SHA-256 digests (see \autoref{sec:digests}) on the way.
 	\item Get all translated sequences of the target species from the database.
 		Sequence identifiers are now SHA-256 digests. Write the sequences into a
 		temporary file.

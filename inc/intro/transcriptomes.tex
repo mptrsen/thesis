@@ -3,8 +3,7 @@ that one wants to understand the function of genes and proteins. The genome is
 made up of long strands of deoxyribonucleic acid (DNA). It contains the
 necessary instructions to create and maintain cells.  Proteins are produced
 according to information on the DNA in a two-step process: during
-\emph{transcription}, messenger ribonucleic acid (\nomenclature{mRNA}{Messenger
-ribonucleic acid}) is synthetisized. In the second step, \emph{translation}, the
+\emph{transcription}, messenger ribonucleic acid (mRNA) is synthetisized. In the second step, \emph{translation}, the
 mRNA is used by specialized organelles, namely ribosomes, to synthetisize
 proteins from amino acids. In eukaryotes, this process includes \emph{splicing},
 during which non-coding regions, so-called \emph{introns} are removed from the
@@ -22,29 +21,27 @@ The study of \emph{transcriptomes} circumvents these problems. A transcriptome
 is the collection of all transcripts in a tissue sample at the time of RNA
 preservation.  Transcriptomes are frequently used in phylogenetics and
 phylogenomics to reconstruct species trees based on hundreds of
-genes\footnote{The \nomenclature{1KITE}{1,000 insect transcriptome evolution}
-project (1K Insect Transcriptome Evolution, \url{http://1kite.org}) aims to
-sequence the transcriptomes of 1,000 insect species and infer a robust backbone
-tree of insects. Preliminary analyses were performed on a supermatrix of 1,478
-genes.}.  The combination of low-cost next-generation sequencing and the
-intron-free nature of transcriptomes allow access to a high proportion of
-protein coding genes per sequenced mega-base pair at a fraction of the cost for
-sequencing the corresponding genome.
+genes\footnote{The 1KITE project (1K Insect Transcriptome Evolution,
+\url{http://1kite.org}) aims to sequence the transcriptomes of 1,000 insect
+species and infer a robust backbone tree of insects. Preliminary analyses were
+performed on a supermatrix of 1,478 genes.}.  The combination of low-cost
+next-generation sequencing and the intron-free nature of transcriptomes allow
+access to a high proportion of protein coding genes per sequenced mega-base pair
+at a fraction of the cost for sequencing the corresponding genome.
 
 Next-generation transcriptome sequencing technologies achieve their high
 throughput by massively parallelizing the sequencing process. They cannot
 sequence whole genomes in a single run, but produce a large number of so-called
-\emph{reads}, short nucleotide sequences (20 to 1,000
-\nomenclature{bp}{basepair(s)} in length, depending on the technology used).
-These fragments must be \emph{assembled} to form so-called \emph{contigs},
-contiguous sequences of nucleotides that most closely resembles the nucleotide
-sequence present in the sequenced specimen. The assembly process is a
-computationally complex problem that has not yet been solved to perfection.
-Reviews of different strategies have been written by, \eg, \citet{zhang2011}.
-The assembled data may be redundant due to, \eg, alternative splicing products
-\citep{black2003} or multiple, non-overlapping sequencing of C-terminus and
-N-terminus (the two ends of a DNA strand or gene).  Most assembly software
-cannot detect these issues reliably \citep{haiminen2011}. 
+\emph{reads}, short nucleotide sequences (20 to 1,000 bp in length, depending on
+the technology used).  These fragments must be \emph{assembled} to form
+so-called \emph{contigs}, contiguous sequences of nucleotides that most closely
+resembles the nucleotide sequence present in the sequenced specimen. The
+assembly process is a computationally complex problem that has not yet been
+solved to perfection.  Reviews of different strategies have been written by,
+\eg, \citet{zhang2011}.  The assembled data may be redundant due to, \eg,
+alternative splicing products \citep{black2003} or multiple, non-overlapping
+sequencing of C-terminus and N-terminus (the two ends of a DNA strand or gene).
+Most assembly software cannot detect these issues reliably \citep{haiminen2011}. 
 
 In addition to the processes explained above, next-generation transcriptome
 sequencing and assembly output sequence data are not only fragmented and

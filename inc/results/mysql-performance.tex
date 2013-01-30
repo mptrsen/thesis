@@ -1,3 +1,4 @@
+\label{sec:mysql-performance}
 As outlined in \autoref{sec:mysql}, MySQL was used for various reasons, one of
 which is that a DBMS is optimized for speed and efficiency. This is true
 especially for small databases with tables that contain less than five million
@@ -6,40 +7,7 @@ current structure, without administrative access to MySQL server
 variables---which allow more fine-tuning for performance
 \citep{schwartz2012}---it does not scale well: above of 5 million records,
 MyISAM performance for re-indexing after uploading new transcriptome sequence
-data starts to drop noticeably (see \autoref{fig:transaction-time}). A solution
-to this issue is to partition the tables ``ests'', ``hmmsearch'', and ``blast''
-into individual tables for each query dataset. Transcriptome sequence data as
-generated within the 1KITE project has a number of sequences in the order of
-$5\cdot10^5$, which amounts to the same number of records in the database. That
-means the database in its current form and without administrative access to
-server variables can only store up to about ten query datasets before it becomes
-slow.
+data starts to drop noticeably (see \autoref{fig:transaction-time}). 
 
 \input{inc/results/fig-transaction-time}
 
-During testing, it became obvious that not only the indexing strategy and the
-query design, but also the database structure plays a major part in terms of
-performance. Especially the tables ``hmmsearch'' and ``blast'' become
-excessively large after a few analyses: with an ortholog set of 4,000 OGs, if
-each of the 4,000 HMM searches obtains an average of 20 hits during the HMM
-search, and each of the 20 BLAST searches obtain an average of 50 hits, this
-amounts to $4,000 \cdot 20 = 8 \cdot 10^4$ rows in the table ``hmmsearch'' and
-$4 \cdot 10^6$ rows in the table ``blast''. The rows themselves do not contain
-much data (only 131 \nomenclature{B}{Byte} on average), but due to the large
-number of records, InnoDB performance with the current schema does not scale
-well. Insertion of new data does not become noticably slow; however, deleting
-old analysis results takes very long. The InnoDB cluster index physically orders
-the table based on the primary key or the first unique key it can utilize. When
-one row is removed, the entire table is reordered on disk for speed and
-defragmentation.  With increasing table size, this operation takes exponentially
-long (see \todo{data!}).
-
-The simplest and most performant solution to this problem is to create
-individual tables for each query taxon. Dropping or truncating (emptying) a
-table and recreating it is much faster than deleting a large portion out of a
-huge table, especially when there are indices involved.
-
-Especially the InnoDB engine
-benefits significantly from large amounts of RAM \citep{schwartz2012} because
-it can cache large portions of a table in RAM and thus does not need to access
-the hard drive frequently.
