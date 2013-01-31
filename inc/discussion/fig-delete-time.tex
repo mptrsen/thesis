@@ -1,0 +1,12 @@
+\begin{figure}[h]
+	\centering
+	\def\svgwidth{0.4\textwidth}
+	\input{img/delete-time.pdf_tex}
+	\caption[Deletion time on large InnoDB tables]{
+		InnoDB performance on deleting rows in large InnoDB tables with many
+		indices. With increasing table size, the transaction takes longer because
+		the InnoDB cluster index has to physically reorder the table contents on the
+		hard drive.
+	}
+	\label{fig:delete-time}
+\end{figure}

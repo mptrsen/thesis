@@ -1,12 +1,13 @@
+\label{sec:mysql-performance-discussion}
 During testing, MySQL performance became a bottleneck because of the re-indexing
 issues of MyISAM, which take increasingly long with growing table size
-(\autoref{sec:mysql-performance}. A solution to this issue is to partition the
-tables ``ests'', ``hmmsearch'', and ``blast'' into individual tables for each
-query dataset. Transcriptome sequence data as generated within the 1KITE project
-have a number of sequences in the order of $5\times10^5$, which amounts to the
-same number of records in the database. That means the database in its current
-form and without administrative access to server variables can only store up to
-about ten query datasets before it becomes slow.
+(see subsection \autoref{sec:mysql-performance}. A solution to this issue is to
+partition the tables ``ests'', ``hmmsearch'', and ``blast'' into individual
+tables for each query dataset. Transcriptome sequence data as generated within
+the 1KITE project have a number of sequences in the order of $5\times10^5$,
+which amounts to the same number of records in the database. That means the
+database in its current form and without administrative access to server
+variables can only store up to about ten query datasets before it becomes slow.
 
 Not only the indexing strategy and the query design, but also the database
 structure plays a major part in terms of performance. Especially the tables
@@ -21,11 +22,13 @@ scale well. Insertion of new data does not become noticably slow; however,
 deleting old analysis results takes very long. The InnoDB cluster index
 physically orders the table based on the primary key or the first unique key it
 can utilize. When one row is removed, the entire table is reordered on disk for
-speed and defragmentation.  With increasing table size, this operation takes
-exponentially long (see \todo{data!}).
+speed and defragmentation. With increasing table size, this operation takes
+exponentially long (\autoref{fig:delete-time}).
 
 The simplest and most performant solution to this problem is to create
 individual tables for each query taxon. Dropping or truncating (emptying) a
 table and recreating it is much faster than deleting a large portion out of a
 huge table, especially when there are indices involved. Implementing this
 partitioning is planned for the next version of \pname.
+
+\input{inc/discussion/fig-delete-time}
