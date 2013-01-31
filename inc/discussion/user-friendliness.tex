@@ -1,0 +1,11 @@
+\pname is designed to be as user-friendly as possible. It is well-documented and
+comes with a step-by-step guide for inexperienced users. The \pname
+programs benefit from fine-tuning the MySQL server as described in, \eg,
+\citet{schwartz2012} or \citet{schneider2005}. I was aware of the fact that most
+users cannot be expected to change MySQL server settings. Thus, I have tried to
+bypass these fine-tuning facilities by putting much consideration into the
+database design. However, the best database structure cannot compensate, \eg, a
+memory buffer pool that is too small for the given database and usage. This has
+to be considered when deploying \pname in a production environment (see also
+\autoref{sec:future-devel} for future improvements regarding the database
+performance).

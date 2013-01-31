@@ -204,11 +204,11 @@
      inkscape:guide-bbox="true"
      inkscape:snap-bbox="true"
      inkscape:bbox-nodes="true"
-     inkscape:window-width="1276"
-     inkscape:window-height="877"
-     inkscape:window-x="0"
-     inkscape:window-y="19"
-     inkscape:window-maximized="0"
+     inkscape:window-width="1680"
+     inkscape:window-height="1023"
+     inkscape:window-x="1280"
+     inkscape:window-y="2"
+     inkscape:window-maximized="1"
      inkscape:object-paths="true">
     <sodipodi:guide
        orientation="0,1"
@@ -279,7 +279,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -747,7 +747,7 @@
          id="tspan5636-2-6"
          x="-318.28561"
          y="483.84833"
-         style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L">0.99</tspan></text>
+         style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L">0.9</tspan></text>
     <path
        sodipodi:type="arc"
        style="color:#000000;fill:#e0b681;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
@@ -769,7 +769,7 @@
          id="tspan5636-7"
          x="-234.6539"
          y="483.84833"
-         style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L">0.99</tspan></text>
+         style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L">0.9</tspan></text>
     <path
        sodipodi:type="arc"
        style="color:#000000;fill:#e0b681;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"
@@ -791,7 +791,7 @@
          id="tspan5636-2-8"
          x="-147.78561"
          y="483.84833"
-         style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L">0.99</tspan></text>
+         style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L">0.9</tspan></text>
     <path
        sodipodi:type="arc"
        style="color:#000000;fill:#b3e9ff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"

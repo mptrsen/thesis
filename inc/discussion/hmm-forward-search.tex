@@ -1,3 +1,4 @@
+\label{sec:hmm-forward-search}
 When triangulating bidirectional best hits as explained in
 \autoref{sec:orthology-howto}, an exhaustive assessment of gene orthology in
 transcriptome data, using a search algorithm like BLAST, must try to align all
@@ -12,6 +13,7 @@ additional performance value: it pools the substitution probability information
 contained in a multiple amino acid sequence alignment in a single statistical
 model. By using this model for performing a search comprising homology
 information of $n$ sequences in the ortholog group in question, the number of
-required searches is reduced to only $1$; this leads to a speedup of up to $n-1$
-compared to an all-against-all BLAST search.
+required searches is reduced to only $1$. This leads to a potential speedup of
+up to $n-1$ compared to an all-against-all BLAST search as implemented in COG
+\citep{li2003} or Inparanoid \citep{ostlund2010}.
 

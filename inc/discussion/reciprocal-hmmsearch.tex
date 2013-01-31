@@ -1,0 +1,10 @@
+As hinted in the introduction (\autoref{sec:improvements}), using BLAST for the
+reciprocal search step may be interpreted as a waste of specificity: why put
+effort into employing HMMs for their capability of finding remotely related
+amino acid sequences during the forward search, when the candidate ortholog may
+be discarded later because BLAST is much stricter than a HMM search? This design
+decision in \hamstr is puzzling, but alternative search algorithms could not
+easily be implemented in the pipeline. This has changed with \pname: its modular
+design facilitates extension and also switching to a different reciprocal search
+algorithm in order to test whether the employment of a HMM-based tool for both
+search directions might provide better results.

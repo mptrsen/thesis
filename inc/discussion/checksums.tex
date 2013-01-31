@@ -1,10 +1,12 @@
-SHA-256 digests are generated using a cryptographic hashing algorithm described
-by \citet{gallagher2008}. For a consistent and reproducible state of the
-nucleotide or amino acid sequence data during all analysis steps, it must be
-guaranteed that no two digests, \ie, two sequence identifiers, are ever
-identical. The SHA-256 hashing algorithm generates a digest that is 160 bits, or
-40 hexadecimal characters in length. The probability $p$ of a hash collision
-(\ie, two hashed elements returning the same digest) in $n$ elements is
+\pname uses SHA-256 digests to unambiguously identify a transcript sequence in
+the database as well as in temporary files. SHA-256 digests are generated using
+a cryptographic hashing algorithm described by \citet{gallagher2008}. For a
+consistent and reproducible state of the nucleotide or amino acid sequence data
+during all analysis steps, it must be guaranteed that no two digests, \ie, two
+sequence identifiers, are ever identical. The SHA-256 hashing algorithm
+generates a digest that is 160 bits, or 40 hexadecimal characters in length. The
+probability $p$ of a hash collision (\ie, two hashed elements returning the same
+digest) in $n$ elements is
 
 \begin{equation}
 p \ge \frac{n (n-1)}{2} \times \frac{1}{2^b}

@@ -4,31 +4,31 @@ issues of MyISAM, which take increasingly long with growing table size
 (see subsection \autoref{sec:mysql-performance}. A solution to this issue is to
 partition the tables ``ests'', ``hmmsearch'', and ``blast'' into individual
 tables for each query dataset. Transcriptome sequence data as generated within
-the 1KITE project have a number of sequences in the order of $5\times10^5$,
-which amounts to the same number of records in the database. That means the
-database in its current form and without administrative access to server
-variables can only store up to about ten query datasets before it becomes slow.
+the 1KITE project have a number of sequences in the order of $10^5$ to
+$5\times10^5$, which amounts to the same number of records in the database. That
+means, in the worst case, the database in its current form and without
+administrative access to server variables can only store up to about ten query
+datasets before it becomes slow.
 
-Not only the indexing strategy and the query design, but also the database
-structure plays a major part in terms of performance. Especially the tables
-``hmmsearch'' and ``blast'' become excessively large after a few analyses: with
-an ortholog set of 4,000 OGs, if each of the 4,000 HMM searches obtains an
-average of 20 hits during the HMM search, and each of the 20 BLAST searches
-obtain an average of 50 hits, this amounts to $4,000 \times 20 = 8 \times 10^4$
-rows in the table ``hmmsearch'' and $4 \times 10^6$ rows in the table ``blast''.
-The rows themselves do not contain much data (only 131 B on average), but due to
-the large number of records, InnoDB performance with the current schema does not
+Besides the indexing strategy and the query design, the database structure plays
+a major role in terms of performance. Especially the tables ``hmmsearch'' and
+``blast'' become excessively large after a few analyses: with an ortholog set of
+4,000 OGs, if each of the 4,000 HMM searches obtains an average of 20 hits
+during the HMM search, and each of the 20 BLAST searches obtains an average of
+50 hits, this amounts to $4,000 \times 20 = 8 \times 10^4$ rows in the table
+``hmmsearch'' and $4 \times 10^6$ rows in the table ``blast''.  The rows
+themselves do not contain much data (only 131 B on average), but due to the
+large number of records, InnoDB performance with the current schema does not
 scale well. Insertion of new data does not become noticably slow; however,
 deleting old analysis results takes very long. The InnoDB cluster index
 physically orders the table based on the primary key or the first unique key it
-can utilize. When one row is removed, the entire table is reordered on disk for
-speed and defragmentation. With increasing table size, this operation takes
-exponentially long (\autoref{fig:delete-time}).
+can utilize. When one row is removed, the entire table is reordered on the hard
+drive for speed and defragmentation. With increasing table size, this operation
+takes exponentially long (\autoref{fig:delete-time}).
 
 The simplest and most performant solution to this problem is to create
-individual tables for each query taxon. Dropping or truncating (emptying) a
-table and recreating it is much faster than deleting a large portion out of a
-huge table, especially when there are indices involved. Implementing this
-partitioning is planned for the next version of \pname.
+individual tables for each query taxon. Deleting and recreating a table is much
+faster than deleting a large portion out of a huge table, especially when there
+are indices involved. 
 
 \input{inc/discussion/fig-delete-time}
