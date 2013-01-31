@@ -1,3 +1,4 @@
+\label{sec:distributed-analysis}
 The server-client model of MySQL enables a distributed analysis on a computer
 network. This is advantageous on either a HPC cluster designed for massively
 parallelized computing, where many physical computers are connected in a
@@ -11,15 +12,12 @@ connections \citep{mysql2013}.
 
 \input{inc/results/fig-server-client}
 
-When using a multi-client setup with standard desktop computers like described
-above, it is beneficial to designate one computer exclusively for the MySQL
-server instance, and not run \pname analyses on that machine. The large amount
-of data that is sent to and from the server, and the overhead due to table
-(re-)indexing take up the majority of the CPU capacity. In order to not hinder
-the other computer's analysis performance, the server computer should be able to
-dedicate its entire resources to managing the MySQL database (\ie, no \pname
-analysis should be running on the server itself). MySQL itself is multithreaded
-and scales well over multiple processors. It can handle hundreds of simultaneous
-connections per second without problems. The InnoDB storage engine benefits from
-large amounts of RAM because it can cache portions of a table in RAM and thus
-does not have to access the hard drive frequently \citep{schneider2005}.
+I applied and tested \pname in a setup as depicted in
+\autoref{fig:server-client}. It worked well for the client computers. On the
+MySQL server machine, however, \pname analyses were up to five times slower than
+on the other client machines. This was due to the MySQL server instance taking
+up most of the CPU capacity for managing the database. In section
+\autoref{sec:distributed-analysis-discussion}, advantages and considerations of
+a networked setup are discussed, as well as future perspectives in integration
+of \pname in a HPC environment.
+

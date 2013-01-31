@@ -1,0 +1,16 @@
+\label{sec:table-per-species}
+At the time of this writing, the tables ``ests'', ``hmmsearch'' and ``blast''
+are filled in a cumulative fashion, \ie, they contain data from all query
+species. This affects performance because without administrative access to
+server configuration and tuning variables, a too small InnoDB key buffer along
+with very large tables becomes a performance bottleneck \citep{mysql2013}. For
+this reason---and because \pname is intended for users with no knowledge about
+MySQL administration, and therefore fine-tuning of server variables in order to
+adapt to the amount of data at hand is not possible---future development will
+implement separate tables for each query dataset. This ensures high database
+performance. With complex SQL queries, it will still be possible to connect
+multiple datasets.
+
+This practice also alleviates the pressure on the SHA-256 digests to be unique:
+in a smaller object space, the probability of a hash collision decreases
+significantly.

@@ -3,7 +3,7 @@ It does not assign transcript sequences to ortholog groups (OG) based on a
 per-OG basis, but instead first collects all possible graph edges  and traverses
 them by ascending \tool{hmmsearch} e-value (see \autoref{fig:orthograph-graph}).
 This has two advantages: firstly, it assures that the transcript sequences are
-mapped to the most relevant OG, and not the one that was processed first.
+mapped to the most relevant OG, and not to the one that was processed first.
 Secondly, by removing the transcript sequences from the list of candidate
 transcripts, redundant assignment is precluded, \ie, the same transcript cannot
 be mapped to multiple OGs or vice versa.

@@ -1,12 +1,12 @@
 In \hamstr, one BLAST database had to be maintained for each reference taxon.
 This led to the problem of BLAST scores and e-values not being normalized: since
-the \hamstr BLAST databases are of differing sizes, the e-values, which depend
-on the database size, cannot be compared across reference taxa. To generate a
-``normalized'' e-value, \hamstr takes an additional comparison step using a
-pairwise alignment with ClustalW.
+the reference proteome BLAST databases used in \hamstr are of differing sizes,
+the e-values, which depend on the database size, cannot be compared across
+reference taxa. To generate a ``normalized'' e-value, \hamstr takes an
+additional comparison step using a pairwise alignment with ClustalW.
 
 In contrast to \hamstr, \pname uses one BLAST database comprising all reference
 taxa proteomes. E-values are comparable across taxa since the database is of
 constant size. Additionally, only one BLAST search is required instead of $n$
-searches, where $n$ is the number of reference taxa, leading to a performance
+searches, where $n$ is the number of reference taxa. This leads to a performance
 boost of up to $n-1$ compared to \hamstr.

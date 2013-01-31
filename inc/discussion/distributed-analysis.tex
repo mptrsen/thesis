@@ -1,0 +1,27 @@
+\label{sec:distributed-analysis-discussion}
+When using a multi-client setup with standard desktop computers like described
+in \autoref{sec:distributed-analysis}, it is beneficial to designate one
+computer exclusively for the MySQL server instance, and not run additional
+\pname analyses on that machine. The large amount of data that is sent to and
+from the server, and the overhead due to table indexing take up the majority of
+the CPU capacity. In order to not hinder the other computer's analysis
+performance, the server computer should be able to dedicate its entire resources
+to managing the MySQL database (\ie, no \pname analysis should be running on the
+server itself). The MySQL server itself is multithreaded and scales well over
+multiple processors. It can handle hundreds of simultaneous connections per
+second without problems. The InnoDB storage engine benefits from large amounts
+of RAM because it can cache portions of a table in RAM and thus does not have to
+access the hard drive frequently \citep{schneider2005}.
+
+When planning an integration of \pname in a HPC environment, additional factors
+have to be considered. HPC clusters are optimized to provide a high computing
+capacity by relying on a massively parallelized architecture. MySQL database
+servers, especially when running large InnoDB engine tables exclusively, benefit
+the most from a large memory pool. However, memory is valuable for all
+applications that run on HPC clusters, and allocating a large portion of the
+available memory to the database server is not feasible. Thus, the database
+server must be externalized (see \autoref{fig:cluster} for a possible
+configuration). This requires a low-latency network connection so that the
+database connection does not become a performance bottleneck.
+
+\input{inc/discussion/fig-cluster}

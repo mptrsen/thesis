@@ -15,9 +15,9 @@ The analysis, \ie, the bidirectional searching algorithm is as follows:
 	\item Backup old results, if requested.
 	\item Clear old results from file system and database, if requested.
 	\item Create the HMMs, if they do not exist.
-	\item Create the BLAST database of all core taxa, if it does not exist.
-	\item Translate the input file in all six reading frames, if it is nucleic
-		acid data.
+	\item Create the BLAST database of all reference taxa, if it does not exist.
+	\item If the input data is nucleic acid, infer a translation in all six
+		reading frames.
 	\item Load the translated sequences into the database, generating unique
 		SHA-256 digests (see \autoref{sec:digests}) on the way.
 	\item Get all translated sequences of the target species from the database.

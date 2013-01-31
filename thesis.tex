@@ -29,6 +29,7 @@
 
 %
 % new colors and commands, mostly formatting
+%
 \definecolor{lightgrey}{rgb}{0.9,0.9,0.9}
 \renewcommand{\nomname}{List of Abbreviations}
 \newcommand{\file}[1]{{\lstinline{#1}}}
@@ -47,6 +48,7 @@
 \makenomenclature
 %
 % setup biblatex
+%
 %--------------------------------------------------
 % \bibliography{bib/diploma}
 % \ExecuteBibliographyOptions{
@@ -62,14 +64,17 @@
 
 %
 % setup natbib citation format
+%
 \bibpunct{(}{)}{,}{a}{,}{,}
 
 %
 % setup caption format
+%
 \captionsetup{format=plain, font=small, labelfont=bf}
 
 %
 % setup code listings
+%
 \lstset{%
 	language=perl,
 	basicstyle=,                       % size of the fonts that are used for the code
@@ -92,6 +97,7 @@
 
 %
 % setup hyperlinks, bookmarks and pdf metadata
+%
 \hypersetup{%
 	bookmarks=true,
 	pdfborder={0 0 0},
@@ -106,6 +112,7 @@
 
 %
 % doublespace
+%
 \linespread{1.3}
 
 %--------------------------------------------------
@@ -115,12 +122,14 @@
 
 %
 % title page
+%
 \begin{titlepage}
 	\include{inc/titlepage}
 \end{titlepage}
 
 %
 % paper notes, remove this later
+%
 %--------------------------------------------------
 % \chapter*{Paper notes}
 % 	\input{inc/notes}
@@ -128,17 +137,25 @@
 
 %
 % declaration of authorship
+%
 \chapter*{Declaration of authorship}
 	\input{inc/declaration}
 	\clearpage
 
 %
+% dedication
+%
+%\include{inc/dedication}
+
+%
 % start numbering pages in roman
+%
 \pagenumbering{roman}
 \pagestyle{headings}
 
 %
 % table of contents
+%
 \phantomsection
 \addcontentsline{toc}{chapter}{Contents}
 \tableofcontents
@@ -146,6 +163,7 @@
 
 %
 % list of figures
+%
 \phantomsection
 \addcontentsline{toc}{chapter}{List of figures}
 \listoffigures
@@ -153,6 +171,7 @@
 
 %
 % list of tables
+%
 \phantomsection
 \addcontentsline{toc}{chapter}{List of tables}
 \listoftables
@@ -160,6 +179,7 @@
 
 %
 % list of abbrevs
+%
 \phantomsection
 \addcontentsline{toc}{chapter}{List of abbreviations}
 \markboth{\nomname}{\nomname}
@@ -170,15 +190,18 @@
 
 %
 % quote 8-)
+%
 \phantomsection
 \include{inc/quotes}
 
 %
 % restart numbering in arabic
+%
 \pagenumbering{arabic}
 
 %
 % content
+%
 \chapter{Introduction}
 	\input{inc/intro/intro}
 	\section{Orthology}
@@ -236,14 +259,15 @@
 				\input{inc/results/one-blast}
 			\subsubsection{MySQL performance}
 				\input{inc/results/mysql-performance}
-			\subsubsection{Distributed analysis}
-				\input{inc/results/distributed-analysis}
+	\section{Distributed analysis}
+		\input{inc/results/distributed-analysis}
 
 \chapter{Discussion}
 	\input{inc/discussion/intro}
 	\section{Algorithm}
 		\input{inc/discussion/algorithm}
 	\section{Implementation}
+		\input{inc/discussion/implementation}
 		\subsubsection{HMM-based forward search}
 			\input{inc/discussion/hmm-forward-search}
 		\subsubsection{Soft threshold}
@@ -253,23 +277,32 @@
 			\input{inc/discussion/traversing-by-evalue}
 		\subsubsection{One BLAST database comprising all reference proteomes}
 			\input{inc/discussion/one-blast}
+		\subsubsection{Distributed analysis}
+			\input{inc/discussion/distributed-analysis}
 	\section{Conclusion and outlook}
+		\input{inc/discussion/conclusion}
 		\subsection{Future development}
 			\input{inc/discussion/future-devel}
+			\subsubsection{Individual analysis tables per query dataset}
+				\input{inc/discussion/table-per-species}
 			\subsubsection{Reciprocal HMM search}
 				\input{inc/discussion/reciprocal-hmmsearch}
 	\section{Summary}
 
+\clearpage
+
 %
 % acknowledgements
+%
 \phantomsection
 \addcontentsline{toc}{chapter}{Acknowledgements}
 \chapter*{Acknowledgements}
-	\input{inc/acknowledgements}
+	%\input{inc/acknowledgements}
 	\clearpage
 
 %
 % bibliography
+%
 \phantomsection
 \addcontentsline{toc}{chapter}{Bibliography}
 % uncomment these four lines if using bibtex
@@ -283,6 +316,7 @@
 
 %
 % appendix
+%
 \phantomsection
 \appendix
 \chapter{Appendix}
