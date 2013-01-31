@@ -1,23 +1,23 @@
 \label{sec:mysql}
-I used the MySQL relational database management system (DBMS) for fast and
+I used the MySQL relational database management system (RDBMS) for fast and
 efficient sequence data storage and retrieval. It is published under the GPL
 license for open source applications. MySQL was installed from the Fedora
 repositories using the package manager yum.
 
-The use of a DBMS has a number of advantages over file-based sequence data
+The use of a RDBMS has a number of advantages over file-based sequence data
 storage:
 
 \begin{description}
 	\item[Memory efficiency.] The amino acid or nucleotide sequence data do not
-		need to be loaded into RAM for fast access since the DBMS manages their
+		need to be loaded into RAM for fast access since the RDBMS manages their
 		storage and retrieval.  This becomes especially important when analyzing data
 		files larger than the computer's physical memory.
 	\item[No redundancy.] If the database is well-designed, every amino acid or
 		nucleotide sequence and each orthology relationship is stored in the database
 		exactly once with a unique identifier. This also contributes to a better
-		performance because the DBMS has to search a smaller search space to find a
+		performance because the RDBMS has to search a smaller search space to find a
 		given sequence.
-	\item[Performance.] The DBMS is highly optimized for speed and efficiency. If
+	\item[Performance.] The RDBMS is highly optimized for speed and efficiency. If
 		configured correctly, complex queries comprising millions of rows are
 		executed quickly.
 	\item[Flexibility.] SQL queries allow fine-grained, custom-tailored filtering
