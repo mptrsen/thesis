@@ -59,7 +59,7 @@
     \put(0.61685985,0.14741459){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.9}}}%
     \put(0.68843341,0.14741459){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.9}}}%
     \put(0.76277689,0.14741459){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.9}}}%
-    \put(0.83520776,0.14741459){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.1}}}%
+    \put(0.83520776,0.14741459){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.01}}}%
     \put(0.90398692,0.14741459){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.99}}}%
     \put(0.04325131,0.00062988){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{emissions:}}}%
     \put(0.19536582,0.00062988){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{0.4}}}%

@@ -7,9 +7,10 @@ exchange of existing modules in order to implement improved methods.
 
 Performance considerations have always been a driving force during development.
 At the time of this writing, a single run of \pname takes about as long as a
-single analysis with \hamstr. The time required for a \pname analysis depends on
-the size of the ortholog set: the more ortholog groups, the more HMMs are used
-to search the transcriptome sequence library, and the more ortholog candidates
-have to be evaluated. Additionally, the database size is relevant when deleting
-data from previous analyses, and when uploading new transcriptome data (see
-subsection \ref{sec:mysql-performance}). 
+single analysis with \hamstr on standard desktop computer hardware. The time
+required for a \pname analysis depends on the size of the ortholog set: the more
+ortholog groups, the more HMMs are used to search the transcriptome sequence
+library, and the more ortholog candidates have to be evaluated. Additionally,
+the database size is relevant when deleting data from previous analyses, and
+when uploading new transcriptome data (see subsection
+\ref{sec:mysql-performance}). 

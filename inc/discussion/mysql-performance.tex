@@ -1,14 +1,15 @@
 \label{sec:mysql-performance-discussion}
-During testing, MySQL performance became a bottleneck because of the re-indexing
-issues of MyISAM, which take increasingly long with growing table size
-(see subsection \autoref{sec:mysql-performance}. A solution to this issue is to
-partition the tables ``ests'', ``hmmsearch'', and ``blast'' into individual
-tables for each query dataset. Transcriptome sequence data as generated within
-the 1KITE project have a number of sequences in the order of $10^5$ to
-$5\times10^5$, which amounts to the same number of records in the database. That
-means, in the worst case, the database in its current form and without
-administrative access to server variables can only store up to about ten query
-datasets before it becomes slow.
+During testing, MySQL performance became a bottleneck because of MyISAM storage
+engine overhead. The re-indexing of the table ``ests'' takes increasingly long
+with table sizes above of 5 megarows (see subsection
+\autoref{sec:mysql-performance}). A solution to this issue is to partition the
+tables ``ests'', ``hmmsearch'', and ``blast'' into individual tables for each
+query dataset. Transcriptome sequence data as generated within the 1KITE project
+have a number of sequences in the order of $10^5$ up to $5\times10^5$, which
+amounts to the same number of records in the table ``ests'' alone. That means,
+in the worst case, the database in its current form and without administrative
+access to server variables can only store up to about ten query datasets before
+it becomes slow.
 
 Besides the indexing strategy and the query design, the database structure plays
 a major role in terms of performance. Especially the tables ``hmmsearch'' and

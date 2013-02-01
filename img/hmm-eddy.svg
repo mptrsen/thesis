@@ -15,7 +15,7 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.4 r9939"
-   sodipodi:docname="hmm-eddy.svg"
+   sodipodi:docname="hmm-eddy.pdf"
    inkscape:export-filename="/tmp/hmm-eddy.png"
    inkscape:export-xdpi="54.75"
    inkscape:export-ydpi="54.75">
@@ -279,7 +279,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -813,7 +813,7 @@
          id="tspan5636-0"
          x="-63.152145"
          y="483.84833"
-         style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L">0.1</tspan></text>
+         style="font-weight:normal;text-align:center;text-anchor:middle;-inkscape-font-specification:Nimbus Sans L">0.01</tspan></text>
     <path
        sodipodi:type="arc"
        style="color:#000000;fill:#b3e9ff;fill-opacity:1;stroke:none;stroke-width:1;stroke-linecap:butt;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0;marker:none;visibility:visible;display:inline;overflow:visible;enable-background:accumulate"

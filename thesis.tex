@@ -123,9 +123,11 @@
 %
 % title page
 %
+\newgeometry{margin=2cm}
 \begin{titlepage}
 	\include{inc/titlepage}
 \end{titlepage}
+\restoregeometry
 
 %
 % paper notes, remove this later
@@ -150,7 +152,7 @@
 %
 % dedication
 %
-%\include{inc/dedication}
+\include{inc/dedication}
 
 %
 % start numbering pages in roman
@@ -198,6 +200,7 @@
 %
 \phantomsection
 \include{inc/quotes}
+\clearpage
 
 %
 % restart numbering in arabic
@@ -278,9 +281,10 @@
 		\subsubsection{HMM-based forward search}
 			\input{inc/discussion/hmm-forward-search}
 		\subsubsection{Soft threshold}
+			\input{inc/discussion/soft-threshold}
 		\subsubsection{SHA-256 digests as sequence identifiers}
 			\input{inc/discussion/checksums}
-		\subsubsection{Traversing the graph by e-value}
+		\subsubsection{Traversing the graph by e-values}
 			\input{inc/discussion/traversing-by-evalue}
 		\subsubsection{One BLAST database comprising all reference proteomes}
 			\input{inc/discussion/one-blast}
@@ -296,7 +300,6 @@
 				\input{inc/discussion/table-per-species}
 			\subsubsection{Reciprocal HMM search}
 				\input{inc/discussion/reciprocal-hmmsearch}
-	\section{Summary}
 
 \clearpage
 
@@ -306,7 +309,7 @@
 \phantomsection
 \addcontentsline{toc}{chapter}{Acknowledgements}
 \chapter*{Acknowledgements}
-	%\input{inc/acknowledgements}
+	\input{inc/acknowledgements}
 	\clearpage
 
 %
