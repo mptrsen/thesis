@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{502.55846498bp}%
+    \setlength{\unitlength}{488.72507629bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,13 +48,13 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.56981073)%
+  \begin{picture}(1,0.58593925)%
     \put(0,0){\includegraphics[width=\unitlength]{img/cluster.pdf}}%
-    \put(0.0909409,0.04062226){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Database server}}}%
-    \put(0.09207793,0.46449916){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Control node}}}%
-    \put(0.68106411,0.55374573){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Compute node}}}%
-    \put(0.85926516,0.3790424){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Compute node}}}%
-    \put(0.52188784,0.16414203){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{Compute node}}}%
-    \put(0.72809878,0.00609362){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Compute node}}}%
+    \put(0.0796488,0.04177208){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Database server}}}%
+    \put(0.08081801,0.47764684){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Control node}}}%
+    \put(0.68647548,0.56941953){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Compute node}}}%
+    \put(0.86972052,0.38977121){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{Compute node}}}%
+    \put(0.52279371,0.16878807){\color[rgb]{0,0,0}\makebox(0,0)[rb]{\smash{Compute node}}}%
+    \put(0.73484147,0.0062661){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Compute node}}}%
   \end{picture}%
 \endgroup%

@@ -36,7 +36,7 @@
   }%
   \providecommand\rotatebox[2]{#2}%
   \ifx\svgwidth\undefined%
-    \setlength{\unitlength}{489.95099058bp}%
+    \setlength{\unitlength}{473.32832414bp}%
     \ifx\svgscale\undefined%
       \relax%
     \else%
@@ -48,13 +48,13 @@
   \global\let\svgwidth\undefined%
   \global\let\svgscale\undefined%
   \makeatother%
-  \begin{picture}(1,0.53614494)%
+  \begin{picture}(1,0.55950455)%
     \put(0,0){\includegraphics[width=\unitlength]{img/server-client.pdf}}%
-    \put(0.47582992,0.00341992){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Database server}}}%
-    \put(0.09911953,0.15352527){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Analysis computer}}}%
-    \put(0.89820521,0.15352527){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Analysis computer}}}%
-    \put(0.18679437,0.43638835){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Analysis computer}}}%
-    \put(0.83408677,0.42328108){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Analysis computer}}}%
-    \put(0.49130117,0.52254685){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Analysis computer}}}%
+    \put(0.08830531,0.16344778){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Analysis computer}}}%
+    \put(0.84908362,0.44267706){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Analysis computer}}}%
+    \put(0.49425984,0.54542891){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Analysis computer}}}%
+    \put(0.16003343,0.45555781){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Analysis computer}}}%
+    \put(0.47740628,0.00275834){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Database server}}}%
+    \put(0.91030411,0.16529587){\color[rgb]{0,0,0}\makebox(0,0)[b]{\smash{Analysis computer}}}%
   \end{picture}%
 \endgroup%
