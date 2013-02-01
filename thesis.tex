@@ -8,27 +8,25 @@
 \usepackage[left=3.5cm,right=2.5cm]{geometry} % setup page geometry
 \usepackage{nomencl}          % nomenclature
 % if using natbib
-\usepackage{natbib}           % bibliography for scientists
+%\usepackage{natbib}           % bibliography for scientists
 % if using biblatex
-%\usepackage[backend=bibtex,style=authoryear,bibstyle=nature,natbib=true]{biblatex}
-%\usepackage{csquotes}         % dunno what this does
+\usepackage[backend=bibtex,style=authoryear,bibstyle=nature,natbib=true]{biblatex}
+\usepackage{csquotes}         % dunno what this does
 %--------------------------------------------------
 % more features
 \usepackage{amsmath}					% all the fancy math stuff
 \usepackage{caption}          % customize captions
 \usepackage{color}						% enable color
-%\usepackage{enumerate}				% customize numbered lists
 \usepackage{graphicx}					% fancy graphics
 \usepackage{listings}         % code listings
 \usepackage{tabularx}         % extended tables
-%\usepackage{tikz}             % draw stuff with tikz
 \usepackage{url}							% URL handling
 \usepackage{xspace}						% to space or not to space
 \usepackage{hyperref} 				% should be loaded last
 %--------------------------------------------------
 
 %
-% new colors and commands, mostly formatting
+% new colors and commands, mostly formatting and laziness
 %
 \definecolor{lightgrey}{rgb}{0.9,0.9,0.9}
 \renewcommand{\nomname}{List of Abbreviations}
@@ -49,23 +47,21 @@
 %
 % setup biblatex
 %
-%--------------------------------------------------
-% \bibliography{bib/diploma}
-% \ExecuteBibliographyOptions{
-% 	firstinits=true,
-% 	backref=true,
-% 	isbn=false,
-% 	url=false,
-% 	maxcitenames=2,
-% 	maxbibnames=999,
-% }
-% \renewcommand{\bibfont}{\normalfont\footnotesize}
-%-------------------------------------------------- 
+\bibliography{bib/diploma}
+\ExecuteBibliographyOptions{
+	firstinits=true,
+	backref=true,
+	isbn=false,
+	url=false,
+	maxcitenames=2,
+	maxbibnames=999,
+}
+\renewcommand{\bibfont}{\normalfont\footnotesize}
 
 %
 % setup natbib citation format
 %
-\bibpunct{(}{)}{,}{a}{,}{,}
+%\bibpunct{(}{)}{,}{a}{,}{,}
 
 %
 % setup caption format
@@ -128,14 +124,6 @@
 	\include{inc/titlepage}
 \end{titlepage}
 \restoregeometry
-
-%
-% paper notes, remove this later
-%
-%--------------------------------------------------
-% \chapter*{Paper notes}
-% 	\input{inc/notes}
-%-------------------------------------------------- 
 
 %
 % declaration of authorship
@@ -318,12 +306,12 @@
 \phantomsection
 \addcontentsline{toc}{chapter}{Bibliography}
 % uncomment these four lines if using bibtex
-\footnotesize
-\bibliographystyle{plainnat}
-\bibliography{bib/diploma}
-\normalsize
+%\footnotesize
+%\bibliographystyle{plainnat}
+%\bibliography{bib/diploma}
+%\normalsize
 % uncomment this line if using biblatex
-%\printbibliography
+\printbibliography
 \clearpage
 
 %
